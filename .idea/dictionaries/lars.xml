@@ -2,7 +2,9 @@
   <dictionary name="lars">
     <words>
       <w>cpus</w>
+      <w>gebraad</w>
       <w>linearalgebra</w>
+      <w>sparsematrix</w>
     </words>
   </dictionary>
 </component>

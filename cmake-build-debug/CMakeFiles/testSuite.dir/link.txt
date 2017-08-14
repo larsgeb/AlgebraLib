@@ -1,0 +1,1 @@
+/usr/bin/c++  -O4 -g   CMakeFiles/testSuite.dir/main.cpp.o CMakeFiles/testSuite.dir/SparseAlgebra.cpp.o CMakeFiles/testSuite.dir/SparseVector.cpp.o CMakeFiles/testSuite.dir/SparseMatrix.cpp.o  -o testSuite 

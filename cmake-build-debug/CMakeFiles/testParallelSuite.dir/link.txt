@@ -1,0 +1,1 @@
+/usr/bin/c++  -O4 -g   CMakeFiles/testParallelSuite.dir/main.cpp.o CMakeFiles/testParallelSuite.dir/SparseAlgebra.cpp.o CMakeFiles/testParallelSuite.dir/SparseMatrix.cpp.o CMakeFiles/testParallelSuite.dir/SparseVector.cpp.o CMakeFiles/testParallelSuite.dir/SparseParallelAlgebra.cpp.o  -o testParallelSuite 
