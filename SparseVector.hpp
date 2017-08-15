@@ -10,7 +10,8 @@
 
 class SparseVector {
 public:
-    std::map<int, double> _entries;
+    typedef std::map<int, double> VectorMap;
+    VectorMap _entries;
     int _numElements;
     bool _isColumn;
 

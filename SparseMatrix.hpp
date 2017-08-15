@@ -11,10 +11,12 @@ class SparseMatrix {
 public:
     // Typedefs
 //    typedef std::map<int, double> SparseRow;
-    typedef std::map<int, SparseVector> MatrixMap;
+    typedef std::map<int, SparseVector> MatrixMapOld;
+    typedef std::pair<int, int> MatrixIndex;
+    typedef std::map<MatrixIndex, double> MatrixMap;
 
     // Fields
-    MatrixMap _M;
+    MatrixMapOld _M;
     int _rows;
     int _columns;
 
@@ -30,6 +32,8 @@ public:
     int GetRows();
 
     int GetColumns();
+
+    SparseVector GetSparseColumn(int column);
 
 };
 

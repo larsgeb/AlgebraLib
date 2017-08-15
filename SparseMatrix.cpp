@@ -64,4 +64,9 @@ int SparseMatrix::GetRows() { return _rows; }
 
 int SparseMatrix::GetColumns() { return _columns; }
 
+SparseVector SparseMatrix::GetSparseColumn(int column) {
+    SparseVector P(_rows);
+
+}
+
 // --- end of class ---
