@@ -1,2 +1,4 @@
 docs/* linguist-documentation
+docs/ linguist-documentation
 doxygen/* linguist-documentation
+doxygen/ linguist-documentation

@@ -11,13 +11,13 @@ add_library(LinearAlgebra ${SOURCE_FILES})
 set(SOURCE_FILES main.cpp SparseAlgebra.cpp SparseVector.cpp SparseMatrix.cpp)
 add_executable(testSuite ${SOURCE_FILES})
 
-set(SOURCE_FILES SparseAlgebra.cpp SparseMatrix.cpp SparseVector.cpp SparseParallelAlgebra.cpp)
-add_library(LinearParallelAlgebra ${SOURCE_FILES})
-
-set(SOURCE_FILES main.cpp SparseAlgebra.cpp SparseMatrix.cpp SparseVector.cpp SparseParallelAlgebra.cpp)
-add_executable(testParallelSuite ${SOURCE_FILES})
-
-set_target_properties(testParallelSuite PROPERTIES COMPILE_FLAGS "-lpthread")
+#set(SOURCE_FILES SparseAlgebra.cpp SparseMatrix.cpp SparseVector.cpp SparseParallelAlgebra.cpp)
+#add_library(LinearParallelAlgebra ${SOURCE_FILES})
+#
+#set(SOURCE_FILES main.cpp SparseAlgebra.cpp SparseMatrix.cpp SparseVector.cpp SparseParallelAlgebra.cpp)
+#add_executable(testParallelSuite ${SOURCE_FILES})
+#
+#set_target_properties(testParallelSuite PROPERTIES COMPILE_FLAGS "-lpthread")
 
 #set_target_properties( LinearParallelAlgebra PROPERTIES CMAKE_CXX_FLAGS "-lpthread -o" )
 #set_target_properties( testParallelSuite PROPERTIES CMAKE_CXX_FLAGS "-lpthread -o" )
