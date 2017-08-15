@@ -1,2 +1,0 @@
-/usr/bin/ar qc libLinearParallelAlgebra.a  CMakeFiles/LinearParallelAlgebra.dir/SparseAlgebra.cpp.o CMakeFiles/LinearParallelAlgebra.dir/SparseMatrix.cpp.o CMakeFiles/LinearParallelAlgebra.dir/SparseVector.cpp.o CMakeFiles/LinearParallelAlgebra.dir/SparseParallelAlgebra.cpp.o
-/usr/bin/ranlib libLinearParallelAlgebra.a

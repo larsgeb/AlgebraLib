@@ -1,6 +1,0 @@
-/home/lars/CLionProjects/LinearAlgebra/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/lars/CLionProjects/LinearAlgebra/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/lars/CLionProjects/LinearAlgebra/cmake-build-debug/CMakeFiles/testParallelSuite.dir
-/home/lars/CLionProjects/LinearAlgebra/cmake-build-debug/CMakeFiles/testSuite.dir
-/home/lars/CLionProjects/LinearAlgebra/cmake-build-debug/CMakeFiles/LinearParallelAlgebra.dir
-/home/lars/CLionProjects/LinearAlgebra/cmake-build-debug/CMakeFiles/LinearAlgebra.dir
