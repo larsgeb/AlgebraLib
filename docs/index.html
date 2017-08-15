@@ -8,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.13"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Sparse Linear Algebra: Main Page</title>
+    <title>Sparse Linear Algebra: Sparse Linear Algebra Documentation</title>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="fix.js"></script>
     <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -67,10 +68,16 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Sparse Linear Algebra Documentation</div>  </div>
+<div class="title">Sparse Linear Algebra Documentation </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>This rather simple library was built to speed up some calculations in Hamiltonian Markov Chain sampling of functions. By building it in a separate library, I can re-use this rather fast code in many projects. Nice, because C++ doesn't have any good (standard) libraries. And it's fun to write!</p>
+<p>Right now, I've implemented some rather basic methods. C++ is new to me, and I still often run into unexpected behaviour. Nevertheless, the speed improvement is already quite large over my previous lubrary, based on the STL vectors.</p>
+<p>Most of the speed gain here is made by not storing zero values of matrices, but instead relying on a nested map to store non-zero entries. In many of the associated functions, this sparsity is exploited by only looping over non-zero functions. However, column access is still rather slow for complex matrices; as this index is contained in the nested map. Therefore, to retrieve one column (with possibly only one entry) one has to loop over all non-zero rows. A possibility would be to use a single map with a pair as index. But then retrieval is more complicated, by matching only one of the pairs.</p>
+<p>In the future, I will merge this library with another non-sparse library. This will hopefully result in performance gains were required, but still the full functionality of a complete set of linear algebra tools.</p>
+<p>I suggest to start browsing at <a class="el" href="SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. ">SparseAlgebra.hpp</a>, as it contains many common linear algebra routines. The parallel files are more of a development challenge right now than an actual working (and reliable) implementation.</p>
+<p>Lars Gebraad </p><dl class="section date"><dt>Date</dt><dd>August 2017 </dd></dl>
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/>

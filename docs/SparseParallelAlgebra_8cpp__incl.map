@@ -1,6 +1,6 @@
 <map id="SparseParallelAlgebra.cpp" name="SparseParallelAlgebra.cpp">
 <area shape="rect" id="node2" href="$SparseParallelAlgebra_8hpp.html" title="SparseParallelAlgebra.hpp" alt="" coords="30,80,205,107"/>
-<area shape="rect" id="node5" href="$SparseAlgebra_8hpp.html" title="SparseAlgebra.hpp" alt="" coords="171,155,303,181"/>
+<area shape="rect" id="node5" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="171,155,303,181"/>
 <area shape="rect" id="node8" href="$SparseVector_8hpp.html" title="SparseVector.hpp" alt="" coords="259,304,386,331"/>
 <area shape="rect" id="node10" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="311,229,435,256"/>
 </map>

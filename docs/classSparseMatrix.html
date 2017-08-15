@@ -11,6 +11,7 @@
     <title>Sparse Linear Algebra: SparseMatrix Class Reference</title>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="fix.js"></script>
     <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -70,6 +71,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classSparseMatrix-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SparseMatrix Class Reference</div>  </div>
@@ -88,12 +90,8 @@ Collaboration diagram for SparseMatrix:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a2b810acff05e1e9967b1c321ffaaa5ab"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; int, <a class="el" href="classSparseVector.html">SparseVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a2b810acff05e1e9967b1c321ffaaa5ab">MatrixMapOld</a></td></tr>
-<tr class="separator:a2b810acff05e1e9967b1c321ffaaa5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaa46b906d27797875ef7407aa09e67c"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#acaa46b906d27797875ef7407aa09e67c">MatrixIndex</a></td></tr>
-<tr class="separator:acaa46b906d27797875ef7407aa09e67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c4280a30290e288d974f4ecedae980"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="classSparseMatrix.html#acaa46b906d27797875ef7407aa09e67c">MatrixIndex</a>, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a96c4280a30290e288d974f4ecedae980">MatrixMap</a></td></tr>
-<tr class="separator:a96c4280a30290e288d974f4ecedae980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec52f4525bdd6ea7b344f57754db640c"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; int, <a class="el" href="classSparseVector.html">SparseVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#aec52f4525bdd6ea7b344f57754db640c">MatrixMap</a></td></tr>
+<tr class="separator:aec52f4525bdd6ea7b344f57754db640c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -101,73 +99,60 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa4fce3c8738a9b692f2854b090ffdeee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a659cb977fb095bb18d629a14ece5a4fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseVector.html">SparseVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a659cb977fb095bb18d629a14ece5a4fb">operator[]</a> (int i)</td></tr>
 <tr class="separator:a659cb977fb095bb18d629a14ece5a4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a201ecbe3e4b60a11b7b6cf819c3b9823"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSparseVector.html">SparseVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a201ecbe3e4b60a11b7b6cf819c3b9823">operator[]</a> (int i) const</td></tr>
+<tr class="separator:a201ecbe3e4b60a11b7b6cf819c3b9823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e0d2c8f9f84a54d8c3a7372298e7dde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseVector.html">SparseVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a7e0d2c8f9f84a54d8c3a7372298e7dde">operator()</a> (int i)</td></tr>
 <tr class="separator:a7e0d2c8f9f84a54d8c3a7372298e7dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1cd6285cd9aefbea2ea3265f3206e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSparseVector.html">SparseVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a7f1cd6285cd9aefbea2ea3265f3206e6">operator()</a> (int i) const</td></tr>
+<tr class="separator:a7f1cd6285cd9aefbea2ea3265f3206e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79dcdb540cf61273d290c9bc5c79e6fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseVector.html">SparseVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a79dcdb540cf61273d290c9bc5c79e6fd">GetSparseColumn</a> (int column)</td></tr>
+<tr class="separator:a79dcdb540cf61273d290c9bc5c79e6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffb2fa00396d91390b0b5247cfd2356"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSparseVector.html">SparseVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#abffb2fa00396d91390b0b5247cfd2356">GetSparseColumn</a> (int column) const</td></tr>
+<tr class="separator:abffb2fa00396d91390b0b5247cfd2356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48260a61204dedc4d9ea995ffcc28d55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a48260a61204dedc4d9ea995ffcc28d55">SetOwnSparseColumn</a> (<a class="el" href="classSparseVector.html">SparseVector</a> Vector, int column)</td></tr>
+<tr class="separator:a48260a61204dedc4d9ea995ffcc28d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d225dc79b05ea6ec62e92256d69728"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ad2d225dc79b05ea6ec62e92256d69728">SetSparseColumn</a> (<a class="el" href="classSparseVector.html">SparseVector</a> Vector, int column)</td></tr>
+<tr class="separator:ad2d225dc79b05ea6ec62e92256d69728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dd3c56341b0598cc729eaf0bb03d0f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5dd3c56341b0598cc729eaf0bb03d0f4">GetRows</a> ()</td></tr>
 <tr class="separator:a5dd3c56341b0598cc729eaf0bb03d0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad0c5eb7d375ff5d8a0354eada3393d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#aad0c5eb7d375ff5d8a0354eada3393d0">GetColumns</a> ()</td></tr>
 <tr class="separator:aad0c5eb7d375ff5d8a0354eada3393d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79dcdb540cf61273d290c9bc5c79e6fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseVector.html">SparseVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a79dcdb540cf61273d290c9bc5c79e6fd">GetSparseColumn</a> (int column)</td></tr>
-<tr class="separator:a79dcdb540cf61273d290c9bc5c79e6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9caac29ed80c4ab56a02a247a311d10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a9caac29ed80c4ab56a02a247a311d10e">Transpose</a> ()</td></tr>
+<tr class="separator:a9caac29ed80c4ab56a02a247a311d10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c633276cdf71428cf0f56fbb5bc86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#ad0c633276cdf71428cf0f56fbb5bc86c">TransposeSelf</a> ()</td></tr>
+<tr class="separator:ad0c633276cdf71428cf0f56fbb5bc86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5bf41c87def5063622e33dfaf43282cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html#a2b810acff05e1e9967b1c321ffaaa5ab">MatrixMapOld</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a5bf41c87def5063622e33dfaf43282cd">_M</a></td></tr>
-<tr class="separator:a5bf41c87def5063622e33dfaf43282cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a313a332b19a558c695c4e98d76607ce3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSparseMatrix.html#aec52f4525bdd6ea7b344f57754db640c">MatrixMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a313a332b19a558c695c4e98d76607ce3">_matrixMap</a></td></tr>
+<tr class="separator:a313a332b19a558c695c4e98d76607ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50173814163107261d4b11af62dc1435"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a50173814163107261d4b11af62dc1435">_rows</a></td></tr>
 <tr class="separator:a50173814163107261d4b11af62dc1435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a313bb480709cd772e4b1c69327eb0e8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a313bb480709cd772e4b1c69327eb0e8d">_columns</a></td></tr>
 <tr class="separator:a313bb480709cd772e4b1c69327eb0e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a1a4cb47b092da0f96316a29a26bf858b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSparseMatrix.html#a1a4cb47b092da0f96316a29a26bf858b">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;<a class="el" href="classSparseMatrix.html">SparseMatrix</a>)</td></tr>
+<tr class="separator:a1a4cb47b092da0f96316a29a26bf858b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00010">10</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="acaa46b906d27797875ef7407aa09e67c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaa46b906d27797875ef7407aa09e67c">&#9670;&nbsp;</a></span>MatrixIndex</h2>
+<a id="aec52f4525bdd6ea7b344f57754db640c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec52f4525bdd6ea7b344f57754db640c">&#9670;&nbsp;</a></span>MatrixMap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::pair&lt;int, int&gt; <a class="el" href="classSparseMatrix.html#acaa46b906d27797875ef7407aa09e67c">SparseMatrix::MatrixIndex</a></td>
+          <td class="memname">typedef std::map&lt;int, <a class="el" href="classSparseVector.html">SparseVector</a>&gt; <a class="el" href="classSparseMatrix.html#aec52f4525bdd6ea7b344f57754db640c">SparseMatrix::MatrixMap</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00015">15</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a96c4280a30290e288d974f4ecedae980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96c4280a30290e288d974f4ecedae980">&#9670;&nbsp;</a></span>MatrixMap</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="classSparseMatrix.html#acaa46b906d27797875ef7407aa09e67c">MatrixIndex</a>, double&gt; <a class="el" href="classSparseMatrix.html#a96c4280a30290e288d974f4ecedae980">SparseMatrix::MatrixMap</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00016">16</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2b810acff05e1e9967b1c321ffaaa5ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b810acff05e1e9967b1c321ffaaa5ab">&#9670;&nbsp;</a></span>MatrixMapOld</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::map&lt;int, <a class="el" href="classSparseVector.html">SparseVector</a>&gt; <a class="el" href="classSparseMatrix.html#a2b810acff05e1e9967b1c321ffaaa5ab">SparseMatrix::MatrixMapOld</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00014">14</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00013">13</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +183,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00009">9</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00010">10</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -218,7 +203,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00065">65</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00090">90</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -237,12 +222,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00063">63</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00088">88</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a79dcdb540cf61273d290c9bc5c79e6fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79dcdb540cf61273d290c9bc5c79e6fd">&#9670;&nbsp;</a></span>GetSparseColumn()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a79dcdb540cf61273d290c9bc5c79e6fd">&#9670;&nbsp;</a></span>GetSparseColumn() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -257,12 +242,32 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00067">67</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00092">92</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abffb2fa00396d91390b0b5247cfd2356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffb2fa00396d91390b0b5247cfd2356">&#9670;&nbsp;</a></span>GetSparseColumn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classSparseVector.html">SparseVector</a> SparseMatrix::GetSparseColumn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00102">102</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a7e0d2c8f9f84a54d8c3a7372298e7dde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e0d2c8f9f84a54d8c3a7372298e7dde">&#9670;&nbsp;</a></span>operator()()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0d2c8f9f84a54d8c3a7372298e7dde">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,12 +282,32 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00048">48</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00053">53</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f1cd6285cd9aefbea2ea3265f3206e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1cd6285cd9aefbea2ea3265f3206e6">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classSparseVector.html">SparseVector</a> &amp; SparseMatrix::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00067">67</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a659cb977fb095bb18d629a14ece5a4fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a659cb977fb095bb18d629a14ece5a4fb">&#9670;&nbsp;</a></span>operator[]()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a659cb977fb095bb18d629a14ece5a4fb">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +322,164 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00031">31</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00015">15</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a201ecbe3e4b60a11b7b6cf819c3b9823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201ecbe3e4b60a11b7b6cf819c3b9823">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classSparseVector.html">SparseVector</a> &amp; SparseMatrix::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00032">32</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a48260a61204dedc4d9ea995ffcc28d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48260a61204dedc4d9ea995ffcc28d55">&#9670;&nbsp;</a></span>SetOwnSparseColumn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> SparseMatrix::SetOwnSparseColumn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSparseVector.html">SparseVector</a>&#160;</td>
+          <td class="paramname"><em>Vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00140">140</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad2d225dc79b05ea6ec62e92256d69728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d225dc79b05ea6ec62e92256d69728">&#9670;&nbsp;</a></span>SetSparseColumn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> SparseMatrix::SetSparseColumn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSparseVector.html">SparseVector</a>&#160;</td>
+          <td class="paramname"><em>Vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00153">153</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9caac29ed80c4ab56a02a247a311d10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9caac29ed80c4ab56a02a247a311d10e">&#9670;&nbsp;</a></span>Transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> SparseMatrix::Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00112">112</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad0c633276cdf71428cf0f56fbb5bc86c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c633276cdf71428cf0f56fbb5bc86c">&#9670;&nbsp;</a></span>TransposeSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSparseMatrix.html">SparseMatrix</a> SparseMatrix::TransposeSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8cpp_source.html#l00125">125</a> of file <a class="el" href="SparseMatrix_8cpp_source.html">SparseMatrix.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a1a4cb47b092da0f96316a29a26bf858b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4cb47b092da0f96316a29a26bf858b">&#9670;&nbsp;</a></span>operator<<</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSparseMatrix.html">SparseMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>SparseMatrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SparseAlgebra_8cpp_source.html#l00153">153</a> of file <a class="el" href="SparseAlgebra_8cpp_source.html">SparseAlgebra.cpp</a>.</p>
 
 </div>
 </div>
@@ -314,23 +496,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00021">21</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00018">18</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a5bf41c87def5063622e33dfaf43282cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bf41c87def5063622e33dfaf43282cd">&#9670;&nbsp;</a></span>_M</h2>
+<a id="a313a332b19a558c695c4e98d76607ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313a332b19a558c695c4e98d76607ce3">&#9670;&nbsp;</a></span>_matrixMap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSparseMatrix.html#a2b810acff05e1e9967b1c321ffaaa5ab">MatrixMapOld</a> SparseMatrix::_M</td>
+          <td class="memname"><a class="el" href="classSparseMatrix.html#aec52f4525bdd6ea7b344f57754db640c">MatrixMap</a> SparseMatrix::_matrixMap</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00019">19</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00016">16</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
 
 </div>
 </div>
@@ -346,7 +528,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00020">20</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SparseMatrix_8hpp_source.html#l00017">17</a> of file <a class="el" href="SparseMatrix_8hpp_source.html">SparseMatrix.hpp</a>.</p>
 
 </div>
 </div>

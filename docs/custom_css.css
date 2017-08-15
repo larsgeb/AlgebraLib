@@ -1,3 +1,8 @@
+a {
+    color:#222;
+}
+
+
 .titlebar-background {
     background-color: #f8f8f8;
 }
@@ -43,6 +48,12 @@
 
 .dyncontent {
     margin: 30px;
+}
+
+
+.memItemLeft{
+    font-family: monospace, monospace;
+    /*font-size: 1em;*/
 }
 
 /* Short function description*/
@@ -244,11 +255,6 @@ table.memname th, table.memname tr, table.memname td{
 
 .memtitle span{
     margin-right: 10px;
-}
-
-.memItemLeft{
-    font-family: monospace, monospace;
-    /*font-size: 1em;*/
 }
 
 table.memname{
