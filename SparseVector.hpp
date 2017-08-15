@@ -10,21 +10,31 @@
 
 class SparseVector {
 public:
+    // Type definitions
     typedef std::map<int, double> VectorMap;
-    VectorMap _entries;
+
+    // Fields
+    VectorMap vectorMap;
     int _numElements;
     bool _isColumn;
 
+    // Constructors
     SparseVector();
-
+    SparseVector(const SparseVector& rhs);
     explicit SparseVector(int numElements);
+    SparseVector(int numElements, bool isColumn);
 
     // Getters and setters using operators
     double &operator[](int i);
-
+    const double &operator[](int i) const;
     double &operator()(int i);
+    const double &operator()(int i) const;
 
-    // Output operator overload
+    // Member functions
+    SparseVector Transpose();
+    SparseVector TransposeSelf();
+
+    // Friend functions
     friend std::ostream &operator<<(std::ostream &stream, const SparseVector &SparseVector);
 };
 

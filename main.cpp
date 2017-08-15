@@ -8,18 +8,22 @@
 
 int main() {
 
-    SparseVector Vector1(500);
-    SparseMatrix Matrix1(500, 500);
-
-    for (int i = 0; i < Matrix1._columns; i += 5) {
-        Matrix1[i][0] = 1;
-        Vector1[i] = i+2;
-    }
-
     std::clock_t start;
     start = std::clock();
 
-    std::cout << Matrix1 * Vector1;
+    SparseMatrix Mat1(200000000, 2000);
+    SparseMatrix Mat2(2000, 20);
+
+    Mat1[0][0] = 1;
+    Mat1[0][1] = 2;
+    Mat1[1][0] = 3;
+    Mat1[1][1] = 4;
+
+    Mat2[0][0] = 2;
+    Mat2[0][1] = 0;
+    Mat2[1][0] = 1;
+    Mat2[1][1] = 2;
+
 
     std::cout << std::endl << "Time: " << (std::clock() - start) / (double) (CLOCKS_PER_SEC) << " s" << std::endl;
 

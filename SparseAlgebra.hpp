@@ -15,8 +15,7 @@
 //
 //class SparseColumn;
 
-
-SparseMatrix MatrixMultiplication(const SparseMatrix &A, const SparseMatrix &B);
+SparseMatrix operator*(const SparseMatrix &A, const SparseMatrix &B);
 
 SparseVector operator*(const SparseMatrix &A, const SparseVector &U);
 

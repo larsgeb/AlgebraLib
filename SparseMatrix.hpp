@@ -9,32 +9,41 @@
 
 class SparseMatrix {
 public:
-    // Typedefs
-//    typedef std::map<int, double> SparseRow;
-    typedef std::map<int, SparseVector> MatrixMapOld;
-    typedef std::pair<int, int> MatrixIndex;
-    typedef std::map<MatrixIndex, double> MatrixMap;
+    // Type definitions
+    typedef std::map<int, SparseVector> MatrixMap;
 
     // Fields
-    MatrixMapOld _M;
+    MatrixMap _matrixMap;
     int _rows;
     int _columns;
 
-    // Constructors and destructors
+    // Constructors
     SparseMatrix(int rows, int columns);
 
+    // Getters and setters using operators
     SparseVector &operator[](int i);
-
+    const SparseVector &operator[] (int i) const;
     SparseVector &operator()(int i);
-
-
-    // Get details of matrix
-    int GetRows();
-
-    int GetColumns();
-
+    const SparseVector &operator() (int i) const;
+    /*
+     * Cannot get reference for columns, as that would require us to
+     * create the entire column, effectively creating every row and
+     * defeating the whole purpose of sparse algebra. Workaround;
+     * separate setters and getters for columns.
+     */
     SparseVector GetSparseColumn(int column);
+    const SparseVector GetSparseColumn(int column) const;
+    SparseMatrix SetOwnSparseColumn(SparseVector Vector, int column);
+    SparseMatrix SetSparseColumn(SparseVector Vector, int column);
 
+    // Member functions
+    int GetRows();
+    int GetColumns();
+    SparseMatrix Transpose();
+    SparseMatrix TransposeSelf();
+
+    // Friend functions
+    friend std::ostream &operator<<(std::ostream &stream, const SparseMatrix &SparseMatrix);
 };
 
 
