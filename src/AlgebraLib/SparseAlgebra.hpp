@@ -21,18 +21,18 @@
 namespace AlgebraLib {
     /**
      *  \brief Matrix matrix product.
-     * @param A \f$ m \times n \f$ matrix
-     * @param B \f$ n \times l \f$ matrix
-     * @return \f$ m \times l \f$ matrix
+     * @param A \f$ m \times n \f$ sparse matrix
+     * @param B \f$ n \times l \f$ sparse matrix
+     * @return \f$ m \times l \f$ sparse matrix
      * @throw std::length_error A and B are not of compatible dimension.
      */
     SparseMatrix operator*(const SparseMatrix &A, const SparseMatrix &B);
 
     /**
      *  \brief Matrix vector product.
-     * @param A \f$ m \times n \f$ matrix
-     * @param U \f$ n \times 1 \f$ (column) vector
-     * @return \f$ m \times 1 \f$ (column) vector
+     * @param A \f$ m \times n \f$ sparse matrix
+     * @param U \f$ n \times 1 \f$ (column) sparse vector
+     * @return \f$ m \times 1 \f$ (column) sparse vector
      * @throw std::length_error A and U are not of compatible dimension.
      * @throw std::invalid_argument U is not a column vector.
      */
@@ -40,9 +40,9 @@ namespace AlgebraLib {
 
     /**
      *  \brief Vector matrix product.
-     * @param U \f$ 1 \times n \f$ (row) vector
-     * @param A \f$ n \times l \f$ matrix
-     * @return \f$ 1 \times l \f$ (row) vector
+     * @param U \f$ 1 \times n \f$ sparse (row) vector
+     * @param A \f$ n \times l \f$ sparse matrix
+     * @return \f$ 1 \times l \f$ sparse (row) vector
      * @throw std::length_error U and A are not of compatible dimension.
      * @throw std::invalid_argument U is not a row vector.
      */
@@ -50,8 +50,8 @@ namespace AlgebraLib {
 
     /**
      * \brief Vector dot product.
-     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
-     * @param V \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
+     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
+     * @param V \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
      * @return scalar
      * @throw std::length_error U and V are not of compatible dimension.
      */
@@ -59,35 +59,35 @@ namespace AlgebraLib {
 
     /**
      * \brief Vector sum.
-     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
-     * @param V \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
-     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
+     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
+     * @param V \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
+     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      * @throw std::length_error U and V are not of compatible dimension.
      */
     SparseVector operator+(const SparseVector &U, const SparseVector &V);
 
     /**
      * \brief Vector difference.
-     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
-     * @param V \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
-     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
+     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
+     * @param V \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
+     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      * @throw std::length_error U and V are not of compatible dimension.
      */
     SparseVector operator-(const SparseVector &U, const SparseVector &V);
 
     /**
      * \brief Vector scalar product.
-     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
+     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
      * @param m scalar
-     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
+     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      */
     SparseVector operator*(const SparseVector &U, double m);
 
     /**
      * \brief Vector scalar product.
-     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
+     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
      * @param m scalar
-     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
+     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      *
      * reverse order of operator*(const SparseVector &U, double m). Functions are identical.
      *
@@ -96,9 +96,9 @@ namespace AlgebraLib {
 
     /**
      * \brief Vector scalar division.
-     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector
+     * @param U \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector
      * @param m scalar
-     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
+     * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      */
     SparseVector operator/(const SparseVector &U, double m);
 }

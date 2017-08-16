@@ -7,6 +7,9 @@
 
 // --- Algebra functions
 namespace AlgebraLib {
+
+
+
 /// \todo Create non-zero column index in SparseMatrix to speed up the iterations here, possibly during reference access.
     SparseMatrix operator*(const SparseMatrix &A, const SparseMatrix &B) {
 
