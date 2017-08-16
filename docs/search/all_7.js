@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sparse_20linear_20algebra_20documentation',['Sparse Linear Algebra Documentation',['../index.html',1,'']]],
   ['setownsparsecolumn',['SetOwnSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#ad2bbff5f68275136254476784d682238',1,'AlgebraLib::SparseMatrix']]],
   ['setsparsecolumn',['SetSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#a319b226be7b280eb3674faac11a1b0ca',1,'AlgebraLib::SparseMatrix']]],
   ['sparsealgebra_2ecpp',['SparseAlgebra.cpp',['../SparseAlgebra_8cpp.html',1,'']]],

@@ -2,7 +2,7 @@
 // Created by Lars Gebraad on 16-8-17.
 //
 
-/*! \mainpage Sparse Linear Algebra Documentation
+/*! \mainpage AlgebraLib Documentation
  *
  * This rather simple library was built to speed up some calculations in Hamiltonian
  * Markov Chain sampling of functions. By building it in a separate library, I can
