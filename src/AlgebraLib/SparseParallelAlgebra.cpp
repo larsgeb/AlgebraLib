@@ -13,7 +13,7 @@ SparseVector ParallelMatrixVector(const SparseMatrix &A, const SparseVector &U) 
     std::vector<std::thread> workers;
     int j = 0;
 
-    // TODO: Linux (and possibly other platforms) can't handle unlimited number of threads. Divide and conquer.
+    /// \todo Linux (and possibly other platforms) can't handle unlimited number of threads. Divide and conquer.
     for (auto const &rowM : A._matrixMap) {
         workers.emplace_back(std::thread([](int i, const SparseVector &row, const SparseVector &rhs, double &pElement) {
             pElement = row * rhs;
