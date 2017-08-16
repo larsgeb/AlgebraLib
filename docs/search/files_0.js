@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['algebralib_2ehpp',['AlgebraLib.hpp',['../AlgebraLib_8hpp.html',1,'']]]
 ];

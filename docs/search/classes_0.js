@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sparsematrix',['SparseMatrix',['../classSparseMatrix.html',1,'']]],
-  ['sparsevector',['SparseVector',['../classSparseVector.html',1,'']]]
+  ['matrix',['Matrix',['../classAlgebraLib_1_1Matrix.html',1,'AlgebraLib']]]
 ];

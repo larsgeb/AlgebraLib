@@ -1,10 +1,11 @@
 <map id="SparseVector.hpp" name="SparseVector.hpp">
-<area shape="rect" id="node2" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="105,155,237,181"/>
-<area shape="rect" id="node7" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="209,80,333,107"/>
-<area shape="rect" id="node9" href="$SparseVector_8cpp.html" title="SparseVector.cpp" alt="" coords="357,80,483,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="main.cpp" alt="" coords="5,229,80,256"/>
-<area shape="rect" id="node4" href="$SparseAlgebra_8cpp.html" title="SparseAlgebra.cpp" alt="" coords="105,229,237,256"/>
-<area shape="rect" id="node5" href="$SparseParallelAlgebra_8hpp.html" title="SparseParallelAlgebra.hpp" alt="" coords="261,229,435,256"/>
-<area shape="rect" id="node6" href="$SparseParallelAlgebra_8cpp.html" title="SparseParallelAlgebra.cpp" alt="" coords="261,304,435,331"/>
-<area shape="rect" id="node8" href="$SparseMatrix_8cpp.html" title="SparseMatrix.cpp" alt="" coords="261,155,385,181"/>
+<area shape="rect" id="node2" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="217,80,341,107"/>
+<area shape="rect" id="node10" href="$SparseVector_8cpp.html" title="SparseVector.cpp" alt="" coords="365,80,492,107"/>
+<area shape="rect" id="node3" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="137,155,269,181"/>
+<area shape="rect" id="node9" href="$SparseMatrix_8cpp.html" title="SparseMatrix.cpp" alt="" coords="293,155,417,181"/>
+<area shape="rect" id="node4" href="$AlgebraLib_8hpp.html" title="AlgebraLib.hpp" alt="" coords="5,229,113,256"/>
+<area shape="rect" id="node6" href="$SparseAlgebra_8cpp.html" title="SparseAlgebra.cpp" alt="" coords="137,229,269,256"/>
+<area shape="rect" id="node7" href="$SparseParallelAlgebra_8hpp.html" title="SparseParallelAlgebra.hpp" alt="" coords="293,229,468,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="main.cpp" alt="" coords="22,304,97,331"/>
+<area shape="rect" id="node8" href="$SparseParallelAlgebra_8cpp.html" title="SparseParallelAlgebra.cpp" alt="" coords="293,304,468,331"/>
 </map>

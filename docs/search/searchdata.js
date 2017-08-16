@@ -1,36 +1,39 @@
 var indexSectionsWithContent =
 {
-  0: "_gmopstv",
-  1: "s",
-  2: "ms",
-  3: "gmopst",
-  4: "_v",
-  5: "mv",
-  6: "o",
-  7: "s"
+  0: "_afgmopstv",
+  1: "msv",
+  2: "a",
+  3: "afmsv",
+  4: "gmopstv",
+  5: "_",
+  6: "mv",
+  7: "o",
+  8: "st"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "functions",
-  4: "variables",
-  5: "typedefs",
-  6: "related",
-  7: "pages"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "typedefs",
+  7: "related",
+  8: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Files",
-  3: "Functions",
-  4: "Variables",
-  5: "Typedefs",
-  6: "Friends",
-  7: "Pages"
+  2: "Namespaces",
+  3: "Files",
+  4: "Functions",
+  5: "Variables",
+  6: "Typedefs",
+  7: "Friends",
+  8: "Pages"
 };
 

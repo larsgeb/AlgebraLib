@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getcolumns',['GetColumns',['../classSparseMatrix.html#aad0c5eb7d375ff5d8a0354eada3393d0',1,'SparseMatrix']]],
-  ['getrows',['GetRows',['../classSparseMatrix.html#a5dd3c56341b0598cc729eaf0bb03d0f4',1,'SparseMatrix']]],
-  ['getsparsecolumn',['GetSparseColumn',['../classSparseMatrix.html#a79dcdb540cf61273d290c9bc5c79e6fd',1,'SparseMatrix::GetSparseColumn(int column)'],['../classSparseMatrix.html#abffb2fa00396d91390b0b5247cfd2356',1,'SparseMatrix::GetSparseColumn(int column) const']]]
+  ['getcolumns',['GetColumns',['../classAlgebraLib_1_1SparseMatrix.html#a6085a908e256a00cd44473d32ea1c644',1,'AlgebraLib::SparseMatrix']]],
+  ['getrows',['GetRows',['../classAlgebraLib_1_1SparseMatrix.html#aaaddf175a4b041350c80ac1645d2101c',1,'AlgebraLib::SparseMatrix']]],
+  ['getsparsecolumn',['GetSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#acf4f72893c42aae0ddc0789566a291ca',1,'AlgebraLib::SparseMatrix::GetSparseColumn(int column)'],['../classAlgebraLib_1_1SparseMatrix.html#a0416f92fe161e59a49c82d9040b3584a',1,'AlgebraLib::SparseMatrix::GetSparseColumn(int column) const']]]
 ];

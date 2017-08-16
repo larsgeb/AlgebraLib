@@ -1,5 +1,5 @@
 <map id="SparseAlgebra.cpp" name="SparseAlgebra.cpp">
-<area shape="rect" id="node2" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="89,80,221,107"/>
-<area shape="rect" id="node5" href="$SparseVector_8hpp.html" title="SparseVector.hpp" alt="" coords="178,229,305,256"/>
-<area shape="rect" id="node7" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="230,155,354,181"/>
+<area shape="rect" id="node3" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="57,80,189,107"/>
+<area shape="rect" id="node4" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="61,155,185,181"/>
+<area shape="rect" id="node5" href="$SparseVector_8hpp.html" title="SparseVector.hpp" alt="" coords="108,229,235,256"/>
 </map>

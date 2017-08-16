@@ -1,8 +1,9 @@
 <map id="SparseMatrix.hpp" name="SparseMatrix.hpp">
-<area shape="rect" id="node2" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="105,80,237,107"/>
-<area shape="rect" id="node7" href="$SparseMatrix_8cpp.html" title="SparseMatrix.cpp" alt="" coords="261,80,385,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="main.cpp" alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node4" href="$SparseAlgebra_8cpp.html" title="SparseAlgebra.cpp" alt="" coords="105,155,237,181"/>
-<area shape="rect" id="node5" href="$SparseParallelAlgebra_8hpp.html" title="SparseParallelAlgebra.hpp" alt="" coords="261,155,435,181"/>
-<area shape="rect" id="node6" href="$SparseParallelAlgebra_8cpp.html" title="SparseParallelAlgebra.cpp" alt="" coords="261,229,435,256"/>
+<area shape="rect" id="node2" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="137,80,269,107"/>
+<area shape="rect" id="node8" href="$SparseMatrix_8cpp.html" title="SparseMatrix.cpp" alt="" coords="293,80,417,107"/>
+<area shape="rect" id="node3" href="$AlgebraLib_8hpp.html" title="AlgebraLib.hpp" alt="" coords="5,155,113,181"/>
+<area shape="rect" id="node5" href="$SparseAlgebra_8cpp.html" title="SparseAlgebra.cpp" alt="" coords="137,155,269,181"/>
+<area shape="rect" id="node6" href="$SparseParallelAlgebra_8hpp.html" title="SparseParallelAlgebra.hpp" alt="" coords="293,155,468,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="main.cpp" alt="" coords="22,229,97,256"/>
+<area shape="rect" id="node7" href="$SparseParallelAlgebra_8cpp.html" title="SparseParallelAlgebra.cpp" alt="" coords="293,229,468,256"/>
 </map>

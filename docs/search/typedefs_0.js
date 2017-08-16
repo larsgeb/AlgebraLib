@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrixmap',['MatrixMap',['../classSparseMatrix.html#aec52f4525bdd6ea7b344f57754db640c',1,'SparseMatrix']]]
+  ['matrixmap',['MatrixMap',['../classAlgebraLib_1_1SparseMatrix.html#a4f5f91d6e5d26fc162393e976dfc7beb',1,'AlgebraLib::SparseMatrix']]]
 ];

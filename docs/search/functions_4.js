@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['setownsparsecolumn',['SetOwnSparseColumn',['../classSparseMatrix.html#a48260a61204dedc4d9ea995ffcc28d55',1,'SparseMatrix']]],
-  ['setsparsecolumn',['SetSparseColumn',['../classSparseMatrix.html#ad2d225dc79b05ea6ec62e92256d69728',1,'SparseMatrix']]],
-  ['sparsematrix',['SparseMatrix',['../classSparseMatrix.html#aa4fce3c8738a9b692f2854b090ffdeee',1,'SparseMatrix']]],
-  ['sparsevector',['SparseVector',['../classSparseVector.html#a45c750857b45f9d13bde38f3d7837013',1,'SparseVector::SparseVector()'],['../classSparseVector.html#ada034c87d402fbcbffeb5e6761d2159a',1,'SparseVector::SparseVector(const SparseVector &amp;rhs)'],['../classSparseVector.html#a40587f86776cb97506c96e2ea26f5066',1,'SparseVector::SparseVector(int numElements)'],['../classSparseVector.html#a1a13d71c5e16ff77ba12380618d3252f',1,'SparseVector::SparseVector(int numElements, bool isColumn)']]]
+  ['setownsparsecolumn',['SetOwnSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#ad2bbff5f68275136254476784d682238',1,'AlgebraLib::SparseMatrix']]],
+  ['setsparsecolumn',['SetSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#a319b226be7b280eb3674faac11a1b0ca',1,'AlgebraLib::SparseMatrix']]],
+  ['sparsematrix',['SparseMatrix',['../classAlgebraLib_1_1SparseMatrix.html#a0d9bcde4dcb9df4296b8acb2a6e03cd7',1,'AlgebraLib::SparseMatrix']]],
+  ['sparsevector',['SparseVector',['../classAlgebraLib_1_1SparseVector.html#af20759cb00c4dd34f733aec1d5b5b8bf',1,'AlgebraLib::SparseVector::SparseVector()'],['../classAlgebraLib_1_1SparseVector.html#adfd82c15c7fc12263c638c7c1220c2ee',1,'AlgebraLib::SparseVector::SparseVector(int numElements)'],['../classAlgebraLib_1_1SparseVector.html#a5a53574666ff6603a7dc37c6436bcd3b',1,'AlgebraLib::SparseVector::SparseVector(int numElements, bool isColumn)']]]
 ];

@@ -1,6 +1,7 @@
 <map id="SparseAlgebra.hpp" name="SparseAlgebra.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="main.cpp" alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="$SparseAlgebra_8cpp.html" title="SparseAlgebra.cpp" alt="" coords="105,80,237,107"/>
-<area shape="rect" id="node4" href="$SparseParallelAlgebra_8hpp.html" title="SparseParallelAlgebra.hpp" alt="" coords="261,80,435,107"/>
-<area shape="rect" id="node5" href="$SparseParallelAlgebra_8cpp.html" title="SparseParallelAlgebra.cpp" alt="" coords="261,155,435,181"/>
+<area shape="rect" id="node2" href="$AlgebraLib_8hpp.html" title="AlgebraLib.hpp" alt="" coords="5,80,113,107"/>
+<area shape="rect" id="node4" href="$SparseAlgebra_8cpp.html" title="SparseAlgebra.cpp" alt="" coords="137,80,269,107"/>
+<area shape="rect" id="node5" href="$SparseParallelAlgebra_8hpp.html" title="SparseParallelAlgebra.hpp" alt="" coords="293,80,468,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="main.cpp" alt="" coords="22,155,97,181"/>
+<area shape="rect" id="node6" href="$SparseParallelAlgebra_8cpp.html" title="SparseParallelAlgebra.cpp" alt="" coords="293,155,468,181"/>
 </map>
