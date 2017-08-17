@@ -3,11 +3,11 @@
 //
 
 #include <ctime>
+#include <iomanip>
 #include "src/AlgebraLib/AlgebraLib.hpp"
 
 
 int main() {
-
     AlgebraLib::Matrix PSD(3, 3);
 
     PSD[0][0] = 4;
@@ -20,11 +20,13 @@ int main() {
     PSD[2][1] = -43;
     PSD[2][2] = 98;
 
-    std::cout << PSD.CholeskyDecompose();
-    std::cout << PSD.CholeskyDecompose().InvertLowerTriangular();
-    std::cout << PSD.CholeskyDecompose() * PSD.CholeskyDecompose().InvertLowerTriangular();
 
-    // That works, nice.
+    AlgebraLib::WriteMatrix(PSD.CholeskyDecompose().InvertLowerTriangular(),"Matrix.txt");
+
+
+    AlgebraLib::Matrix A = AlgebraLib::ReadMatrix("Matrix.txt");
+
+    std::cout << A.InvertLowerTriangular() * A;
 
     return EXIT_SUCCESS;
 }

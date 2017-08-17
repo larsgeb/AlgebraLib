@@ -114,6 +114,15 @@ namespace AlgebraLib {
     Matrix VectorToDiagonal(Vector &U, int offset = 0);
 
     Matrix VectorToDiagonal(const Vector &Vector, int offset = 0);
+
+    Matrix ReadMatrix(const char *filename);
+
+    void WriteMatrix(Matrix M, const char *filename);
+
+    Vector ReadVector(const char *filename);
+
+    void WriteVector(Vector U, const char *filename);
+
 };
 
 #endif //LINEARALGEBRA_FULLALGEBRA_HPP

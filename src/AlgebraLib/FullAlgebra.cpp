@@ -1,8 +1,9 @@
 //
 // Created by Lars Gebraad on 16-8-17.
 //
-#include <iostream>
-#include <unordered_map>
+
+#include <iomanip>
+#include "Globals.hpp"
 #include "FullAlgebra.hpp"
 
 namespace AlgebraLib {
@@ -192,7 +193,7 @@ namespace AlgebraLib {
             for (int i = 0; i < U.elements(); ++i) {
                 Diagonal[i + offset][i] = U[i];
             }
-        }else{
+        } else {
             for (int i = 0; i < U.elements(); ++i) {
                 Diagonal[i][i - offset] = U[i];
             }
@@ -202,7 +203,7 @@ namespace AlgebraLib {
     }
 
     Matrix operator*(const Matrix &A, const double &b) {
-        Matrix Product(A.rows(),A.columns());
+        Matrix Product(A.rows(), A.columns());
 
         for (int row = 0; row < A.rows(); ++row) {
             Product[row] = A[row].Transpose() * b;
@@ -213,6 +214,96 @@ namespace AlgebraLib {
 
     Matrix operator*(const double &b, const Matrix &A) {
         return A * b;
+    }
+
+    Matrix ReadMatrix(const char *filename) {
+        double element;
+        unsigned long rows;
+        unsigned long columns;
+
+        std::ifstream infile(filename);
+
+        // Ignore first lines
+        infile.ignore(500, '\n');
+        infile.ignore(500, '\n');
+        infile.ignore(500, '\n');
+
+        infile >> rows;
+        infile >> columns;
+
+        Matrix ReadMatrix(rows, columns);
+
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                infile >> element;
+                ReadMatrix[i][j] = element;
+            }
+        }
+
+        infile.close();
+
+        return ReadMatrix;
+    }
+
+    void WriteMatrix(Matrix M, const char *filename) {
+        std::ofstream outfile;
+        outfile.open(filename);
+
+        outfile << std::setprecision(9);
+        outfile << "# Written matrix" << std::endl;
+        outfile << "# " << std::endl;
+        outfile << "# " << std::endl;
+
+        outfile << M.rows() << " " << M.columns() << std::endl;
+        for (auto &&row : M) {
+            for (auto &&element : row) {
+                outfile << element << " ";
+            }
+            outfile << std::endl;
+        }
+        outfile.close();
+    }
+
+    Vector ReadVector(const char *filename) {
+        double element;
+        unsigned long columns;
+
+        std::ifstream infile(filename);
+
+        // Ignore first lines
+        infile.ignore(500, '\n');
+        infile.ignore(500, '\n');
+        infile.ignore(500, '\n');
+
+        infile >> columns;
+
+        Vector ReadVector(columns, true);
+
+        for (int i = 0; i < columns; i++) {
+            infile >> element;
+            ReadVector[i] = element;
+        }
+
+        infile.close();
+
+        return ReadVector;
+    }
+
+    void WriteVector(Vector U, const char *filename) {
+        std::ofstream outfile;
+        outfile.open(filename);
+
+        outfile << std::setprecision(9);
+        outfile << "# Written vector" << std::endl;
+        outfile << "# " << std::endl;
+        outfile << "# " << std::endl;
+
+        outfile << U.elements() << std::endl;
+        for (int i = 0; i < U.elements(); i++) {
+            outfile << U[i] << " ";
+        }
+        outfile.close();
     }
 
 }

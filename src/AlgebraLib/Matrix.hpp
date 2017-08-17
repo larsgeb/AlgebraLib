@@ -90,8 +90,6 @@ namespace AlgebraLib {
 
         const Vector getColumn(int i) const;
 
-        Matrix setColumn(int i, Vector &Vector);
-
         Matrix setColumn(int i, Vector Vector);
 
         // Friend functions
