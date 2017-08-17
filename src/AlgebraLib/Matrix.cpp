@@ -159,7 +159,7 @@ namespace AlgebraLib {
     }
 
     Matrix Matrix::setColumn(int i, Vector Vector) {
-        if (rows() != Vector.elements()) {
+        if (rows() != Vector.size()) {
             throw std::length_error(
                     "Column assignment: vector and matrix are not compatible in dimension");
         } else if (!Vector.isColumn()) {
@@ -223,11 +223,11 @@ namespace AlgebraLib {
         Vector Trace(rows() - abs(offset));
 
         if (offset > 0) {
-            for (int element = 0; element < Trace.elements(); ++element) {
+            for (int element = 0; element < Trace.size(); ++element) {
                 Trace[element] = (*this)[element + offset][element];
             }
         } else {
-            for (int element = 0; element < Trace.elements(); ++element) {
+            for (int element = 0; element < Trace.size(); ++element) {
                 Trace[element] = (*this)[element][element - offset];
             }
         }
@@ -247,7 +247,7 @@ namespace AlgebraLib {
 
         X[0] = (Y[0] / (*this)[0][0]);
 
-        for (int i = 1; i < X.elements(); ++i) {
+        for (int i = 1; i < X.size(); ++i) {
             double sum = 0.0;
 
             for (int j = 0; j < i; ++j) {

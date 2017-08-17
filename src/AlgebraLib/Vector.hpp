@@ -47,9 +47,9 @@ namespace AlgebraLib {
          * \brief Retrieving private member field of dimensions of vector.
          * @return Dimensions of vector.
          */
-        const unsigned long &elements() { return _elements; };
+        const unsigned long &size() { return _elements; };
 
-        const unsigned long &elements() const { return _elements; };
+        const unsigned long &size() const { return _elements; };
 
         Vector Transpose();
 

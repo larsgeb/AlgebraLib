@@ -96,7 +96,7 @@ namespace AlgebraLib {
     }
 
     Vector operator*(const Matrix &A, const Vector &U) {
-        if (A.columns() != U.elements()) {
+        if (A.columns() != U.size()) {
             throw std::length_error(
                     "Left multiplication with matrix: vector and matrix are not compatible in dimension");
         } else if (!U.isColumn()) {
@@ -106,14 +106,14 @@ namespace AlgebraLib {
 
         Vector Product(A.rows(), true);
 
-        for (int i = 0; i < U.elements(); ++i) {
+        for (int i = 0; i < U.size(); ++i) {
             Product[i] = A[i] * U;
         }
         return Product;
     }
 
     Vector operator*(const Vector &U, const Matrix &A) {
-        if (A.rows() != U.elements()) {
+        if (A.rows() != U.size()) {
             throw std::length_error(
                     "Right multiplication with matrix: vector and matrix are not compatible in dimension");
         } else if (U.isColumn()) {
@@ -124,7 +124,7 @@ namespace AlgebraLib {
 
         Vector Product(A.columns(), false);
 
-        for (int i = 0; i < U.elements(); ++i) {
+        for (int i = 0; i < U.size(); ++i) {
             Product[i] = A.getColumn(i) * U;
         }
 
@@ -132,32 +132,32 @@ namespace AlgebraLib {
     }
 
     double operator*(const Vector &U, const Vector &V) {
-        if (U.elements() != V.elements()) throw std::length_error("Vectors are not the same dimension");
+        if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
 
         double inProduct = 0.0;
-        for (int element = 0; element < U.elements(); ++element) {
+        for (int element = 0; element < U.size(); ++element) {
             inProduct += U[element] * V[element];
         }
         return inProduct;
     }
 
     Vector operator+(const Vector &U, const Vector &V) {
-        if (U.elements() != V.elements()) throw std::length_error("Vectors are not the same dimension");
+        if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
 
-        Vector Sum(U.elements(), U.isColumn());
+        Vector Sum(U.size(), U.isColumn());
 
-        for (int element = 0; element < U.elements(); ++element) {
+        for (int element = 0; element < U.size(); ++element) {
             Sum[element] = U[element] + V[element];
         }
         return Sum;
     }
 
     Vector operator-(const Vector &U, const Vector &V) {
-        if (U.elements() != V.elements()) throw std::length_error("Vectors are not the same dimension");
+        if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
 
-        Vector Difference(U.elements(), U.isColumn());
+        Vector Difference(U.size(), U.isColumn());
 
-        for (int element = 0; element < U.elements(); ++element) {
+        for (int element = 0; element < U.size(); ++element) {
             Difference[element] = U[element] - V[element];
         }
         return Difference;
@@ -165,9 +165,9 @@ namespace AlgebraLib {
 
     Vector operator*(const Vector &U, double m) {
 
-        Vector Product(U.elements(), U.isColumn());
+        Vector Product(U.size(), U.isColumn());
 
-        for (int element = 0; element < U.elements(); ++element) {
+        for (int element = 0; element < U.size(); ++element) {
             Product[element] = U[element] * m;
         }
 
@@ -187,14 +187,14 @@ namespace AlgebraLib {
     }
 
     Matrix VectorToDiagonal(const Vector &U, int offset) {
-        Matrix Diagonal(U.elements() + abs(offset), U.elements() + abs(offset));
+        Matrix Diagonal(U.size() + abs(offset), U.size() + abs(offset));
 
         if (offset > 0) {
-            for (int i = 0; i < U.elements(); ++i) {
+            for (int i = 0; i < U.size(); ++i) {
                 Diagonal[i + offset][i] = U[i];
             }
         } else {
-            for (int i = 0; i < U.elements(); ++i) {
+            for (int i = 0; i < U.size(); ++i) {
                 Diagonal[i][i - offset] = U[i];
             }
         }
@@ -299,8 +299,8 @@ namespace AlgebraLib {
         outfile << "# " << std::endl;
         outfile << "# " << std::endl;
 
-        outfile << U.elements() << std::endl;
-        for (int i = 0; i < U.elements(); i++) {
+        outfile << U.size() << std::endl;
+        for (int i = 0; i < U.size(); i++) {
             outfile << U[i] << " ";
         }
         outfile.close();
