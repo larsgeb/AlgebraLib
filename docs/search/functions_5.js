@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['transpose',['Transpose',['../classAlgebraLib_1_1SparseMatrix.html#a98595e133f6d9707b205eda17877bd69',1,'AlgebraLib::SparseMatrix::Transpose()'],['../classAlgebraLib_1_1SparseVector.html#a67a51934a66fa6f74224f738e0f7a8af',1,'AlgebraLib::SparseVector::Transpose()']]],
-  ['transposeself',['TransposeSelf',['../classAlgebraLib_1_1SparseMatrix.html#a41d3b5c15f3a87c9f576068ca9f6d68d',1,'AlgebraLib::SparseMatrix::TransposeSelf()'],['../classAlgebraLib_1_1SparseVector.html#a3e5241bcc0fc09d0deccf598e880ab8e',1,'AlgebraLib::SparseVector::TransposeSelf()']]]
+  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['matrix',['Matrix',['../classAlgebraLib_1_1Matrix.html#ae809baa096a8747850446fb7b0a213ee',1,'AlgebraLib::Matrix::Matrix()'],['../classAlgebraLib_1_1Matrix.html#a20dc826ec1aeba5294090880cb3c3749',1,'AlgebraLib::Matrix::Matrix(unsigned long rows, unsigned long columns)']]]
 ];

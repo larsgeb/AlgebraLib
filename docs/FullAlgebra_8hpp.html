@@ -78,14 +78,20 @@ $(function() {
 <div class="title">FullAlgebra.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>&quot;</code><br />
+
+<p>Functions for <a class="el" href="namespaceAlgebraLib.html" title="Namespace for the library. ">AlgebraLib</a> acting on const full matrices and vectors.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Globals_8hpp_source.html">Globals.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FullAlgebra.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="FullAlgebra_8hpp__incl.png" border="0" usemap="#FullAlgebra_8hpp" alt=""/></div>
 <map name="FullAlgebra_8hpp" id="FullAlgebra_8hpp">
-<area shape="rect" id="node2" href="Matrix_8hpp.html" title="Matrix.hpp" alt="" coords="40,80,123,107"/>
-<area shape="rect" id="node4" href="Vector_8hpp.html" title="Vector.hpp" alt="" coords="79,155,164,181"/>
+<area shape="rect" id="node2" href="Globals_8hpp.html" title="Globals.hpp" alt="" coords="163,229,253,256"/>
+<area shape="rect" id="node8" href="Vector_8hpp.html" title="Vector.hpp" alt="" coords="165,155,251,181"/>
+<area shape="rect" id="node9" href="Matrix_8hpp.html" title="Matrix.hpp" alt="" coords="231,80,313,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -93,8 +99,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="FullAlgebra_8hpp__dep__incl.png" border="0" usemap="#FullAlgebra_8hppdep" alt=""/></div>
 <map name="FullAlgebra_8hppdep" id="FullAlgebra_8hppdep">
-<area shape="rect" id="node2" href="AlgebraLib_8hpp.html" title="AlgebraLib.hpp" alt="" coords="5,80,113,107"/>
+<area shape="rect" id="node2" href="AlgebraLib_8hpp.html" title="This header acts as an include for the AlgebraLib library. " alt="" coords="5,80,113,107"/>
 <area shape="rect" id="node4" href="FullAlgebra_8cpp.html" title="FullAlgebra.cpp" alt="" coords="138,80,250,107"/>
+<area shape="rect" id="node5" href="Vector_8cpp.html" title="Vector.cpp" alt="" coords="274,80,359,107"/>
 <area shape="rect" id="node3" href="main_8cpp.html" title="main.cpp" alt="" coords="22,155,97,181"/>
 </map>
 </div>
@@ -104,39 +111,67 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceAlgebraLib"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html">AlgebraLib</a></td></tr>
+<tr class="memdesc:namespaceAlgebraLib"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for the library. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3c2df0d2b8b7d5dca428887f7fd51551"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a3c2df0d2b8b7d5dca428887f7fd51551">AlgebraLib::operator*</a> (const Matrix &amp;A, const Matrix &amp;B)</td></tr>
-<tr class="memdesc:a3c2df0d2b8b7d5dca428887f7fd51551"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> matrix product.  <a href="namespaceAlgebraLib.html#a3c2df0d2b8b7d5dca428887f7fd51551">More...</a><br /></td></tr>
+<tr class="memdesc:a3c2df0d2b8b7d5dca428887f7fd51551"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Matrix.html" title="Class for full matrices. ">Matrix</a> matrix product.  <a href="namespaceAlgebraLib.html#a3c2df0d2b8b7d5dca428887f7fd51551">More...</a><br /></td></tr>
 <tr class="separator:a3c2df0d2b8b7d5dca428887f7fd51551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9973024b5609ce4bb3d96720616996"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a7b9973024b5609ce4bb3d96720616996">AlgebraLib::operator*</a> (const Matrix &amp;A, const double &amp;b)</td></tr>
+<tr class="separator:a7b9973024b5609ce4bb3d96720616996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548d3c81807c2bef1663bb19d9176a8e"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a548d3c81807c2bef1663bb19d9176a8e">AlgebraLib::operator*</a> (const double &amp;b, const Matrix &amp;A)</td></tr>
+<tr class="separator:a548d3c81807c2bef1663bb19d9176a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990081e2bb57d49fc1792f26b4ac889b"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a990081e2bb57d49fc1792f26b4ac889b">AlgebraLib::operator+</a> (const Matrix &amp;A, const Matrix &amp;B)</td></tr>
+<tr class="separator:a990081e2bb57d49fc1792f26b4ac889b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9580b6529c80653a80098babfb983179"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a9580b6529c80653a80098babfb983179">AlgebraLib::operator-</a> (const Matrix &amp;A, const Matrix &amp;B)</td></tr>
+<tr class="separator:a9580b6529c80653a80098babfb983179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34df6fff61844d5b2e85f74400671b92"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a34df6fff61844d5b2e85f74400671b92">AlgebraLib::operator*</a> (const Matrix &amp;A, const Vector &amp;U)</td></tr>
-<tr class="memdesc:a34df6fff61844d5b2e85f74400671b92"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> vector product.  <a href="namespaceAlgebraLib.html#a34df6fff61844d5b2e85f74400671b92">More...</a><br /></td></tr>
+<tr class="memdesc:a34df6fff61844d5b2e85f74400671b92"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Matrix.html" title="Class for full matrices. ">Matrix</a> vector product.  <a href="namespaceAlgebraLib.html#a34df6fff61844d5b2e85f74400671b92">More...</a><br /></td></tr>
 <tr class="separator:a34df6fff61844d5b2e85f74400671b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3a5af86e7d4d027e6e4957a10f71aa"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a2f3a5af86e7d4d027e6e4957a10f71aa">AlgebraLib::operator*</a> (const Vector &amp;U, const Matrix &amp;A)</td></tr>
-<tr class="memdesc:a2f3a5af86e7d4d027e6e4957a10f71aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> matrix product.  <a href="namespaceAlgebraLib.html#a2f3a5af86e7d4d027e6e4957a10f71aa">More...</a><br /></td></tr>
+<tr class="memdesc:a2f3a5af86e7d4d027e6e4957a10f71aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> matrix product.  <a href="namespaceAlgebraLib.html#a2f3a5af86e7d4d027e6e4957a10f71aa">More...</a><br /></td></tr>
 <tr class="separator:a2f3a5af86e7d4d027e6e4957a10f71aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad946db3e789a0c7d1976e81e8afaa858"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#ad946db3e789a0c7d1976e81e8afaa858">AlgebraLib::operator*</a> (const Vector &amp;U, const Vector &amp;V)</td></tr>
-<tr class="memdesc:ad946db3e789a0c7d1976e81e8afaa858"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> dot product.  <a href="namespaceAlgebraLib.html#ad946db3e789a0c7d1976e81e8afaa858">More...</a><br /></td></tr>
+<tr class="memdesc:ad946db3e789a0c7d1976e81e8afaa858"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> dot product.  <a href="namespaceAlgebraLib.html#ad946db3e789a0c7d1976e81e8afaa858">More...</a><br /></td></tr>
 <tr class="separator:ad946db3e789a0c7d1976e81e8afaa858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eaded9b015da5fcc8dca0f565e46dd0"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a9eaded9b015da5fcc8dca0f565e46dd0">AlgebraLib::operator+</a> (const Vector &amp;U, const Vector &amp;V)</td></tr>
-<tr class="memdesc:a9eaded9b015da5fcc8dca0f565e46dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> sum.  <a href="namespaceAlgebraLib.html#a9eaded9b015da5fcc8dca0f565e46dd0">More...</a><br /></td></tr>
+<tr class="memdesc:a9eaded9b015da5fcc8dca0f565e46dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> sum.  <a href="namespaceAlgebraLib.html#a9eaded9b015da5fcc8dca0f565e46dd0">More...</a><br /></td></tr>
 <tr class="separator:a9eaded9b015da5fcc8dca0f565e46dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a235c5c97d3317edd757d490d806771c0"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a235c5c97d3317edd757d490d806771c0">AlgebraLib::operator-</a> (const Vector &amp;U, const Vector &amp;V)</td></tr>
-<tr class="memdesc:a235c5c97d3317edd757d490d806771c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> difference.  <a href="namespaceAlgebraLib.html#a235c5c97d3317edd757d490d806771c0">More...</a><br /></td></tr>
+<tr class="memdesc:a235c5c97d3317edd757d490d806771c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> difference.  <a href="namespaceAlgebraLib.html#a235c5c97d3317edd757d490d806771c0">More...</a><br /></td></tr>
 <tr class="separator:a235c5c97d3317edd757d490d806771c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0da408708bca9cab757aed3743f0fe8c"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a0da408708bca9cab757aed3743f0fe8c">AlgebraLib::operator*</a> (const Vector &amp;U, double m)</td></tr>
-<tr class="memdesc:a0da408708bca9cab757aed3743f0fe8c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> scalar product.  <a href="namespaceAlgebraLib.html#a0da408708bca9cab757aed3743f0fe8c">More...</a><br /></td></tr>
+<tr class="memdesc:a0da408708bca9cab757aed3743f0fe8c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> scalar product.  <a href="namespaceAlgebraLib.html#a0da408708bca9cab757aed3743f0fe8c">More...</a><br /></td></tr>
 <tr class="separator:a0da408708bca9cab757aed3743f0fe8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c82a6832569401a7c71ece3a32a9fcd"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a2c82a6832569401a7c71ece3a32a9fcd">AlgebraLib::operator*</a> (double m, const Vector &amp;U)</td></tr>
-<tr class="memdesc:a2c82a6832569401a7c71ece3a32a9fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> scalar product.  <a href="namespaceAlgebraLib.html#a2c82a6832569401a7c71ece3a32a9fcd">More...</a><br /></td></tr>
+<tr class="memdesc:a2c82a6832569401a7c71ece3a32a9fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> scalar product.  <a href="namespaceAlgebraLib.html#a2c82a6832569401a7c71ece3a32a9fcd">More...</a><br /></td></tr>
 <tr class="separator:a2c82a6832569401a7c71ece3a32a9fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b4a07b3966cf40caba613f6b996f0a"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a06b4a07b3966cf40caba613f6b996f0a">AlgebraLib::operator/</a> (const Vector &amp;U, double m)</td></tr>
-<tr class="memdesc:a06b4a07b3966cf40caba613f6b996f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> scalar division.  <a href="namespaceAlgebraLib.html#a06b4a07b3966cf40caba613f6b996f0a">More...</a><br /></td></tr>
+<tr class="memdesc:a06b4a07b3966cf40caba613f6b996f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> scalar division.  <a href="namespaceAlgebraLib.html#a06b4a07b3966cf40caba613f6b996f0a">More...</a><br /></td></tr>
 <tr class="separator:a06b4a07b3966cf40caba613f6b996f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e23193270e76d9678b300d1be04692"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#aa3e23193270e76d9678b300d1be04692">AlgebraLib::VectorToDiagonal</a> (Vector &amp;U, int offset)</td></tr>
+<tr class="separator:aa3e23193270e76d9678b300d1be04692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a15cbb94a0bb61aaaf862faa1243f6"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#aa1a15cbb94a0bb61aaaf862faa1243f6">AlgebraLib::VectorToDiagonal</a> (const Vector &amp;U, int offset)</td></tr>
+<tr class="separator:aa1a15cbb94a0bb61aaaf862faa1243f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398b52b5eea8534ca7832320f7327e27"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a398b52b5eea8534ca7832320f7327e27">AlgebraLib::ReadMatrix</a> (const char *filename)</td></tr>
+<tr class="separator:a398b52b5eea8534ca7832320f7327e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55cdd6b2d01531f741e4a82447d47144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a55cdd6b2d01531f741e4a82447d47144">AlgebraLib::WriteMatrix</a> (Matrix M, const char *filename)</td></tr>
+<tr class="separator:a55cdd6b2d01531f741e4a82447d47144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5667fa7b3207e5e5471a2de02dd4829a"><td class="memItemLeft" align="right" valign="top">Vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#a5667fa7b3207e5e5471a2de02dd4829a">AlgebraLib::ReadVector</a> (const char *filename)</td></tr>
+<tr class="separator:a5667fa7b3207e5e5471a2de02dd4829a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ddbc5f20b0d54c6b02fea9d8a26f98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceAlgebraLib.html#ab9ddbc5f20b0d54c6b02fea9d8a26f98">AlgebraLib::WriteVector</a> (Vector U, const char *filename)</td></tr>
+<tr class="separator:ab9ddbc5f20b0d54c6b02fea9d8a26f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Functions for <a class="el" href="namespaceAlgebraLib.html" title="Namespace for the library. ">AlgebraLib</a> acting on const full matrices and vectors. </p>
+<dl class="section author"><dt>Author</dt><dd>Lars Gebraad</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>August 2017</dd></dl>
+<p>Assorted function which combine full algebra classes within the library to execute typical linear algebra functions. Most of the inputs here are const, and the functions won't alter the input. </p>
+
+<p class="definition">Definition in file <a class="el" href="FullAlgebra_8hpp_source.html">FullAlgebra.hpp</a>.</p>
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/>

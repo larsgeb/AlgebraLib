@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['setownsparsecolumn',['SetOwnSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#ad2bbff5f68275136254476784d682238',1,'AlgebraLib::SparseMatrix']]],
-  ['setsparsecolumn',['SetSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#a319b226be7b280eb3674faac11a1b0ca',1,'AlgebraLib::SparseMatrix']]],
-  ['sparsematrix',['SparseMatrix',['../classAlgebraLib_1_1SparseMatrix.html#a0d9bcde4dcb9df4296b8acb2a6e03cd7',1,'AlgebraLib::SparseMatrix']]],
-  ['sparsevector',['SparseVector',['../classAlgebraLib_1_1SparseVector.html#af20759cb00c4dd34f733aec1d5b5b8bf',1,'AlgebraLib::SparseVector::SparseVector()'],['../classAlgebraLib_1_1SparseVector.html#adfd82c15c7fc12263c638c7c1220c2ee',1,'AlgebraLib::SparseVector::SparseVector(int numElements)'],['../classAlgebraLib_1_1SparseVector.html#a5a53574666ff6603a7dc37c6436bcd3b',1,'AlgebraLib::SparseVector::SparseVector(int numElements, bool isColumn)']]]
+  ['invertlowertriangular',['InvertLowerTriangular',['../classAlgebraLib_1_1Matrix.html#af0bf311b9106c6777fa7f4aad007ee63',1,'AlgebraLib::Matrix::InvertLowerTriangular()'],['../classAlgebraLib_1_1Matrix.html#a7564d2a3d34e644b95bf6f060520bd7c',1,'AlgebraLib::Matrix::InvertLowerTriangular() const']]],
+  ['invertmatrixelements',['InvertMatrixElements',['../classAlgebraLib_1_1Matrix.html#a4c53c184b479f95983df18e1bbfe54a9',1,'AlgebraLib::Matrix::InvertMatrixElements(bool preserveZero=false)'],['../classAlgebraLib_1_1Matrix.html#a6702e37e177b9be8f76c25c0a99c4c2e',1,'AlgebraLib::Matrix::InvertMatrixElements(bool preserveZero=false) const']]],
+  ['invertmatrixelementsself',['InvertMatrixElementsSelf',['../classAlgebraLib_1_1Matrix.html#a3c7fd595963b1271a903919794da6f42',1,'AlgebraLib::Matrix']]],
+  ['iscolumn',['isColumn',['../classAlgebraLib_1_1Vector.html#accb580953eaf0651a34dd736c23a169c',1,'AlgebraLib::Vector::isColumn()'],['../classAlgebraLib_1_1Vector.html#a19e36373c92b3307b928d5dcc8473719',1,'AlgebraLib::Vector::isColumn() const']]]
 ];

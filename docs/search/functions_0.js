@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['getcolumns',['GetColumns',['../classAlgebraLib_1_1SparseMatrix.html#a6085a908e256a00cd44473d32ea1c644',1,'AlgebraLib::SparseMatrix']]],
-  ['getrows',['GetRows',['../classAlgebraLib_1_1SparseMatrix.html#aaaddf175a4b041350c80ac1645d2101c',1,'AlgebraLib::SparseMatrix']]],
-  ['getsparsecolumn',['GetSparseColumn',['../classAlgebraLib_1_1SparseMatrix.html#acf4f72893c42aae0ddc0789566a291ca',1,'AlgebraLib::SparseMatrix::GetSparseColumn(int column)'],['../classAlgebraLib_1_1SparseMatrix.html#a0416f92fe161e59a49c82d9040b3584a',1,'AlgebraLib::SparseMatrix::GetSparseColumn(int column) const']]]
+  ['begin',['begin',['../classAlgebraLib_1_1Matrix.html#abbb821893204a111382cb21cf9d329b6',1,'AlgebraLib::Matrix::begin()'],['../classAlgebraLib_1_1Matrix.html#a94b5926257bf35351535dc14da50b487',1,'AlgebraLib::Matrix::begin() const'],['../classAlgebraLib_1_1Vector.html#a23b65e8f0985a64183be38e0a8793b16',1,'AlgebraLib::Vector::begin()'],['../classAlgebraLib_1_1Vector.html#ab4445a9e1bee8a734d665b0c646fee5e',1,'AlgebraLib::Vector::begin() const']]]
 ];

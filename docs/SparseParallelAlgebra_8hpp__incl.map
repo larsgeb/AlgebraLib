@@ -1,5 +1,6 @@
 <map id="SparseParallelAlgebra.hpp" name="SparseParallelAlgebra.hpp">
-<area shape="rect" id="node4" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="171,80,303,107"/>
-<area shape="rect" id="node5" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="175,155,299,181"/>
-<area shape="rect" id="node7" href="$SparseVector_8hpp.html" title="SparseVector.hpp" alt="" coords="225,229,351,256"/>
+<area shape="rect" id="node4" href="$SparseAlgebra_8hpp.html" title="Functions for AlgebraLib acting on const sparse matrices and vectors. " alt="" coords="149,80,281,107"/>
+<area shape="rect" id="node5" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="167,304,257,331"/>
+<area shape="rect" id="node10" href="$SparseVector_8hpp.html" title="SparseVector.hpp" alt="" coords="150,229,277,256"/>
+<area shape="rect" id="node11" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="251,155,375,181"/>
 </map>

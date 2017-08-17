@@ -1,8 +1,9 @@
 <map id="AlgebraLib.hpp" name="AlgebraLib.hpp">
-<area shape="rect" id="node2" href="$SparseAlgebra_8hpp.html" title="Functions for SparseLinearAlgebra acting on const matrices and vectors. " alt="" coords="48,80,180,107"/>
-<area shape="rect" id="node7" href="$FullAlgebra_8hpp.html" title="FullAlgebra.hpp" alt="" coords="205,80,317,107"/>
-<area shape="rect" id="node3" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="52,155,176,181"/>
-<area shape="rect" id="node5" href="$SparseVector_8hpp.html" title="SparseVector.hpp" alt="" coords="5,229,132,256"/>
-<area shape="rect" id="node8" href="$Matrix_8hpp.html" title="Matrix.hpp" alt="" coords="219,155,302,181"/>
-<area shape="rect" id="node9" href="$Vector_8hpp.html" title="Vector.hpp" alt="" coords="258,229,343,256"/>
+<area shape="rect" id="node2" href="$Globals_8hpp.html" title="Globals.hpp" alt="" coords="163,304,253,331"/>
+<area shape="rect" id="node8" href="$FullAlgebra_8hpp.html" title="Functions for AlgebraLib acting on const full matrices and vectors. " alt="" coords="44,80,156,107"/>
+<area shape="rect" id="node11" href="$SparseAlgebra_8hpp.html" title="Functions for AlgebraLib acting on const sparse matrices and vectors. " alt="" coords="218,80,350,107"/>
+<area shape="rect" id="node9" href="$Vector_8hpp.html" title="Vector.hpp" alt="" coords="85,229,171,256"/>
+<area shape="rect" id="node10" href="$Matrix_8hpp.html" title="Matrix.hpp" alt="" coords="137,155,220,181"/>
+<area shape="rect" id="node12" href="$SparseVector_8hpp.html" title="SparseVector.hpp" alt="" coords="297,229,423,256"/>
+<area shape="rect" id="node13" href="$SparseMatrix_8hpp.html" title="SparseMatrix.hpp" alt="" coords="347,155,471,181"/>
 </map>

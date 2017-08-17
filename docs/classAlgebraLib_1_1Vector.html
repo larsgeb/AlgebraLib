@@ -72,9 +72,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classAlgebraLib_1_1Vector-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -82,72 +81,120 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class for full vectors.  
+ <a href="classAlgebraLib_1_1Vector.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for AlgebraLib::Vector:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgebraLib_1_1Vector__coll__graph.png" border="0" usemap="#AlgebraLib_1_1Vector_coll__map" alt="Collaboration graph"/></div>
+<map name="AlgebraLib_1_1Vector_coll__map" id="AlgebraLib_1_1Vector_coll__map">
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:ae3bae0a81a2e228b362585821362700d"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#ae3bae0a81a2e228b362585821362700d">Vector1D</a></td></tr>
-<tr class="separator:ae3bae0a81a2e228b362585821362700d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ff21486847b08fd5e2a1436fda544b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a7ff21486847b08fd5e2a1436fda544b8">Vector</a> ()</td></tr>
+<tr class="memdesc:a7ff21486847b08fd5e2a1436fda544b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor, creates \( 2 \times 1 \) zero column vector.  <a href="#a7ff21486847b08fd5e2a1436fda544b8">More...</a><br /></td></tr>
 <tr class="separator:a7ff21486847b08fd5e2a1436fda544b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9151d6cdf009d79722c96312cdbb5c3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a9151d6cdf009d79722c96312cdbb5c3d">Vector</a> (bool isColumn)</td></tr>
+<tr class="memitem:a9151d6cdf009d79722c96312cdbb5c3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a9151d6cdf009d79722c96312cdbb5c3d">Vector</a> (bool <a class="el" href="classAlgebraLib_1_1Vector.html#accb580953eaf0651a34dd736c23a169c">isColumn</a>)</td></tr>
+<tr class="memdesc:a9151d6cdf009d79722c96312cdbb5c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for row or column vector, creates 2 dimensional vector.  <a href="#a9151d6cdf009d79722c96312cdbb5c3d">More...</a><br /></td></tr>
 <tr class="separator:a9151d6cdf009d79722c96312cdbb5c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d831bf3e5ca74749f386b310fda5e05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a6d831bf3e5ca74749f386b310fda5e05">Vector</a> (unsigned long elements)</td></tr>
+<tr class="memdesc:a6d831bf3e5ca74749f386b310fda5e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for column vector.  <a href="#a6d831bf3e5ca74749f386b310fda5e05">More...</a><br /></td></tr>
 <tr class="separator:a6d831bf3e5ca74749f386b310fda5e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25f7849d138d3d00f603daa5abe9457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#ad25f7849d138d3d00f603daa5abe9457">Vector</a> (unsigned long elements, bool isColumn)</td></tr>
+<tr class="memitem:ad25f7849d138d3d00f603daa5abe9457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#ad25f7849d138d3d00f603daa5abe9457">Vector</a> (unsigned long elements, bool <a class="el" href="classAlgebraLib_1_1Vector.html#accb580953eaf0651a34dd736c23a169c">isColumn</a>)</td></tr>
+<tr class="memdesc:ad25f7849d138d3d00f603daa5abe9457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for vector.  <a href="#ad25f7849d138d3d00f603daa5abe9457">More...</a><br /></td></tr>
 <tr class="separator:ad25f7849d138d3d00f603daa5abe9457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb580953eaf0651a34dd736c23a169c"><td class="memItemLeft" align="right" valign="top">const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#accb580953eaf0651a34dd736c23a169c">isColumn</a> ()</td></tr>
+<tr class="memdesc:accb580953eaf0651a34dd736c23a169c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieving private member field of dimensions of vector.  <a href="#accb580953eaf0651a34dd736c23a169c">More...</a><br /></td></tr>
+<tr class="separator:accb580953eaf0651a34dd736c23a169c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e36373c92b3307b928d5dcc8473719"><td class="memItemLeft" align="right" valign="top">const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a19e36373c92b3307b928d5dcc8473719">isColumn</a> () const</td></tr>
+<tr class="separator:a19e36373c92b3307b928d5dcc8473719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71499b8a41f2c6b574a2dd5e71438c1d"><td class="memItemLeft" align="right" valign="top">const unsigned long &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a71499b8a41f2c6b574a2dd5e71438c1d">size</a> ()</td></tr>
+<tr class="memdesc:a71499b8a41f2c6b574a2dd5e71438c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieving private member field of dimensions of vector.  <a href="#a71499b8a41f2c6b574a2dd5e71438c1d">More...</a><br /></td></tr>
+<tr class="separator:a71499b8a41f2c6b574a2dd5e71438c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfb152bada3cbdceb4e7e160a90118f"><td class="memItemLeft" align="right" valign="top">const unsigned long &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a7bfb152bada3cbdceb4e7e160a90118f">size</a> () const</td></tr>
+<tr class="separator:a7bfb152bada3cbdceb4e7e160a90118f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909c4408dc4b0f3712c8ec774d035afc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a909c4408dc4b0f3712c8ec774d035afc">Transpose</a> ()</td></tr>
+<tr class="separator:a909c4408dc4b0f3712c8ec774d035afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a96d01a0a8bd88baca858bca6afa582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a7a96d01a0a8bd88baca858bca6afa582">Transpose</a> () const</td></tr>
+<tr class="separator:a7a96d01a0a8bd88baca858bca6afa582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253287be929daad54623e847361dc5cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a253287be929daad54623e847361dc5cc">TransposeSelf</a> ()</td></tr>
+<tr class="separator:a253287be929daad54623e847361dc5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6a1a1045f5f61b8d6d970fac13860e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#afa6a1a1045f5f61b8d6d970fac13860e">Normalize</a> ()</td></tr>
+<tr class="separator:afa6a1a1045f5f61b8d6d970fac13860e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98127692e76cd2bf5f3a047f228c7fa6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a98127692e76cd2bf5f3a047f228c7fa6">Normalize</a> () const</td></tr>
+<tr class="separator:a98127692e76cd2bf5f3a047f228c7fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783160bcfcfe67bb54ed70ab3d9cda87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a783160bcfcfe67bb54ed70ab3d9cda87">NormalizeSelf</a> ()</td></tr>
+<tr class="separator:a783160bcfcfe67bb54ed70ab3d9cda87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4867d67be961627af4f56980c0edce5a"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a4867d67be961627af4f56980c0edce5a">operator[]</a> (int i)</td></tr>
+<tr class="memdesc:a4867d67be961627af4f56980c0edce5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access elements using zero-based index.  <a href="#a4867d67be961627af4f56980c0edce5a">More...</a><br /></td></tr>
 <tr class="separator:a4867d67be961627af4f56980c0edce5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a8d5620b006891ad4a309d527b0f342"><td class="memItemLeft" align="right" valign="top">const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a9a8d5620b006891ad4a309d527b0f342">operator[]</a> (int i) const</td></tr>
+<tr class="memdesc:a9a8d5620b006891ad4a309d527b0f342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access elements of constant instance using zero-based index.  <a href="#a9a8d5620b006891ad4a309d527b0f342">More...</a><br /></td></tr>
 <tr class="separator:a9a8d5620b006891ad4a309d527b0f342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab2d77094c2122c0aaa12f617b703c7f"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#aab2d77094c2122c0aaa12f617b703c7f">operator()</a> (int i)</td></tr>
+<tr class="memdesc:aab2d77094c2122c0aaa12f617b703c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access elements using one-based index.  <a href="#aab2d77094c2122c0aaa12f617b703c7f">More...</a><br /></td></tr>
 <tr class="separator:aab2d77094c2122c0aaa12f617b703c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af33d54703568da1d8227391c9335f1a4"><td class="memItemLeft" align="right" valign="top">const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#af33d54703568da1d8227391c9335f1a4">operator()</a> (int i) const</td></tr>
+<tr class="memdesc:af33d54703568da1d8227391c9335f1a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access elements of constant instance using one-based index.  <a href="#af33d54703568da1d8227391c9335f1a4">More...</a><br /></td></tr>
 <tr class="separator:af33d54703568da1d8227391c9335f1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b65e8f0985a64183be38e0a8793b16"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a23b65e8f0985a64183be38e0a8793b16">begin</a> ()</td></tr>
+<tr class="memdesc:a23b65e8f0985a64183be38e0a8793b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator begin, forwards to private _vectorContents member.  <a href="#a23b65e8f0985a64183be38e0a8793b16">More...</a><br /></td></tr>
+<tr class="separator:a23b65e8f0985a64183be38e0a8793b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00b7851b3a64b8dd1d85e448d144b9f"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#ae00b7851b3a64b8dd1d85e448d144b9f">end</a> ()</td></tr>
+<tr class="memdesc:ae00b7851b3a64b8dd1d85e448d144b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator end, forwards to private _vectorContents member.  <a href="#ae00b7851b3a64b8dd1d85e448d144b9f">More...</a><br /></td></tr>
+<tr class="separator:ae00b7851b3a64b8dd1d85e448d144b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4445a9e1bee8a734d665b0c646fee5e"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#ab4445a9e1bee8a734d665b0c646fee5e">begin</a> () const</td></tr>
+<tr class="memdesc:ab4445a9e1bee8a734d665b0c646fee5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator begin, forwards to private _vectorContents member.  <a href="#ab4445a9e1bee8a734d665b0c646fee5e">More...</a><br /></td></tr>
+<tr class="separator:ab4445a9e1bee8a734d665b0c646fee5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c28ba197faf2e78dd942e21cf8178d6"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a8c28ba197faf2e78dd942e21cf8178d6">end</a> () const</td></tr>
+<tr class="memdesc:a8c28ba197faf2e78dd942e21cf8178d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator end, forwards to private _vectorContents member.  <a href="#a8c28ba197faf2e78dd942e21cf8178d6">More...</a><br /></td></tr>
+<tr class="separator:a8c28ba197faf2e78dd942e21cf8178d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d03c8f1f6a1680379f9b328592ed61"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a62d03c8f1f6a1680379f9b328592ed61">rbegin</a> ()</td></tr>
+<tr class="memdesc:a62d03c8f1f6a1680379f9b328592ed61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator reverse begin, forwards to private _vectorContents member.  <a href="#a62d03c8f1f6a1680379f9b328592ed61">More...</a><br /></td></tr>
+<tr class="separator:a62d03c8f1f6a1680379f9b328592ed61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fe565dfb3477307b0ad8b7923556ed"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#ad6fe565dfb3477307b0ad8b7923556ed">rend</a> ()</td></tr>
+<tr class="memdesc:ad6fe565dfb3477307b0ad8b7923556ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator reverse end, forwards to private _vectorContents member.  <a href="#ad6fe565dfb3477307b0ad8b7923556ed">More...</a><br /></td></tr>
+<tr class="separator:ad6fe565dfb3477307b0ad8b7923556ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0039fec192e970242fecc88c0b03cc5b"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a0039fec192e970242fecc88c0b03cc5b">cbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:a0039fec192e970242fecc88c0b03cc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator cbegin, forwards to private _vectorContents member.  <a href="#a0039fec192e970242fecc88c0b03cc5b">More...</a><br /></td></tr>
+<tr class="separator:a0039fec192e970242fecc88c0b03cc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc08a1b34b07db6238016edd3bc42fad"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#afc08a1b34b07db6238016edd3bc42fad">cend</a> () const noexcept</td></tr>
+<tr class="memdesc:afc08a1b34b07db6238016edd3bc42fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator cend, forwards to private _vectorContents member.  <a href="#afc08a1b34b07db6238016edd3bc42fad">More...</a><br /></td></tr>
+<tr class="separator:afc08a1b34b07db6238016edd3bc42fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529c2406fb1001f0243a2c2157ee1e99"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a529c2406fb1001f0243a2c2157ee1e99">crbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:a529c2406fb1001f0243a2c2157ee1e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator crbegin, forwards to private _vectorContents member.  <a href="#a529c2406fb1001f0243a2c2157ee1e99">More...</a><br /></td></tr>
+<tr class="separator:a529c2406fb1001f0243a2c2157ee1e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0794524b0da2183c86501747383eb694"><td class="memItemLeft" align="right" valign="top">contentVectorDouble::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a0794524b0da2183c86501747383eb694">crend</a> () const noexcept</td></tr>
+<tr class="memdesc:a0794524b0da2183c86501747383eb694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator crend, forwards to private _vectorContents member.  <a href="#a0794524b0da2183c86501747383eb694">More...</a><br /></td></tr>
+<tr class="separator:a0794524b0da2183c86501747383eb694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a31ae3d543aade5c1781f2815071e571e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceAlgebraLib.html#abe67379545910e48d6937ec96d64f9fb">contentVectorDouble</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a31ae3d543aade5c1781f2815071e571e">_vectorContents</a></td></tr>
+<tr class="memdesc:a31ae3d543aade5c1781f2815071e571e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contents of vector.  <a href="#a31ae3d543aade5c1781f2815071e571e">More...</a><br /></td></tr>
+<tr class="separator:a31ae3d543aade5c1781f2815071e571e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a963784420423ddd6309e5033bd7f3c4f"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a963784420423ddd6309e5033bd7f3c4f">_elements</a></td></tr>
+<tr class="memdesc:a963784420423ddd6309e5033bd7f3c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of elements in vetor.  <a href="#a963784420423ddd6309e5033bd7f3c4f">More...</a><br /></td></tr>
 <tr class="separator:a963784420423ddd6309e5033bd7f3c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b98b9a4def049062b075d3ccd2cc04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a35b98b9a4def049062b075d3ccd2cc04">_isColumn</a></td></tr>
+<tr class="memdesc:a35b98b9a4def049062b075d3ccd2cc04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shape of vector.  <a href="#a35b98b9a4def049062b075d3ccd2cc04">More...</a><br /></td></tr>
 <tr class="separator:a35b98b9a4def049062b075d3ccd2cc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae54fab6c9d140b1a56d4bbbc12bef715"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html#ae3bae0a81a2e228b362585821362700d">Vector1D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#ae54fab6c9d140b1a56d4bbbc12bef715">_data</a></td></tr>
-<tr class="separator:ae54fab6c9d140b1a56d4bbbc12bef715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a4659daafae8b0e3ae53f6c92a04e41e8"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Vector.html#a4659daafae8b0e3ae53f6c92a04e41e8">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;<a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>)</td></tr>
+<tr class="memdesc:a4659daafae8b0e3ae53f6c92a04e41e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A natural way to output vector to console.  <a href="#a4659daafae8b0e3ae53f6c92a04e41e8">More...</a><br /></td></tr>
 <tr class="separator:a4659daafae8b0e3ae53f6c92a04e41e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00012">12</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae3bae0a81a2e228b362585821362700d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3bae0a81a2e228b362585821362700d">&#9670;&nbsp;</a></span>Vector1D</h2>
+<div class="textblock"><p>Class for full vectors. </p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::vector&lt;double&gt; <a class="el" href="classAlgebraLib_1_1Vector.html#ae3bae0a81a2e228b362585821362700d">AlgebraLib::Vector::Vector1D</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00014">14</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00010">10</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7ff21486847b08fd5e2a1436fda544b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ff21486847b08fd5e2a1436fda544b8">&#9670;&nbsp;</a></span>Vector() <span class="overload">[1/4]</span></h2>
 
@@ -163,7 +210,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00021">21</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Default constructor, creates \( 2 \times 1 \) zero column vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00023">23</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -191,7 +240,15 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00027">27</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Constructor for row or column vector, creates 2 dimensional vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isColumn</td><td>True if vector is a column matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00029">29</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +276,15 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00014">14</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Constructor for column vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elements</td><td>Number of dimensions of vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00016">16</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -249,11 +314,342 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00008">8</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Constructor for vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elements</td><td>Number of dimensions of vector. </td></tr>
+    <tr><td class="paramname">isColumn</td><td>True if vector is a column matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00010">10</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a23b65e8f0985a64183be38e0a8793b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b65e8f0985a64183be38e0a8793b16">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::iterator AlgebraLib::Vector::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator begin, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::begin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00075">75</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab4445a9e1bee8a734d665b0c646fee5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4445a9e1bee8a734d665b0c646fee5e">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::const_iterator AlgebraLib::Vector::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator begin, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::begin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00083">83</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0039fec192e970242fecc88c0b03cc5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0039fec192e970242fecc88c0b03cc5b">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::const_iterator AlgebraLib::Vector::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator cbegin, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::cbegin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00099">99</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afc08a1b34b07db6238016edd3bc42fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc08a1b34b07db6238016edd3bc42fad">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::const_iterator AlgebraLib::Vector::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator cend, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::cend(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00103">103</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a529c2406fb1001f0243a2c2157ee1e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529c2406fb1001f0243a2c2157ee1e99">&#9670;&nbsp;</a></span>crbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::const_reverse_iterator AlgebraLib::Vector::crbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator crbegin, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::crbegin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00107">107</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0794524b0da2183c86501747383eb694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0794524b0da2183c86501747383eb694">&#9670;&nbsp;</a></span>crend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::const_reverse_iterator AlgebraLib::Vector::crend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator crend, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::crend(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00111">111</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae00b7851b3a64b8dd1d85e448d144b9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00b7851b3a64b8dd1d85e448d144b9f">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::iterator AlgebraLib::Vector::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator end, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::end(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00079">79</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8c28ba197faf2e78dd942e21cf8178d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c28ba197faf2e78dd942e21cf8178d6">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::const_iterator AlgebraLib::Vector::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator end, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::end(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00087">87</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="accb580953eaf0651a34dd736c23a169c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb580953eaf0651a34dd736c23a169c">&#9670;&nbsp;</a></span>isColumn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool&amp; AlgebraLib::Vector::isColumn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieving private member field of dimensions of vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the vector is a column vector. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00042">42</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a19e36373c92b3307b928d5dcc8473719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e36373c92b3307b928d5dcc8473719">&#9670;&nbsp;</a></span>isColumn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool&amp; AlgebraLib::Vector::isColumn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00044">44</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afa6a1a1045f5f61b8d6d970fac13860e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6a1a1045f5f61b8d6d970fac13860e">&#9670;&nbsp;</a></span>Normalize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Vector::Normalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00130">130</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a98127692e76cd2bf5f3a047f228c7fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98127692e76cd2bf5f3a047f228c7fa6">&#9670;&nbsp;</a></span>Normalize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Vector::Normalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00134">134</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a783160bcfcfe67bb54ed70ab3d9cda87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783160bcfcfe67bb54ed70ab3d9cda87">&#9670;&nbsp;</a></span>NormalizeSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp; AlgebraLib::Vector::NormalizeSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00138">138</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
 <a id="aab2d77094c2122c0aaa12f617b703c7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab2d77094c2122c0aaa12f617b703c7f">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
@@ -270,7 +666,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00053">53</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Access elements using one-based index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i \) mathematical index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Element at \( i \). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00055">55</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -290,7 +695,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00063">63</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Access elements of constant instance using one-based index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i \) mathematical index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Element at \( i \). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00065">65</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +724,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00033">33</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Access elements using zero-based index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i - 1\) mathematical index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Element at \( i - 1 \). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00035">35</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +753,174 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00043">43</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+<p>Access elements of constant instance using zero-based index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i - 1\) mathematical index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Element at \( i - 1 \). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00045">45</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a62d03c8f1f6a1680379f9b328592ed61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d03c8f1f6a1680379f9b328592ed61">&#9670;&nbsp;</a></span>rbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::reverse_iterator AlgebraLib::Vector::rbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator reverse begin, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::rbegin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00091">91</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad6fe565dfb3477307b0ad8b7923556ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6fe565dfb3477307b0ad8b7923556ed">&#9670;&nbsp;</a></span>rend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorDouble::reverse_iterator AlgebraLib::Vector::rend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator reverse end, forwards to private _vectorContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;double&gt;::rend(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00095">95</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a71499b8a41f2c6b574a2dd5e71438c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71499b8a41f2c6b574a2dd5e71438c1d">&#9670;&nbsp;</a></span>size() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long&amp; AlgebraLib::Vector::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieving private member field of dimensions of vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>Dimensions of vector. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00050">50</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7bfb152bada3cbdceb4e7e160a90118f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bfb152bada3cbdceb4e7e160a90118f">&#9670;&nbsp;</a></span>size() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long&amp; AlgebraLib::Vector::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00052">52</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a909c4408dc4b0f3712c8ec774d035afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a909c4408dc4b0f3712c8ec774d035afc">&#9670;&nbsp;</a></span>Transpose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Vector::Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00115">115</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7a96d01a0a8bd88baca858bca6afa582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a96d01a0a8bd88baca858bca6afa582">&#9670;&nbsp;</a></span>Transpose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Vector::Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00119">119</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a253287be929daad54623e847361dc5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253287be929daad54623e847361dc5cc">&#9670;&nbsp;</a></span>TransposeSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp; AlgebraLib::Vector::TransposeSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Vector_8cpp_source.html#l00125">125</a> of file <a class="el" href="Vector_8cpp_source.html">Vector.cpp</a>.</p>
 
 </div>
 </div>
@@ -369,40 +959,44 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FullAlgebra_8cpp_source.html#l00008">8</a> of file <a class="el" href="FullAlgebra_8cpp_source.html">FullAlgebra.cpp</a>.</p>
+<p>A natural way to output vector to console. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>I/O stream. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classAlgebraLib_1_1Matrix.html" title="Class for full matrices. ">Matrix</a></td><td>Any instance of <a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">AlgebraLib::Vector</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Same stream </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="FullAlgebra_8cpp_source.html#l00017">17</a> of file <a class="el" href="FullAlgebra_8cpp_source.html">FullAlgebra.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae54fab6c9d140b1a56d4bbbc12bef715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae54fab6c9d140b1a56d4bbbc12bef715">&#9670;&nbsp;</a></span>_data</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html#ae3bae0a81a2e228b362585821362700d">Vector1D</a> AlgebraLib::Vector::_data</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00046">46</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a963784420423ddd6309e5033bd7f3c4f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a963784420423ddd6309e5033bd7f3c4f">&#9670;&nbsp;</a></span>_elements</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned long AlgebraLib::Vector::_elements</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00026">26</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+<p>Number of elements in vetor. </p>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00168">168</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
 
 </div>
 </div>
@@ -411,14 +1005,50 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool AlgebraLib::Vector::_isColumn</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00027">27</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+<p>Shape of vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00172">172</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a31ae3d543aade5c1781f2815071e571e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ae3d543aade5c1781f2815071e571e">&#9670;&nbsp;</a></span>_vectorContents</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceAlgebraLib.html#abe67379545910e48d6937ec96d64f9fb">contentVectorDouble</a> AlgebraLib::Vector::_vectorContents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Contents of vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="Vector_8hpp_source.html#l00164">164</a> of file <a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>.</p>
 
 </div>
 </div>

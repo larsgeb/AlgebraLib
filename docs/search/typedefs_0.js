@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['matrixmap',['MatrixMap',['../classAlgebraLib_1_1SparseMatrix.html#a4f5f91d6e5d26fc162393e976dfc7beb',1,'AlgebraLib::SparseMatrix']]]
+  ['contentvectordouble',['contentVectorDouble',['../namespaceAlgebraLib.html#abe67379545910e48d6937ec96d64f9fb',1,'AlgebraLib']]],
+  ['contentvectorvector',['contentVectorVector',['../namespaceAlgebraLib.html#ae62acab3ac65938684ef034156f2e5de',1,'AlgebraLib']]]
 ];

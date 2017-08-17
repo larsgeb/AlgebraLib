@@ -72,9 +72,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classAlgebraLib_1_1Matrix-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -82,71 +81,131 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class for full matrices.  
+ <a href="classAlgebraLib_1_1Matrix.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for AlgebraLib::Matrix:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAlgebraLib_1_1Matrix__coll__graph.png" border="0" usemap="#AlgebraLib_1_1Matrix_coll__map" alt="Collaboration graph"/></div>
 <map name="AlgebraLib_1_1Matrix_coll__map" id="AlgebraLib_1_1Matrix_coll__map">
-<area shape="rect" id="node3" href="classAlgebraLib_1_1Vector.html" title="AlgebraLib::Vector" alt="" coords="19,95,149,121"/>
+<area shape="rect" id="node3" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. " alt="" coords="19,95,149,121"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a8dc833fa4f6f7b40e4064e66131ffa23"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classAlgebraLib_1_1Vector.html">AlgebraLib::Vector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a8dc833fa4f6f7b40e4064e66131ffa23">Vector2D</a></td></tr>
-<tr class="separator:a8dc833fa4f6f7b40e4064e66131ffa23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae809baa096a8747850446fb7b0a213ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#ae809baa096a8747850446fb7b0a213ee">Matrix</a> ()</td></tr>
+<tr class="memdesc:ae809baa096a8747850446fb7b0a213ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#ae809baa096a8747850446fb7b0a213ee">More...</a><br /></td></tr>
 <tr class="separator:ae809baa096a8747850446fb7b0a213ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20dc826ec1aeba5294090880cb3c3749"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a20dc826ec1aeba5294090880cb3c3749">Matrix</a> (unsigned long rows, unsigned long columns)</td></tr>
+<tr class="memitem:a20dc826ec1aeba5294090880cb3c3749"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a20dc826ec1aeba5294090880cb3c3749">Matrix</a> (unsigned long <a class="el" href="classAlgebraLib_1_1Matrix.html#a0fd958b574461ea197536c6291d09f5e">rows</a>, unsigned long <a class="el" href="classAlgebraLib_1_1Matrix.html#a4d51da3b67b38f330a4d94faba351ac8">columns</a>)</td></tr>
+<tr class="memdesc:a20dc826ec1aeba5294090880cb3c3749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for specified matrix size.  <a href="#a20dc826ec1aeba5294090880cb3c3749">More...</a><br /></td></tr>
 <tr class="separator:a20dc826ec1aeba5294090880cb3c3749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bf311b9106c6777fa7f4aad007ee63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#af0bf311b9106c6777fa7f4aad007ee63">InvertLowerTriangular</a> ()</td></tr>
+<tr class="separator:af0bf311b9106c6777fa7f4aad007ee63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7564d2a3d34e644b95bf6f060520bd7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a7564d2a3d34e644b95bf6f060520bd7c">InvertLowerTriangular</a> () const</td></tr>
+<tr class="separator:a7564d2a3d34e644b95bf6f060520bd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c53c184b479f95983df18e1bbfe54a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a4c53c184b479f95983df18e1bbfe54a9">InvertMatrixElements</a> (bool preserveZero=false)</td></tr>
+<tr class="separator:a4c53c184b479f95983df18e1bbfe54a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6702e37e177b9be8f76c25c0a99c4c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a6702e37e177b9be8f76c25c0a99c4c2e">InvertMatrixElements</a> (bool preserveZero=false) const</td></tr>
+<tr class="separator:a6702e37e177b9be8f76c25c0a99c4c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7fd595963b1271a903919794da6f42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a3c7fd595963b1271a903919794da6f42">InvertMatrixElementsSelf</a> (bool preserveZero=false)</td></tr>
+<tr class="separator:a3c7fd595963b1271a903919794da6f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04b4fad230d93389769df1118ea8b56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#ab04b4fad230d93389769df1118ea8b56">Transpose</a> ()</td></tr>
+<tr class="separator:ab04b4fad230d93389769df1118ea8b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d09629cc286c79f19befb7b197cc965"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a4d09629cc286c79f19befb7b197cc965">TransposeSelf</a> ()</td></tr>
+<tr class="separator:a4d09629cc286c79f19befb7b197cc965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad332f76f405f282b5c342d9724ebdc13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#ad332f76f405f282b5c342d9724ebdc13">Transpose</a> () const</td></tr>
+<tr class="separator:ad332f76f405f282b5c342d9724ebdc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f08a0ba8b3f322eb7d55cb35aaa4e63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a4f08a0ba8b3f322eb7d55cb35aaa4e63">Trace</a> (int offset=0)</td></tr>
+<tr class="separator:a4f08a0ba8b3f322eb7d55cb35aaa4e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb76f84d69894a1ef4699dbae714ac7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#abb76f84d69894a1ef4699dbae714ac7f">Trace</a> (int offset=0) const</td></tr>
+<tr class="separator:abb76f84d69894a1ef4699dbae714ac7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9e6114439ae7f4570790b294fa0459"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a4d9e6114439ae7f4570790b294fa0459">CholeskyDecompose</a> ()</td></tr>
+<tr class="separator:a4d9e6114439ae7f4570790b294fa0459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f6b448477000931824aa75cd1af40a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#af2f6b448477000931824aa75cd1af40a">CholeskyDecompose</a> () const</td></tr>
+<tr class="separator:af2f6b448477000931824aa75cd1af40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af39872e5c1d27edd13f2d507510566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a8af39872e5c1d27edd13f2d507510566">SolveLowerTriangular</a> (<a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;Y)</td></tr>
+<tr class="separator:a8af39872e5c1d27edd13f2d507510566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17405998a148b5164990ea11e4d7bcc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a17405998a148b5164990ea11e4d7bcc6">SolveLowerTriangular</a> (<a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;Y) const</td></tr>
+<tr class="separator:a17405998a148b5164990ea11e4d7bcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d51da3b67b38f330a4d94faba351ac8"><td class="memItemLeft" align="right" valign="top">const unsigned long &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a4d51da3b67b38f330a4d94faba351ac8">columns</a> () const</td></tr>
+<tr class="separator:a4d51da3b67b38f330a4d94faba351ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd958b574461ea197536c6291d09f5e"><td class="memItemLeft" align="right" valign="top">const unsigned long &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a0fd958b574461ea197536c6291d09f5e">rows</a> () const</td></tr>
+<tr class="separator:a0fd958b574461ea197536c6291d09f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad0a79fb637102b60c243eabb988f23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a5ad0a79fb637102b60c243eabb988f23">operator[]</a> (int i)</td></tr>
+<tr class="memdesc:a5ad0a79fb637102b60c243eabb988f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access by reference through operator, zero based.  <a href="#a5ad0a79fb637102b60c243eabb988f23">More...</a><br /></td></tr>
 <tr class="separator:a5ad0a79fb637102b60c243eabb988f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a137b55626da77e054705ca810874c0ac"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a137b55626da77e054705ca810874c0ac">operator[]</a> (int i) const</td></tr>
+<tr class="memdesc:a137b55626da77e054705ca810874c0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access by reference of constant instance through operator, one based.  <a href="#a137b55626da77e054705ca810874c0ac">More...</a><br /></td></tr>
 <tr class="separator:a137b55626da77e054705ca810874c0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaddc84f7dd26ba59656c8ce8b1a0afb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#aaddc84f7dd26ba59656c8ce8b1a0afb0">operator()</a> (int i)</td></tr>
+<tr class="memdesc:aaddc84f7dd26ba59656c8ce8b1a0afb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access by reference through operator, zero based.  <a href="#aaddc84f7dd26ba59656c8ce8b1a0afb0">More...</a><br /></td></tr>
 <tr class="separator:aaddc84f7dd26ba59656c8ce8b1a0afb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02fd74dd2208e9ccc42565728fcdfaf1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a02fd74dd2208e9ccc42565728fcdfaf1">operator()</a> (int i) const</td></tr>
+<tr class="memdesc:a02fd74dd2208e9ccc42565728fcdfaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access by reference of constant instance through operator, one based.  <a href="#a02fd74dd2208e9ccc42565728fcdfaf1">More...</a><br /></td></tr>
 <tr class="separator:a02fd74dd2208e9ccc42565728fcdfaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f5a1679a75e1dbac936e2813a56b52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#ae4f5a1679a75e1dbac936e2813a56b52">getColumn</a> (int i)</td></tr>
+<tr class="separator:ae4f5a1679a75e1dbac936e2813a56b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7e5ad676e3ff2a985b6cbb635a7751"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a3e7e5ad676e3ff2a985b6cbb635a7751">getColumn</a> (int i) const</td></tr>
+<tr class="separator:a3e7e5ad676e3ff2a985b6cbb635a7751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cde84d33657c5e88f354abafe34ed3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a1cde84d33657c5e88f354abafe34ed3e">setColumn</a> (int i, <a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> <a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>)</td></tr>
+<tr class="separator:a1cde84d33657c5e88f354abafe34ed3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb821893204a111382cb21cf9d329b6"><td class="memItemLeft" align="right" valign="top">contentVectorVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#abbb821893204a111382cb21cf9d329b6">begin</a> ()</td></tr>
+<tr class="memdesc:abbb821893204a111382cb21cf9d329b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator begin, forwards to private _matrixContents member.  <a href="#abbb821893204a111382cb21cf9d329b6">More...</a><br /></td></tr>
+<tr class="separator:abbb821893204a111382cb21cf9d329b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760a531a7dd6311e9b67b8d0145490cb"><td class="memItemLeft" align="right" valign="top">contentVectorVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a760a531a7dd6311e9b67b8d0145490cb">end</a> ()</td></tr>
+<tr class="memdesc:a760a531a7dd6311e9b67b8d0145490cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator end, forwards to private _matrixContents member.  <a href="#a760a531a7dd6311e9b67b8d0145490cb">More...</a><br /></td></tr>
+<tr class="separator:a760a531a7dd6311e9b67b8d0145490cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b5926257bf35351535dc14da50b487"><td class="memItemLeft" align="right" valign="top">contentVectorVector::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a94b5926257bf35351535dc14da50b487">begin</a> () const</td></tr>
+<tr class="memdesc:a94b5926257bf35351535dc14da50b487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator begin, forwards to private _matrixContents member.  <a href="#a94b5926257bf35351535dc14da50b487">More...</a><br /></td></tr>
+<tr class="separator:a94b5926257bf35351535dc14da50b487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb078708ea76d2effb368bdcc507671a"><td class="memItemLeft" align="right" valign="top">contentVectorVector::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#adb078708ea76d2effb368bdcc507671a">end</a> () const</td></tr>
+<tr class="memdesc:adb078708ea76d2effb368bdcc507671a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator end, forwards to private _matrixContents member.  <a href="#adb078708ea76d2effb368bdcc507671a">More...</a><br /></td></tr>
+<tr class="separator:adb078708ea76d2effb368bdcc507671a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b938c267f7b681375e3133bafb1354"><td class="memItemLeft" align="right" valign="top">contentVectorVector::reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a33b938c267f7b681375e3133bafb1354">rbegin</a> ()</td></tr>
+<tr class="memdesc:a33b938c267f7b681375e3133bafb1354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator reverse begin, forwards to private _matrixContents member.  <a href="#a33b938c267f7b681375e3133bafb1354">More...</a><br /></td></tr>
+<tr class="separator:a33b938c267f7b681375e3133bafb1354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106a9f0516113353b25a10d6623589eb"><td class="memItemLeft" align="right" valign="top">contentVectorVector::reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a106a9f0516113353b25a10d6623589eb">rend</a> ()</td></tr>
+<tr class="memdesc:a106a9f0516113353b25a10d6623589eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator reverse end, forwards to private _matrixContents member.  <a href="#a106a9f0516113353b25a10d6623589eb">More...</a><br /></td></tr>
+<tr class="separator:a106a9f0516113353b25a10d6623589eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fe176520c4d4b73684ca4726d159c3"><td class="memItemLeft" align="right" valign="top">contentVectorVector::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#ae4fe176520c4d4b73684ca4726d159c3">cbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:ae4fe176520c4d4b73684ca4726d159c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator cbegin, forwards to private _matrixContents member.  <a href="#ae4fe176520c4d4b73684ca4726d159c3">More...</a><br /></td></tr>
+<tr class="separator:ae4fe176520c4d4b73684ca4726d159c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031bf8bbba275982cb03290417511aaf"><td class="memItemLeft" align="right" valign="top">contentVectorVector::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a031bf8bbba275982cb03290417511aaf">cend</a> () const noexcept</td></tr>
+<tr class="memdesc:a031bf8bbba275982cb03290417511aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator cend, forwards to private _matrixContents member.  <a href="#a031bf8bbba275982cb03290417511aaf">More...</a><br /></td></tr>
+<tr class="separator:a031bf8bbba275982cb03290417511aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3481aa2dc7ea593b95e6cb07b62248ed"><td class="memItemLeft" align="right" valign="top">contentVectorVector::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a3481aa2dc7ea593b95e6cb07b62248ed">crbegin</a> () const noexcept</td></tr>
+<tr class="memdesc:a3481aa2dc7ea593b95e6cb07b62248ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator crbegin, forwards to private _matrixContents member.  <a href="#a3481aa2dc7ea593b95e6cb07b62248ed">More...</a><br /></td></tr>
+<tr class="separator:a3481aa2dc7ea593b95e6cb07b62248ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd394f6f7bbec04e07c98529c09a4d6"><td class="memItemLeft" align="right" valign="top">contentVectorVector::const_reverse_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a7fd394f6f7bbec04e07c98529c09a4d6">crend</a> () const noexcept</td></tr>
+<tr class="memdesc:a7fd394f6f7bbec04e07c98529c09a4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator crend, forwards to private _matrixContents member.  <a href="#a7fd394f6f7bbec04e07c98529c09a4d6">More...</a><br /></td></tr>
+<tr class="separator:a7fd394f6f7bbec04e07c98529c09a4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
 <tr class="memitem:a8d02e6c013c97dbd1f27079a15328077"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a8d02e6c013c97dbd1f27079a15328077">_columns</a></td></tr>
+<tr class="memdesc:a8d02e6c013c97dbd1f27079a15328077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Columns in matrix. Can not be changed after initialization.  <a href="#a8d02e6c013c97dbd1f27079a15328077">More...</a><br /></td></tr>
 <tr class="separator:a8d02e6c013c97dbd1f27079a15328077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11761f98276a8beedca3ebffdeb1d404"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a11761f98276a8beedca3ebffdeb1d404">_rows</a></td></tr>
+<tr class="memdesc:a11761f98276a8beedca3ebffdeb1d404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rows in matrix. Can not be changed after initialization.  <a href="#a11761f98276a8beedca3ebffdeb1d404">More...</a><br /></td></tr>
 <tr class="separator:a11761f98276a8beedca3ebffdeb1d404"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37efb6dfbf9847256d56b36f75420fcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAlgebraLib_1_1Matrix.html#a8dc833fa4f6f7b40e4064e66131ffa23">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a37efb6dfbf9847256d56b36f75420fcc">_data</a></td></tr>
-<tr class="separator:a37efb6dfbf9847256d56b36f75420fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e51b928e3001a3b483ae51751185789"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceAlgebraLib.html#ae62acab3ac65938684ef034156f2e5de">contentVectorVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a1e51b928e3001a3b483ae51751185789">_matrixContents</a></td></tr>
+<tr class="memdesc:a1e51b928e3001a3b483ae51751185789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of std::vector&lt;Vector&gt; which contains matrix rows.  <a href="#a1e51b928e3001a3b483ae51751185789">More...</a><br /></td></tr>
+<tr class="separator:a1e51b928e3001a3b483ae51751185789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a03011406e7b716b63be2295bb06f1775"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgebraLib_1_1Matrix.html#a03011406e7b716b63be2295bb06f1775">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> &amp;<a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a>)</td></tr>
+<tr class="memdesc:a03011406e7b716b63be2295bb06f1775"><td class="mdescLeft">&#160;</td><td class="mdescRight">A natural way to output matrix to console.  <a href="#a03011406e7b716b63be2295bb06f1775">More...</a><br /></td></tr>
 <tr class="separator:a03011406e7b716b63be2295bb06f1775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00012">12</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a8dc833fa4f6f7b40e4064e66131ffa23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dc833fa4f6f7b40e4064e66131ffa23">&#9670;&nbsp;</a></span>Vector2D</h2>
+<div class="textblock"><p>Class for full matrices. </p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::vector&lt;<a class="el" href="classAlgebraLib_1_1Vector.html">AlgebraLib::Vector</a>&gt; <a class="el" href="classAlgebraLib_1_1Matrix.html#a8dc833fa4f6f7b40e4064e66131ffa23">AlgebraLib::Matrix::Vector2D</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00014">14</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00011">11</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae809baa096a8747850446fb7b0a213ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae809baa096a8747850446fb7b0a213ee">&#9670;&nbsp;</a></span>Matrix() <span class="overload">[1/2]</span></h2>
 
@@ -162,7 +221,10 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00015">15</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Default constructor. </p>
+<p>Creates zero matrix of size \( 2 \times 2\). </p>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00016">16</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -192,11 +254,433 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor for specified matrix size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rows</td><td>rows in matrix </td></tr>
+    <tr><td class="paramname">columns</td><td>columns in matrix</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Creates zero matrix of size \( rows \times columns\). </p>
+
 <p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00009">9</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abbb821893204a111382cb21cf9d329b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb821893204a111382cb21cf9d329b6">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::iterator AlgebraLib::Matrix::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator begin, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::begin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00082">82</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a94b5926257bf35351535dc14da50b487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b5926257bf35351535dc14da50b487">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::const_iterator AlgebraLib::Matrix::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator begin, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::begin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00090">90</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4fe176520c4d4b73684ca4726d159c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fe176520c4d4b73684ca4726d159c3">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::const_iterator AlgebraLib::Matrix::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator cbegin, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::cbegin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00106">106</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a031bf8bbba275982cb03290417511aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031bf8bbba275982cb03290417511aaf">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::const_iterator AlgebraLib::Matrix::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator cend, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::cend(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00110">110</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d9e6114439ae7f4570790b294fa0459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9e6114439ae7f4570790b294fa0459">&#9670;&nbsp;</a></span>CholeskyDecompose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::CholeskyDecompose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00179">179</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af2f6b448477000931824aa75cd1af40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f6b448477000931824aa75cd1af40a">&#9670;&nbsp;</a></span>CholeskyDecompose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::CholeskyDecompose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00183">183</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d51da3b67b38f330a4d94faba351ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d51da3b67b38f330a4d94faba351ac8">&#9670;&nbsp;</a></span>columns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long&amp; AlgebraLib::Matrix::columns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Access read only field columns by reference. </p><dl class="section return"><dt>Returns</dt><dd>Columns of matrix </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00052">52</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3481aa2dc7ea593b95e6cb07b62248ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3481aa2dc7ea593b95e6cb07b62248ed">&#9670;&nbsp;</a></span>crbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::const_reverse_iterator AlgebraLib::Matrix::crbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator crbegin, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::crbegin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00114">114</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7fd394f6f7bbec04e07c98529c09a4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd394f6f7bbec04e07c98529c09a4d6">&#9670;&nbsp;</a></span>crend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::const_reverse_iterator AlgebraLib::Matrix::crend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator crend, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::crend(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00118">118</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a760a531a7dd6311e9b67b8d0145490cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760a531a7dd6311e9b67b8d0145490cb">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::iterator AlgebraLib::Matrix::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator end, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::end(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00086">86</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adb078708ea76d2effb368bdcc507671a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb078708ea76d2effb368bdcc507671a">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::const_iterator AlgebraLib::Matrix::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator end, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::end(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00094">94</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4f5a1679a75e1dbac936e2813a56b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4f5a1679a75e1dbac936e2813a56b52">&#9670;&nbsp;</a></span>getColumn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Matrix::getColumn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00062">62</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3e7e5ad676e3ff2a985b6cbb635a7751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7e5ad676e3ff2a985b6cbb635a7751">&#9670;&nbsp;</a></span>getColumn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Matrix::getColumn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00072">72</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af0bf311b9106c6777fa7f4aad007ee63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0bf311b9106c6777fa7f4aad007ee63">&#9670;&nbsp;</a></span>InvertLowerTriangular() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::InvertLowerTriangular </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00262">262</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7564d2a3d34e644b95bf6f060520bd7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7564d2a3d34e644b95bf6f060520bd7c">&#9670;&nbsp;</a></span>InvertLowerTriangular() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::InvertLowerTriangular </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00266">266</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c53c184b479f95983df18e1bbfe54a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c53c184b479f95983df18e1bbfe54a9">&#9670;&nbsp;</a></span>InvertMatrixElements() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::InvertMatrixElements </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>preserveZero</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00133">133</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6702e37e177b9be8f76c25c0a99c4c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6702e37e177b9be8f76c25c0a99c4c2e">&#9670;&nbsp;</a></span>InvertMatrixElements() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::InvertMatrixElements </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>preserveZero</em> = <code>false</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00122">122</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c7fd595963b1271a903919794da6f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7fd595963b1271a903919794da6f42">&#9670;&nbsp;</a></span>InvertMatrixElementsSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> &amp; AlgebraLib::Matrix::InvertMatrixElementsSelf </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>preserveZero</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00137">137</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
 <a id="aaddc84f7dd26ba59656c8ce8b1a0afb0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaddc84f7dd26ba59656c8ce8b1a0afb0">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
@@ -213,7 +697,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00041">41</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Access by reference through operator, zero based. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i \) one based (mathematical) index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> component at one based (mathematical) index. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00042">42</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -233,7 +726,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00051">51</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Access by reference of constant instance through operator, one based. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i \) one based (mathematical) index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> component at one based (mathematical) index. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00052">52</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +755,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00021">21</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Access by reference through operator, zero based. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i - 1 \) one based (mathematical) index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> component at one based (mathematical) index. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00022">22</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +784,255 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00031">31</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+<p>Access by reference of constant instance through operator, one based. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>\( i - 1 \) one based (mathematical) index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classAlgebraLib_1_1Vector.html" title="Class for full vectors. ">Vector</a> component at one based (mathematical) index. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00032">32</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a33b938c267f7b681375e3133bafb1354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b938c267f7b681375e3133bafb1354">&#9670;&nbsp;</a></span>rbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::reverse_iterator AlgebraLib::Matrix::rbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator reverse begin, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::rbegin(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00098">98</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a106a9f0516113353b25a10d6623589eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106a9f0516113353b25a10d6623589eb">&#9670;&nbsp;</a></span>rend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contentVectorVector::reverse_iterator AlgebraLib::Matrix::rend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterator reverse end, forwards to private _matrixContents member. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator std::vector&lt;Vector&gt;::rend(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00102">102</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0fd958b574461ea197536c6291d09f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd958b574461ea197536c6291d09f5e">&#9670;&nbsp;</a></span>rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long&amp; AlgebraLib::Matrix::rows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Access read only field rows by reference. </p><dl class="section return"><dt>Returns</dt><dd>rows of matrix </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00058">58</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1cde84d33657c5e88f354abafe34ed3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cde84d33657c5e88f354abafe34ed3e">&#9670;&nbsp;</a></span>setColumn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::setColumn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>Vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00161">161</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8af39872e5c1d27edd13f2d507510566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af39872e5c1d27edd13f2d507510566">&#9670;&nbsp;</a></span>SolveLowerTriangular() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Matrix::SolveLowerTriangular </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAlgebraLib_1_1Vector.html">AlgebraLib::Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00237">237</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a17405998a148b5164990ea11e4d7bcc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17405998a148b5164990ea11e4d7bcc6">&#9670;&nbsp;</a></span>SolveLowerTriangular() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Matrix::SolveLowerTriangular </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAlgebraLib_1_1Vector.html">AlgebraLib::Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>Y</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00241">241</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4f08a0ba8b3f322eb7d55cb35aaa4e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f08a0ba8b3f322eb7d55cb35aaa4e63">&#9670;&nbsp;</a></span>Trace() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Matrix::Trace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00213">213</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb76f84d69894a1ef4699dbae714ac7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb76f84d69894a1ef4699dbae714ac7f">&#9670;&nbsp;</a></span>Trace() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Vector.html">Vector</a> AlgebraLib::Matrix::Trace </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00217">217</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab04b4fad230d93389769df1118ea8b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04b4fad230d93389769df1118ea8b56">&#9670;&nbsp;</a></span>Transpose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00142">142</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad332f76f405f282b5c342d9724ebdc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad332f76f405f282b5c342d9724ebdc13">&#9670;&nbsp;</a></span>Transpose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> AlgebraLib::Matrix::Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00147">147</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4d09629cc286c79f19befb7b197cc965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d09629cc286c79f19befb7b197cc965">&#9670;&nbsp;</a></span>TransposeSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html">Matrix</a> &amp; AlgebraLib::Matrix::TransposeSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8cpp_source.html#l00156">156</a> of file <a class="el" href="Matrix_8cpp_source.html">Matrix.cpp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +1071,17 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FullAlgebra_8cpp_source.html#l00020">20</a> of file <a class="el" href="FullAlgebra_8cpp_source.html">FullAlgebra.cpp</a>.</p>
+<p>A natural way to output matrix to console. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>I/O stream. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classAlgebraLib_1_1Matrix.html" title="Class for full matrices. ">Matrix</a></td><td>Any instance of <a class="el" href="classAlgebraLib_1_1Matrix.html" title="Class for full matrices. ">AlgebraLib::Matrix</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Same stream </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="FullAlgebra_8cpp_source.html#l00036">36</a> of file <a class="el" href="FullAlgebra_8cpp_source.html">FullAlgebra.cpp</a>.</p>
 
 </div>
 </div>
@@ -322,30 +1091,50 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned long AlgebraLib::Matrix::_columns</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00022">22</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
+<p>Columns in matrix. Can not be changed after initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00164">164</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a37efb6dfbf9847256d56b36f75420fcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37efb6dfbf9847256d56b36f75420fcc">&#9670;&nbsp;</a></span>_data</h2>
+<a id="a1e51b928e3001a3b483ae51751185789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e51b928e3001a3b483ae51751185789">&#9670;&nbsp;</a></span>_matrixContents</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAlgebraLib_1_1Matrix.html#a8dc833fa4f6f7b40e4064e66131ffa23">Vector2D</a> AlgebraLib::Matrix::_data</td>
+          <td class="memname"><a class="el" href="namespaceAlgebraLib.html#ae62acab3ac65938684ef034156f2e5de">contentVectorVector</a> AlgebraLib::Matrix::_matrixContents</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00042">42</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
+<p>Instance of std::vector&lt;Vector&gt; which contains matrix rows. </p>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00174">174</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
 
 </div>
 </div>
@@ -354,14 +1143,24 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned long AlgebraLib::Matrix::_rows</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00023">23</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
+<p>Rows in matrix. Can not be changed after initialization. </p>
+
+<p class="definition">Definition at line <a class="el" href="Matrix_8hpp_source.html#l00169">169</a> of file <a class="el" href="Matrix_8hpp_source.html">Matrix.hpp</a>.</p>
 
 </div>
 </div>
