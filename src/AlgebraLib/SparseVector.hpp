@@ -1,14 +1,12 @@
-//
-// Created by Lars Gebraad on 14-8-17.
-//
-
 #ifndef LINEARALGEBRA_SPARSEVECTOR_H
 #define LINEARALGEBRA_SPARSEVECTOR_H
 
-#include <iostream>
-#include <map>
+#include "Globals.hpp"
 
 namespace AlgebraLib {
+    /*!
+     * \brief Class for sparse vectors.
+     */
     class SparseVector {
     public:
         // Type definitions

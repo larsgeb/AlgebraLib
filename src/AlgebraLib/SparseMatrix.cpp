@@ -117,7 +117,7 @@ namespace AlgebraLib {
             } catch (const std::exception &e) {
                 /*
                  * Nothing fancy, we're trying to acces a const Matrix. Right.. So what happens if we don't know which
-                 * column entries are exactly non-zero and we have to iterate? Well, normally, map[] would create a new map
+                 * getColumn entries are exactly non-zero and we have to iterate? Well, normally, map[] would create a new map
                  * entry, but that is not allowed for a const! So we try to acces it with map::at(), which return an
                  * exception when an element is non-existent in map. Here we catch it and we... don't do anything with it!
                  * This happens occasionally if we are not quite sure of the contents of our matrix, for example with

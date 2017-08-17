@@ -1,10 +1,22 @@
-//
-// Created by Lars Gebraad on 16-8-17.
-//
+/*! \file FullAlgebra.hpp
+ * \brief Functions for AlgebraLib acting on const full matrices and vectors.
+ *
+ * \author Lars Gebraad
+ *
+ * \date August 2017
+ *
+ * Assorted function which combine full algebra classes within the library
+ * to execute typical linear algebra functions. Most of the inputs here are const, and
+ * the functions won't alter the input.
+ *
+ */
+
 
 #ifndef LINEARALGEBRA_FULLALGEBRA_HPP
 #define LINEARALGEBRA_FULLALGEBRA_HPP
 
+#include "Globals.hpp"
+#include "Vector.hpp"
 #include "Matrix.hpp"
 
 namespace AlgebraLib {
@@ -16,6 +28,14 @@ namespace AlgebraLib {
      * @throw std::length_error A and B are not of compatible dimension.
      */
     Matrix operator*(const Matrix &A, const Matrix &B);
+
+    Matrix operator*(const Matrix &A, const double &b);
+
+    Matrix operator*(const double &b, const Matrix &A);
+
+    Matrix operator+(const Matrix &A, const Matrix &B);
+
+    Matrix operator-(const Matrix &A, const Matrix &B);
 
     /**
      *  \brief Matrix vector product.
@@ -90,7 +110,10 @@ namespace AlgebraLib {
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
      */
     Vector operator/(const Vector &U, double m);
-};
 
+    Matrix VectorToDiagonal(Vector &U, int offset = 0);
+
+    Matrix VectorToDiagonal(const Vector &Vector, int offset = 0);
+};
 
 #endif //LINEARALGEBRA_FULLALGEBRA_HPP

@@ -1,22 +1,23 @@
 /*! \file SparseAlgebra.hpp
- * \brief Functions for SparseLinearAlgebra acting on const matrices and vectors.
+ * \brief Functions for AlgebraLib acting on const sparse matrices and vectors.
  *
  * \author Lars Gebraad
  *
  * \date August 2017
  *
- * <P>Assorted function which combine different classes of the SparseLinearAlgebra library
+ * Assorted function which combine 'sparse' algebra classes within the library
  * to execute typical linear algebra functions. Most of the inputs here are const, and
- * the functions won't alter the input.</P><P>Including just this file in your main file
- * will take care of the rest.</P>
+ * the functions won't alter the input.
  *
  */
+
 
 #ifndef LINEARALGEBRA_MATRIX_H_H
 #define LINEARALGEBRA_MATRIX_H_H
 
+#include "Globals.hpp"
+#include "SparseVector.hpp"
 #include "SparseMatrix.hpp"
-
 
 namespace AlgebraLib {
     /**

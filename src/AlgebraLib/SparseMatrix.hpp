@@ -1,14 +1,13 @@
-//
-// Created by Lars Gebraad on 14-8-17.
-//
-
 #ifndef LINEARALGEBRA_SPARSEMATRIX_H
 #define LINEARALGEBRA_SPARSEMATRIX_H
 
-#include <iostream>
+#include "Globals.hpp"
 #include "SparseVector.hpp"
 
 namespace AlgebraLib {
+    /*!
+     * \brief Class for sparse matrices.
+     */
     class SparseMatrix {
     public:
         // Type definitions
@@ -34,7 +33,7 @@ namespace AlgebraLib {
 
         /*
          * Cannot get reference for columns, as that would require us to
-         * create the entire column, effectively creating every row and
+         * create the entire getColumn, effectively creating every row and
          * defeating the whole purpose of sparse algebra. Workaround;
          * separate setters and getters for columns.
          */

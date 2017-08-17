@@ -1,7 +1,3 @@
-//
-// Created by Lars Gebraad on 16-8-17.
-//
-
 /*! \mainpage AlgebraLib Documentation
  *
  * This rather simple library was built to speed up some calculations in Hamiltonian
@@ -33,12 +29,20 @@
  * \date August 2017
  */
 
+/*! \file
+ * \brief This header acts as an include for the AlgebraLib library.
+ */
+
+/*! \namespace AlgebraLib
+ *  \brief Namespace for the library.
+ *  \todo Remove code duplicates for const and non-const functions. See Meyer's implementation using const_cast.
+ */
 
 #ifndef LINEARALGEBRA_ALGEBRALIB_HPP
 #define LINEARALGEBRA_ALGEBRALIB_HPP
 
-#include "SparseAlgebra.hpp"
+#include "Globals.hpp"
 #include "FullAlgebra.hpp"
-
+#include "SparseAlgebra.hpp"
 
 #endif //LINEARALGEBRA_ALGEBRALIB_HPP

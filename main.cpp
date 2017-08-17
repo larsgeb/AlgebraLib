@@ -8,16 +8,23 @@
 
 int main() {
 
-    std::clock_t start;
+    AlgebraLib::Matrix PSD(3, 3);
 
-    AlgebraLib::Vector A(4, true);
-    AlgebraLib::Matrix B(4, 9);
+    PSD[0][0] = 4;
+    PSD[0][1] = 12;
+    PSD[0][2] = -16;
+    PSD[1][0] = 12;
+    PSD[1][1] = 37;
+    PSD[1][2] = -43;
+    PSD[2][0] = -16;
+    PSD[2][1] = -43;
+    PSD[2][2] = 98;
 
-    std::cout << A;
-    std::cout << B;
+    std::cout << PSD.CholeskyDecompose();
+    std::cout << PSD.CholeskyDecompose().InvertLowerTriangular();
+    std::cout << PSD.CholeskyDecompose() * PSD.CholeskyDecompose().InvertLowerTriangular();
 
-    std::cout << std::endl << "Time: " << (std::clock() - start) / (double) (CLOCKS_PER_SEC) << " s" << std::endl;
-
+    // That works, nice.
 
     return EXIT_SUCCESS;
 }
