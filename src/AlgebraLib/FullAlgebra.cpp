@@ -223,6 +223,11 @@ namespace AlgebraLib {
 
         std::ifstream infile(filename);
 
+        if (!infile.is_open()) {
+            throw std::invalid_argument(
+                    std::string("File ") + std::string(filename) + std::string(" doesn't exist! Terminating..."));
+        }
+
         // Ignore first lines
         infile.ignore(500, '\n');
         infile.ignore(500, '\n');
@@ -271,6 +276,11 @@ namespace AlgebraLib {
 
         std::ifstream infile(filename);
 
+        if (!infile.is_open()) {
+            throw std::invalid_argument(
+                    std::string("File ") + std::string(filename) + std::string(" doesn't exist! Terminating..."));
+        }
+
         // Ignore first lines
         infile.ignore(500, '\n');
         infile.ignore(500, '\n');
@@ -304,6 +314,41 @@ namespace AlgebraLib {
             outfile << U[i] << " ";
         }
         outfile.close();
+    }
+
+    Vector ElementWiseMultiplication(const Vector &U, const Vector &V) {
+        if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
+
+        Vector Product = U;
+
+        for (auto iterator = Product.begin(); iterator != Product.end(); iterator++) {
+            (*iterator) *= V[iterator - Product.begin()];
+        }
+
+        return Product;
+    }
+
+    Vector ElementWiseDivision(double d, const Vector &V, bool preserveZero) {
+
+        Vector Division = V;
+
+        for (auto &&iterator = Division.begin(); iterator != Division.end(); iterator++) {
+            if ((*iterator) != 0)
+                (*iterator) = d / V[iterator - Division.begin()];
+        }
+
+        return Division;
+    }
+
+    Matrix ElementWiseDivision(double d, const Matrix &V, bool preserveZero) {
+
+        Matrix Division = V;
+
+        for (auto &&iterator = Division.begin(); iterator != Division.end(); iterator++) {
+            (*iterator) = AlgebraLib::ElementWiseDivision(d, *iterator, preserveZero);
+        }
+
+        return Division;
     }
 
 }

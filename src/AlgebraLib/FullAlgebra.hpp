@@ -111,6 +111,12 @@ namespace AlgebraLib {
      */
     Vector operator/(const Vector &U, double m);
 
+    Vector ElementWiseMultiplication(const Vector &U, const Vector &V);
+
+    Vector ElementWiseDivision(double d, const Vector &V, bool preserveZero = true);
+
+    Matrix ElementWiseDivision(double d, const Matrix &V, bool preserveZero = true);
+
     Matrix VectorToDiagonal(Vector &U, int offset = 0);
 
     Matrix VectorToDiagonal(const Vector &Vector, int offset = 0);
@@ -122,7 +128,6 @@ namespace AlgebraLib {
     Vector ReadVector(const char *filename);
 
     void WriteVector(Vector U, const char *filename);
-
 };
 
 #endif //LINEARALGEBRA_FULLALGEBRA_HPP

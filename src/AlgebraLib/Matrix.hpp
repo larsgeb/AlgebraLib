@@ -43,6 +43,7 @@ namespace AlgebraLib {
         Matrix CholeskyDecompose() const;
         Vector SolveLowerTriangular(Vector &Y);
         Vector SolveLowerTriangular(Vector &Y) const;
+        Matrix & Unit();
 
         // Read only field accessing
         /*!

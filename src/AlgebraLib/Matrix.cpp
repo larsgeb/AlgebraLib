@@ -278,4 +278,12 @@ namespace AlgebraLib {
         }
         return Inverse;
     }
+
+    Matrix &Matrix::Unit() {
+        for (auto it = (*this).begin(); it != (*this).end(); ++it){
+            (*it) = Vector(columns(), false);
+            (*it)[it - (*this).begin()] = 1.0;
+        }
+        return (*this);
+    }
 }
