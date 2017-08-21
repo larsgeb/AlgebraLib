@@ -6,55 +6,28 @@
 #include "sparse_matrix.hpp"
 
 namespace algebra_lib {
-    SparseMatrix::SparseMatrix(int rows, int columns) {
+    sparse_matrix::sparse_matrix(int rows, int columns) {
         _rows = rows;
         _columns = columns;
     }
 
-    SparseVector &SparseMatrix::operator[](int i) {
-        // Check if within matrix size
-        if (i < 0) {
-            throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i >= _rows) {
-            throw std::out_of_range("Exceeded number of rows");
-        }
-
-        // Does the sparse row already contain something?
-        if (_matrixMap.find(i) == _matrixMap.end())
-            // If not, make empty row.
-            _matrixMap[i] = SparseVector(_columns, false);
-
-        _matrixMap[i]._numElements = _columns;
-        return _matrixMap[i];
+    sparse_vector sparse_matrix::operator[](int i) {
+        return (static_cast<const sparse_matrix *>(this)->operator[](i));
     }
 
-    const SparseVector &SparseMatrix::operator[](int i) const {
+    const sparse_vector &sparse_matrix::operator[](int i) const {
         // Check if within matrix size
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i >= _rows) {
             throw std::out_of_range("Exceeded number of rows");
         }
-
-        /*
-        const std::map<int, SparseVector>::const_iterator &row = _matrixMap.find(i);
-
-        if (row != _matrixMap.end()) {
-            // Do we have entries in the constant matrix?
-            return row->second;
-        }
-
-        // If not, we're not allowed to make them, so we return empty const SparseVector.
-        const SparseVector A(_columns, false);
-        return A;
-         */
 
         return _matrixMap.at(i);
 
-
     }
 
-    SparseVector &SparseMatrix::operator()(int i) {
+    sparse_vector &sparse_matrix::operator()(int i) {
         if (i < 1) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i > _rows) {
@@ -62,13 +35,13 @@ namespace algebra_lib {
         }
 
         if (_matrixMap.find(i - 1) == _matrixMap.end())
-            _matrixMap[i - 1] = SparseVector(_columns, false);
+            _matrixMap[i - 1] = sparse_vector(_columns, false);
 
         _matrixMap[i - 1]._numElements = _columns;
         return _matrixMap[i - 1];
     }
 
-    const SparseVector &SparseMatrix::operator()(int i) const {
+    const sparse_vector &sparse_matrix::operator()(int i) const {
         // Check if within matrix size
         if (i < 1) {
             throw std::out_of_range("Exceeded natural range for indices");
@@ -93,12 +66,12 @@ namespace algebra_lib {
 
     }
 
-    int SparseMatrix::GetRows() { return _rows; }
+    int sparse_matrix::GetRows() { return _rows; }
 
-    int SparseMatrix::GetColumns() { return _columns; }
+    int sparse_matrix::GetColumns() { return _columns; }
 
-    SparseVector SparseMatrix::GetSparseColumn(int column) {
-        SparseVector P(_rows, true);
+    sparse_vector sparse_matrix::GetSparseColumn(int column) {
+        sparse_vector P(_rows, true);
         for (auto &row : _matrixMap) {
             double entry = row.second[column];
             if (entry != 0)
@@ -107,8 +80,8 @@ namespace algebra_lib {
         return P;
     }
 
-    const SparseVector SparseMatrix::GetSparseColumn(int column) const {
-        SparseVector P(_rows, true);
+    const sparse_vector sparse_matrix::GetSparseColumn(int column) const {
+        sparse_vector P(_rows, true);
         for (auto &row : _matrixMap) {
             try {
                 double entry = row.second[column];
@@ -132,8 +105,8 @@ namespace algebra_lib {
         return P;
     }
 
-    SparseMatrix SparseMatrix::Transpose() {
-        SparseMatrix T(_columns, _rows);
+    sparse_matrix sparse_matrix::Transpose() {
+        sparse_matrix T(_columns, _rows);
 
         for (auto row: _matrixMap) {
             for (auto column: row.second._vectorMap) {
@@ -145,10 +118,10 @@ namespace algebra_lib {
         return T;
     }
 
-    SparseMatrix SparseMatrix::TransposeSelf() {
+    sparse_matrix sparse_matrix::TransposeSelf() {
         // Does not provide performance increase//less required memory over
-        // SparseMatrix = SparseMatrix::Transpose().
-        SparseMatrix T(_columns, _rows);
+        // sparse_matrix = sparse_matrix::Transpose().
+        sparse_matrix T(_columns, _rows);
         for (auto row: _matrixMap) {
             for (auto column: row.second._vectorMap) {
                 if (column.second != 0)
@@ -159,9 +132,9 @@ namespace algebra_lib {
         return (*this);
     }
 
-    SparseMatrix SparseMatrix::SetOwnSparseColumn(SparseVector Vector, int column) {
+    sparse_matrix sparse_matrix::SetSparseColumnSelf(sparse_vector Vector, int column) {
         // Does provide performance increase//less required memory over
-        // SparseMatrix = SparseMatrix::SetSparseColumn().
+        // sparse_matrix = sparse_matrix::SetSparseColumn().
         for (auto &&item : Vector._vectorMap) {
             if (item.second != 0) {
                 (*this)[item.first][column] = item.second;
@@ -172,8 +145,8 @@ namespace algebra_lib {
         return (*this);
     }
 
-    SparseMatrix SparseMatrix::SetSparseColumn(SparseVector Vector, int column) {
-        SparseMatrix VectorModified = (*this);
+    sparse_matrix sparse_matrix::SetSparseColumn(sparse_vector Vector, int column) {
+        sparse_matrix VectorModified = (*this);
         for (auto &&item : Vector._vectorMap) {
             if (item.second != 0) {
                 VectorModified[item.first][column] = item.second;
@@ -183,6 +156,7 @@ namespace algebra_lib {
         }
         return VectorModified;
     }
+
 }
 
 // --- end of class ---

@@ -1,5 +1,5 @@
-#ifndef LINEARALGEBRA_SPARSEMATRIX_H
-#define LINEARALGEBRA_SPARSEMATRIX_H
+#ifndef LINEARALGEBRA_sparse_matrix_H
+#define LINEARALGEBRA_sparse_matrix_H
 
 #include "globals.hpp"
 #include "sparse_vector.hpp"
@@ -8,28 +8,28 @@ namespace algebra_lib {
     /*!
      * \brief Class for sparse matrices.
      */
-    class SparseMatrix {
+    class sparse_matrix {
     public:
         // Type definitions
-        typedef std::map<int, SparseVector> MatrixMap;
+        typedef std::map<int, sparse_vector> MatrixMap;
 
         // Fields
         MatrixMap _matrixMap;
         int _rows;
         int _columns;
-        /// \todo Create non-zero column index in SparseMatrix to speed up the iterations here, possibly during reference access.
+        /// \todo Create non-zero column index in sparse_matrix to speed up the iterations here, possibly during reference access.
 
         // Constructors
-        SparseMatrix(int rows, int columns);
+        sparse_matrix(int rows, int columns);
 
         // Getters and setters using operators
-        SparseVector &operator[](int i);
+        sparse_vector operator[](int i);
 
-        const SparseVector &operator[](int i) const;
+        const sparse_vector &operator[](int i) const;
 
-        SparseVector &operator()(int i);
+        sparse_vector &operator()(int i);
 
-        const SparseVector &operator()(int i) const;
+        const sparse_vector &operator()(int i) const;
 
         /*
          * Cannot get reference for columns, as that would require us to
@@ -37,26 +37,26 @@ namespace algebra_lib {
          * defeating the whole purpose of sparse algebra. Workaround;
          * separate setters and getters for columns.
          */
-        SparseVector GetSparseColumn(int column);
+        sparse_vector GetSparseColumn(int column);
 
-        const SparseVector GetSparseColumn(int column) const;
+        const sparse_vector GetSparseColumn(int column) const;
 
-        SparseMatrix SetOwnSparseColumn(SparseVector Vector, int column);
+        sparse_matrix SetSparseColumnSelf(sparse_vector Vector, int column);
 
-        SparseMatrix SetSparseColumn(SparseVector Vector, int column);
+        sparse_matrix SetSparseColumn(sparse_vector Vector, int column);
 
         // Member functions
         int GetRows();
 
         int GetColumns();
 
-        SparseMatrix Transpose();
+        sparse_matrix Transpose();
 
-        SparseMatrix TransposeSelf();
+        sparse_matrix TransposeSelf();
 
         // Friend functions
-        friend std::ostream &operator<<(std::ostream &stream, const SparseMatrix &SparseMatrix);
+        friend std::ostream &operator<<(std::ostream &stream, const sparse_matrix &sparse_matrix);
     };
 
 }
-#endif //LINEARALGEBRA_SPARSEMATRIX_H
+#endif //LINEARALGEBRA_sparse_matrix_H
