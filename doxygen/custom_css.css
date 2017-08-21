@@ -97,6 +97,11 @@ dd {
     /*font-size: 1em;*/
 }
 
+.memItemLeft a.el {
+    font-family: monospace, monospace;
+    /*font-size: 1em;*/
+}
+
 /* Short function description*/
 .memItemRight, .memItemLeft, .mdescLeft, .mdescRight {
     border: 0px none black;
