@@ -15,11 +15,11 @@
 #ifndef LINEARALGEBRA_MATRIX_H_H
 #define LINEARALGEBRA_MATRIX_H_H
 
-#include "Globals.hpp"
-#include "SparseVector.hpp"
-#include "SparseMatrix.hpp"
+#include "globals.hpp"
+#include "sparse_vector.hpp"
+#include "sparse_matrix.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /**
      *  \brief Matrix matrix product.
      * @param A \f$ m \times n \f$ sparse matrix
@@ -27,7 +27,7 @@ namespace AlgebraLib {
      * @return \f$ m \times l \f$ sparse matrix
      * @throw std::length_error A and B are not of compatible dimension.
      */
-    SparseMatrix operator*(const SparseMatrix &A, const SparseMatrix &B);
+    sparse_matrix operator*(const sparse_matrix &A, const sparse_matrix &B);
 
     /**
      *  \brief Matrix vector product.
@@ -37,7 +37,7 @@ namespace AlgebraLib {
      * @throw std::length_error A and U are not of compatible dimension.
      * @throw std::invalid_argument U is not a column vector.
      */
-    SparseVector operator*(const SparseMatrix &A, const SparseVector &U);
+    sparse_vector operator*(const sparse_matrix &A, const sparse_vector &U);
 
     /**
      *  \brief Vector matrix product.
@@ -47,7 +47,7 @@ namespace AlgebraLib {
      * @throw std::length_error U and A are not of compatible dimension.
      * @throw std::invalid_argument U is not a row vector.
      */
-    SparseVector operator*(const SparseVector &U, const SparseMatrix &A);
+    sparse_vector operator*(const sparse_vector &U, const sparse_matrix &A);
 
     /**
      * \brief Vector dot product.
@@ -56,7 +56,7 @@ namespace AlgebraLib {
      * @return scalar
      * @throw std::length_error U and V are not of compatible dimension.
      */
-    double operator*(const SparseVector &U, const SparseVector &V);
+    double operator*(const sparse_vector &U, const sparse_vector &V);
 
     /**
      * \brief Vector sum.
@@ -65,7 +65,7 @@ namespace AlgebraLib {
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      * @throw std::length_error U and V are not of compatible dimension.
      */
-    SparseVector operator+(const SparseVector &U, const SparseVector &V);
+    sparse_vector operator+(const sparse_vector &U, const sparse_vector &V);
 
     /**
      * \brief Vector difference.
@@ -74,7 +74,7 @@ namespace AlgebraLib {
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      * @throw std::length_error U and V are not of compatible dimension.
      */
-    SparseVector operator-(const SparseVector &U, const SparseVector &V);
+    sparse_vector operator-(const sparse_vector &U, const sparse_vector &V);
 
     /**
      * \brief Vector scalar product.
@@ -82,7 +82,7 @@ namespace AlgebraLib {
      * @param m scalar
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      */
-    SparseVector operator*(const SparseVector &U, double m);
+    sparse_vector operator*(const sparse_vector &U, double m);
 
     /**
      * \brief Vector scalar product.
@@ -93,7 +93,7 @@ namespace AlgebraLib {
      * reverse order of operator*(const SparseVector &U, double m). Functions are identical.
      *
      */
-    SparseVector operator*(double m, const SparseVector &U);
+    sparse_vector operator*(double m, const sparse_vector &U);
 
     /**
      * \brief Vector scalar division.
@@ -101,6 +101,6 @@ namespace AlgebraLib {
      * @param m scalar
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      */
-    SparseVector operator/(const SparseVector &U, double m);
+    sparse_vector operator/(const sparse_vector &U, double m);
 }
 #endif //LINEARALGEBRA_MATRIX_H_H

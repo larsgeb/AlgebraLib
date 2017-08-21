@@ -1,38 +1,38 @@
 #ifndef LINEARALGEBRA_VECTOR_HPP
 #define LINEARALGEBRA_VECTOR_HPP
 
-#include "Globals.hpp"
+#include "globals.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /*!
      * \brief Class for full vectors.
      */
-    class Vector {
+    class vector {
     public:
         // Constructors
         /*!
          * \brief Default constructor, creates \f$ 2 \times 1 \f$ zero column vector.
          */
-        Vector();
+        vector();
 
         /*!
          * \brief Constructor for row or column vector, creates 2 dimensional vector.
          * @param isColumn True if vector is a column matrix.
          */
-        explicit Vector(bool isColumn);
+        explicit vector(bool isColumn);
 
         /*!
          * \brief Constructor for column vector.
          * @param elements Number of dimensions of vector.
          */
-        explicit Vector(unsigned long elements);
+        explicit vector(unsigned long elements);
 
         /*!
          * \brief Constructor for vector.
          * @param elements Number of dimensions of vector.
          * @param isColumn True if vector is a column matrix.
          */
-        Vector(unsigned long elements, bool isColumn);
+        vector(unsigned long elements, bool isColumn);
 
         // Public member functions
         /*!
@@ -51,17 +51,17 @@ namespace AlgebraLib {
 
         const unsigned long &size() const { return _elements; };
 
-        Vector Transpose();
+        vector Transpose();
 
-        Vector Transpose() const;
+        vector Transpose() const;
 
-        Vector &TransposeSelf();
+        vector &TransposeSelf();
 
-        Vector Normalize();
+        vector Normalize();
 
-        Vector Normalize() const;
+        vector Normalize() const;
 
-        Vector &NormalizeSelf();
+        vector &NormalizeSelf();
 
         // Getters and setters using operators
         /*!
@@ -93,7 +93,7 @@ namespace AlgebraLib {
         const double &operator()(int i) const;
 
         // Friend functions
-        friend std::ostream &operator<<(std::ostream &stream, const Vector &Vector);
+        friend std::ostream &operator<<(std::ostream &stream, const vector &Vector);
 
         // Iterator forwards
         /*!
@@ -175,7 +175,7 @@ namespace AlgebraLib {
     /* --------------------------------------------------- *
      * Typedefs relying on class
      * --------------------------------------------------- */
-    typedef std::vector<AlgebraLib::Vector> contentVectorVector;
+    typedef std::vector<algebra_lib::vector> contentVectorVector;
 }
 
 #endif //LINEARALGEBRA_VECTOR_HPP

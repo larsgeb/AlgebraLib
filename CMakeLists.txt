@@ -5,10 +5,10 @@ set(CMAKE_CXX_FLAGS "-O4")
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(SOURCE_FILES src/AlgebraLib/SparseAlgebra.cpp src/AlgebraLib/SparseVector.cpp src/AlgebraLib/SparseMatrix.cpp src/AlgebraLib/Matrix.cpp src/AlgebraLib/Matrix.hpp src/AlgebraLib/Vector.cpp src/AlgebraLib/Vector.hpp src/AlgebraLib/AlgebraLib.hpp src/AlgebraLib/FullAlgebra.cpp src/AlgebraLib/FullAlgebra.hpp src/AlgebraLib/Globals.hpp)
+set(SOURCE_FILES src/algebra_lib/sparse_algebra.cpp src/algebra_lib/sparse_vector.cpp src/algebra_lib/sparse_matrix.cpp src/algebra_lib/matrix.cpp src/algebra_lib/matrix.hpp src/algebra_lib/vector.cpp src/algebra_lib/vector.hpp src/algebra_lib/algebra_lib.hpp src/algebra_lib/full_algebra.cpp src/algebra_lib/full_algebra.hpp src/algebra_lib/globals.hpp)
 add_library(LinearAlgebra ${SOURCE_FILES})
 
-set(SOURCE_FILES main.cpp src/AlgebraLib/SparseAlgebra.cpp src/AlgebraLib/SparseVector.cpp src/AlgebraLib/SparseMatrix.cpp src/AlgebraLib/Matrix.cpp src/AlgebraLib/Matrix.hpp src/AlgebraLib/Vector.cpp src/AlgebraLib/Vector.hpp src/AlgebraLib/AlgebraLib.hpp src/AlgebraLib/FullAlgebra.cpp src/AlgebraLib/FullAlgebra.hpp src/AlgebraLib/Globals.hpp)
+set(SOURCE_FILES main.cpp src/algebra_lib/sparse_algebra.cpp src/algebra_lib/sparse_vector.cpp src/algebra_lib/sparse_matrix.cpp src/algebra_lib/matrix.cpp src/algebra_lib/matrix.hpp src/algebra_lib/vector.cpp src/algebra_lib/vector.hpp src/algebra_lib/algebra_lib.hpp src/algebra_lib/full_algebra.cpp src/algebra_lib/full_algebra.hpp src/algebra_lib/globals.hpp)
 add_executable(testSuite ${SOURCE_FILES})
 
 #set(SOURCE_FILES SparseAlgebra.cpp SparseMatrix.cpp SparseVector.cpp SparseParallelAlgebra.cpp)

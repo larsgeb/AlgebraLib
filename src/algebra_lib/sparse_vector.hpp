@@ -1,13 +1,13 @@
 #ifndef LINEARALGEBRA_SPARSEVECTOR_H
 #define LINEARALGEBRA_SPARSEVECTOR_H
 
-#include "Globals.hpp"
+#include "globals.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /*!
      * \brief Class for sparse vectors.
      */
-    class SparseVector {
+    class sparse_vector {
     public:
         // Type definitions
         typedef std::map<int, double> VectorMap;
@@ -18,13 +18,13 @@ namespace AlgebraLib {
         bool _isColumn;
 
         // Constructors
-        SparseVector();
+        explicit sparse_vector();
 
 //        SparseVector(const SparseVector &rhs);
 
-        explicit SparseVector(int numElements);
+        explicit sparse_vector(int numElements);
 
-        SparseVector(int numElements, bool isColumn);
+        sparse_vector(int numElements, bool isColumn);
 
         // Getters and setters using operators
         double &operator[](int i);
@@ -36,12 +36,12 @@ namespace AlgebraLib {
         const double &operator()(int i) const;
 
         // Member functions
-        SparseVector Transpose();
+        sparse_vector Transpose();
 
-        SparseVector TransposeSelf();
+        sparse_vector TransposeSelf();
 
         // Friend functions
-        friend std::ostream &operator<<(std::ostream &stream, const SparseVector &SparseVector);
+        friend std::ostream &operator<<(std::ostream &stream, const sparse_vector &SparseVector);
     };
 }
 

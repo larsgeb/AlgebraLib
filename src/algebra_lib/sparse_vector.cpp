@@ -2,26 +2,26 @@
 // Created by Lars Gebraad on 14-8-17.
 //
 
-#include "SparseVector.hpp"
+#include "sparse_vector.hpp"
 
-namespace AlgebraLib {
-    SparseVector::SparseVector() {
+namespace algebra_lib {
+    sparse_vector::sparse_vector() {
         _numElements = 0;
         _isColumn = true;
     };
 
-    SparseVector::SparseVector(int numElements) {
+    sparse_vector::sparse_vector(int numElements) {
         _numElements = numElements;
         _isColumn = true;
     };
 
-    SparseVector::SparseVector(int numElements, bool row) {
+    sparse_vector::sparse_vector(int numElements, bool row) {
         _numElements = numElements;
         _isColumn = row;
     }
 
 // Indexing using operators on mutable and constant instantiations.
-    double &SparseVector::operator[](int i) {
+    double &sparse_vector::operator[](int i) {
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i >= _numElements)
@@ -36,7 +36,7 @@ namespace AlgebraLib {
 
     }
 
-    const double &SparseVector::operator[](int i) const {
+    const double &sparse_vector::operator[](int i) const {
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i >= _numElements)
@@ -57,7 +57,7 @@ namespace AlgebraLib {
         return _vectorMap.at(i);
     }
 
-    double &SparseVector::operator()(int i) {
+    double &sparse_vector::operator()(int i) {
         if (i < 1) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i > _numElements)
@@ -71,7 +71,7 @@ namespace AlgebraLib {
         return _vectorMap[i - 1];
     }
 
-    const double &SparseVector::operator()(int i) const {
+    const double &sparse_vector::operator()(int i) const {
         if (i < 1) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i > _numElements)
@@ -93,13 +93,13 @@ namespace AlgebraLib {
 
     }
 
-    SparseVector SparseVector::Transpose() {
-        SparseVector T(_numElements, !_isColumn);
+    sparse_vector sparse_vector::Transpose() {
+        sparse_vector T(_numElements, !_isColumn);
         T._vectorMap = _vectorMap;
         return T;
     }
 
-    SparseVector SparseVector::TransposeSelf() {
+    sparse_vector sparse_vector::TransposeSelf() {
         // Does provide performance increase//less required memory over
         // SparseVector = SparseVector::Transpose().
         _isColumn = !_isColumn;

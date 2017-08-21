@@ -3,10 +3,10 @@
 //
 
 #include <iomanip>
-#include "Globals.hpp"
-#include "FullAlgebra.hpp"
+#include "globals.hpp"
+#include "full_algebra.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
 
     /*!
      * \brief A natural way to output vector to console.
@@ -14,7 +14,7 @@ namespace AlgebraLib {
      * @param Matrix Any instance of AlgebraLib::Vector
      * @return Same stream
      */
-    std::ostream &operator<<(std::ostream &stream, const Vector &Vector) {
+    std::ostream &operator<<(std::ostream &stream, const vector &Vector) {
         stream << "Full " << (Vector._isColumn ? "column" : "row");
         stream << " vector of dimension " << Vector._elements << ":"
                << std::endl;
@@ -33,7 +33,7 @@ namespace AlgebraLib {
      * @param Matrix Any instance of AlgebraLib::Matrix
      * @return Same stream
      */
-    std::ostream &operator<<(std::ostream &stream, const AlgebraLib::Matrix &Matrix) {
+    std::ostream &operator<<(std::ostream &stream, const algebra_lib::matrix &Matrix) {
         int rowIt = 1;
         stream << "Full matrix of dimension " << Matrix.rows() << "x";
         stream << Matrix.columns() << ":" << std::endl;
@@ -48,13 +48,13 @@ namespace AlgebraLib {
         return stream;
     }
 
-    Matrix operator*(const Matrix &A, const Matrix &B) {
+    matrix operator*(const matrix &A, const matrix &B) {
 
         if (A.columns() != B.rows()) {
-            throw std::length_error("Matrix multiplication: matrices are not compatible in dimension");
+            throw std::length_error("matrix multiplication: matrices are not compatible in dimension");
         }
 
-        Matrix Product(A.rows(), B.columns());
+        matrix Product(A.rows(), B.columns());
 
         for (int row = 0; row < Product.rows(); ++row) {
             for (int column = 0; column < Product.columns(); ++column) {
@@ -66,12 +66,12 @@ namespace AlgebraLib {
 
     }
 
-    Matrix operator+(const Matrix &A, const Matrix &B) {
+    matrix operator+(const matrix &A, const matrix &B) {
         if (A.columns() != B.columns() or A.rows() != B.rows()) {
-            throw std::length_error("Matrix arithmetic: matrices are not compatible in dimension");
+            throw std::length_error("matrix arithmetic: matrices are not compatible in dimension");
         }
 
-        Matrix Sum(A.rows(), A.columns());
+        matrix Sum(A.rows(), A.columns());
 
         for (int row = 0; row < Sum.rows(); ++row) {
             Sum[row] = A[row] + B[row];
@@ -80,12 +80,12 @@ namespace AlgebraLib {
         return Sum;
     }
 
-    Matrix operator-(const Matrix &A, const Matrix &B) {
+    matrix operator-(const matrix &A, const matrix &B) {
         if (A.columns() != B.columns() or A.rows() != B.rows()) {
-            throw std::length_error("Matrix arithmetic: matrices are not compatible in dimension");
+            throw std::length_error("matrix arithmetic: matrices are not compatible in dimension");
         }
 
-        Matrix Sum(A.rows(), A.columns());
+        matrix Sum(A.rows(), A.columns());
 
         for (int row = 0; row < Sum.rows(); ++row) {
             Sum[row] = A[row] - B[row];
@@ -95,7 +95,7 @@ namespace AlgebraLib {
 
     }
 
-    Vector operator*(const Matrix &A, const Vector &U) {
+    vector operator*(const matrix &A, const vector &U) {
         if (A.columns() != U.size()) {
             throw std::length_error(
                     "Left multiplication with matrix: vector and matrix are not compatible in dimension");
@@ -104,7 +104,7 @@ namespace AlgebraLib {
                     "Left multiplication with matrix: vector is not a column vector! First transpose it for goodness' sake.");
         }
 
-        Vector Product(A.rows(), true);
+        vector Product(A.rows(), true);
 
         for (int i = 0; i < U.size(); ++i) {
             Product[i] = A[i] * U;
@@ -112,7 +112,7 @@ namespace AlgebraLib {
         return Product;
     }
 
-    Vector operator*(const Vector &U, const Matrix &A) {
+    vector operator*(const vector &U, const matrix &A) {
         if (A.rows() != U.size()) {
             throw std::length_error(
                     "Right multiplication with matrix: vector and matrix are not compatible in dimension");
@@ -122,7 +122,7 @@ namespace AlgebraLib {
                             "sake.");
         }
 
-        Vector Product(A.columns(), false);
+        vector Product(A.columns(), false);
 
         for (int i = 0; i < U.size(); ++i) {
             Product[i] = A.getColumn(i) * U;
@@ -131,7 +131,7 @@ namespace AlgebraLib {
         return Product;
     }
 
-    double operator*(const Vector &U, const Vector &V) {
+    double operator*(const vector &U, const vector &V) {
         if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
 
         double inProduct = 0.0;
@@ -141,10 +141,10 @@ namespace AlgebraLib {
         return inProduct;
     }
 
-    Vector operator+(const Vector &U, const Vector &V) {
+    vector operator+(const vector &U, const vector &V) {
         if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
 
-        Vector Sum(U.size(), U.isColumn());
+        vector Sum(U.size(), U.isColumn());
 
         for (int element = 0; element < U.size(); ++element) {
             Sum[element] = U[element] + V[element];
@@ -152,10 +152,10 @@ namespace AlgebraLib {
         return Sum;
     }
 
-    Vector operator-(const Vector &U, const Vector &V) {
+    vector operator-(const vector &U, const vector &V) {
         if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
 
-        Vector Difference(U.size(), U.isColumn());
+        vector Difference(U.size(), U.isColumn());
 
         for (int element = 0; element < U.size(); ++element) {
             Difference[element] = U[element] - V[element];
@@ -163,9 +163,9 @@ namespace AlgebraLib {
         return Difference;
     }
 
-    Vector operator*(const Vector &U, double m) {
+    vector operator*(const vector &U, double m) {
 
-        Vector Product(U.size(), U.isColumn());
+        vector Product(U.size(), U.isColumn());
 
         for (int element = 0; element < U.size(); ++element) {
             Product[element] = U[element] * m;
@@ -174,20 +174,20 @@ namespace AlgebraLib {
         return Product;
     }
 
-    Vector operator*(double m, const Vector &U) {
+    vector operator*(double m, const vector &U) {
         return U * m;
     }
 
-    Vector operator/(const Vector &U, double m) {
+    vector operator/(const vector &U, double m) {
         return U * (1.0 / m);
     }
 
-    Matrix VectorToDiagonal(Vector &U, int offset) {
-        return static_cast<Matrix>(VectorToDiagonal(static_cast<const Vector>(U), offset));
+    matrix VectorToDiagonal(vector &U, int offset) {
+        return static_cast<matrix>(VectorToDiagonal(static_cast<const vector>(U), offset));
     }
 
-    Matrix VectorToDiagonal(const Vector &U, int offset) {
-        Matrix Diagonal(U.size() + abs(offset), U.size() + abs(offset));
+    matrix VectorToDiagonal(const vector &U, int offset) {
+        matrix Diagonal(U.size() + abs(offset), U.size() + abs(offset));
 
         if (offset > 0) {
             for (int i = 0; i < U.size(); ++i) {
@@ -202,8 +202,8 @@ namespace AlgebraLib {
         return Diagonal;
     }
 
-    Matrix operator*(const Matrix &A, const double &b) {
-        Matrix Product(A.rows(), A.columns());
+    matrix operator*(const matrix &A, const double &b) {
+        matrix Product(A.rows(), A.columns());
 
         for (int row = 0; row < A.rows(); ++row) {
             Product[row] = A[row].Transpose() * b;
@@ -212,11 +212,11 @@ namespace AlgebraLib {
         return Product;
     }
 
-    Matrix operator*(const double &b, const Matrix &A) {
+    matrix operator*(const double &b, const matrix &A) {
         return A * b;
     }
 
-    Matrix ReadMatrix(const char *filename) {
+    matrix ReadMatrix(const char *filename) {
         double element;
         unsigned long rows;
         unsigned long columns;
@@ -236,7 +236,7 @@ namespace AlgebraLib {
         infile >> rows;
         infile >> columns;
 
-        Matrix ReadMatrix(rows, columns);
+        matrix ReadMatrix(rows, columns);
 
 
         for (int i = 0; i < rows; i++) {
@@ -251,7 +251,7 @@ namespace AlgebraLib {
         return ReadMatrix;
     }
 
-    void WriteMatrix(Matrix M, const char *filename) {
+    void WriteMatrix(matrix M, const char *filename) {
         std::ofstream outfile;
         outfile.open(filename);
 
@@ -270,7 +270,7 @@ namespace AlgebraLib {
         outfile.close();
     }
 
-    Vector ReadVector(const char *filename) {
+    vector ReadVector(const char *filename) {
         double element;
         unsigned long columns;
 
@@ -288,7 +288,7 @@ namespace AlgebraLib {
 
         infile >> columns;
 
-        Vector ReadVector(columns, true);
+        vector ReadVector(columns, true);
 
         for (int i = 0; i < columns; i++) {
             infile >> element;
@@ -300,7 +300,7 @@ namespace AlgebraLib {
         return ReadVector;
     }
 
-    void WriteVector(Vector U, const char *filename) {
+    void WriteVector(vector U, const char *filename) {
         std::ofstream outfile;
         outfile.open(filename);
 
@@ -316,10 +316,10 @@ namespace AlgebraLib {
         outfile.close();
     }
 
-    Vector ElementWiseMultiplication(const Vector &U, const Vector &V) {
+    vector ElementWiseMultiplication(const vector &U, const vector &V) {
         if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
 
-        Vector Product = U;
+        vector Product = U;
 
         for (auto iterator = Product.begin(); iterator != Product.end(); iterator++) {
             (*iterator) *= V[iterator - Product.begin()];
@@ -328,9 +328,9 @@ namespace AlgebraLib {
         return Product;
     }
 
-    Vector ElementWiseDivision(double d, const Vector &V, bool preserveZero) {
+    vector ElementWiseDivision(double d, const vector &V, bool preserveZero) {
 
-        Vector Division = V;
+        vector Division = V;
 
         for (auto &&iterator = Division.begin(); iterator != Division.end(); iterator++) {
             if ((*iterator) != 0)
@@ -340,12 +340,12 @@ namespace AlgebraLib {
         return Division;
     }
 
-    Matrix ElementWiseDivision(double d, const Matrix &V, bool preserveZero) {
+    matrix ElementWiseDivision(double d, const matrix &V, bool preserveZero) {
 
-        Matrix Division = V;
+        matrix Division = V;
 
         for (auto &&iterator = Division.begin(); iterator != Division.end(); iterator++) {
-            (*iterator) = AlgebraLib::ElementWiseDivision(d, *iterator, preserveZero);
+            (*iterator) = algebra_lib::ElementWiseDivision(d, *iterator, preserveZero);
         }
 
         return Division;
