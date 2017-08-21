@@ -15,11 +15,11 @@
 #ifndef LINEARALGEBRA_MATRIX_H_H
 #define LINEARALGEBRA_MATRIX_H_H
 
-#include "Globals.hpp"
-#include "SparseVector.hpp"
-#include "SparseMatrix.hpp"
+#include "globals.hpp"
+#include "sparse_vector.hpp"
+#include "sparse_matrix.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /**
      *  \brief Matrix matrix product.
      * @param A \f$ m \times n \f$ sparse matrix

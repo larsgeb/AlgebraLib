@@ -1,9 +1,9 @@
 #ifndef LINEARALGEBRA_SPARSEVECTOR_H
 #define LINEARALGEBRA_SPARSEVECTOR_H
 
-#include "Globals.hpp"
+#include "globals.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /*!
      * \brief Class for sparse vectors.
      */

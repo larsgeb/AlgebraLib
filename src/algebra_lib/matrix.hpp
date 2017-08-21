@@ -1,14 +1,14 @@
 #ifndef LINEARALGEBRA_MATRIX_HPP
 #define LINEARALGEBRA_MATRIX_HPP
 
-#include "Globals.hpp"
-#include "Vector.hpp"
+#include "globals.hpp"
+#include "vector.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /*!
      * \brief Class for full matrices.
      */
-    class Matrix {
+    class matrix {
     public:
         // Constructors
         /*!
@@ -16,7 +16,7 @@ namespace AlgebraLib {
          *
          * Creates zero matrix of size \f$ 2 \times 2\f$.
          */
-        Matrix();
+        matrix();
 
         /*!
          * \brief Constructor for specified matrix size.
@@ -26,24 +26,24 @@ namespace AlgebraLib {
          *
          * Creates zero matrix of size \f$ rows \times columns\f$.
          */
-        Matrix(unsigned long rows, unsigned long columns);
+        matrix(unsigned long rows, unsigned long columns);
 
         // Member functions
-        Matrix InvertLowerTriangular();
-        Matrix InvertLowerTriangular() const;
-        Matrix InvertMatrixElements(bool preserveZero = false);
-        Matrix InvertMatrixElements(bool preserveZero = false) const;
-        Matrix & InvertMatrixElementsSelf(bool preserveZero = false);
-        Matrix Transpose();
-        Matrix & TransposeSelf();
-        Matrix Transpose() const;
-        Vector Trace(int offset = 0);
-        Vector Trace(int offset = 0) const;
-        Matrix CholeskyDecompose();
-        Matrix CholeskyDecompose() const;
-        Vector SolveLowerTriangular(Vector &Y);
-        Vector SolveLowerTriangular(Vector &Y) const;
-        Matrix & Unit();
+        matrix InvertLowerTriangular();
+        matrix InvertLowerTriangular() const;
+        matrix InvertMatrixElements(bool preserveZero = false);
+        matrix InvertMatrixElements(bool preserveZero = false) const;
+        matrix & InvertMatrixElementsSelf(bool preserveZero = false);
+        matrix Transpose();
+        matrix & TransposeSelf();
+        matrix Transpose() const;
+        vector Trace(int offset = 0);
+        vector Trace(int offset = 0) const;
+        matrix CholeskyDecompose();
+        matrix CholeskyDecompose() const;
+        vector SolveLowerTriangular(vector &Y);
+        vector SolveLowerTriangular(vector &Y) const;
+        matrix & Unit();
 
         // Read only field accessing
         /*!
@@ -64,37 +64,37 @@ namespace AlgebraLib {
          * @param i \f$ i - 1 \f$ one based (mathematical) index.
          * @return Vector component at one based (mathematical) index.
          */
-        Vector &operator[](int i);
+        vector &operator[](int i);
 
         /*!
          * \brief Access by reference of constant instance through operator, one based.
          * @param i \f$ i - 1 \f$ one based (mathematical) index.
          * @return Vector component at one based (mathematical) index.
          */
-        const Vector &operator[](int i) const;
+        const vector &operator[](int i) const;
 
         /*!
          * \brief Access by reference through operator, zero based.
          * @param i \f$ i \f$ one based (mathematical) index.
          * @return Vector component at one based (mathematical) index.
          */
-        Vector &operator()(int i);
+        vector &operator()(int i);
 
         /*!
          * \brief Access by reference of constant instance through operator, one based.
          * @param i \f$ i \f$ one based (mathematical) index.
          * @return Vector component at one based (mathematical) index.
          */
-        const Vector &operator()(int i) const;
+        const vector &operator()(int i) const;
 
-        Vector getColumn(int i);
+        vector getColumn(int i);
 
-        const Vector getColumn(int i) const;
+        const vector getColumn(int i) const;
 
-        Matrix setColumn(int i, Vector Vector);
+        matrix setColumn(int i, vector Vector);
 
         // Friend functions
-        friend std::ostream &operator<<(std::ostream &stream, const Matrix &Matrix);
+        friend std::ostream &operator<<(std::ostream &stream, const matrix &Matrix);
 
         // Iterator forwards
         /*!

@@ -4,7 +4,7 @@
 
 #include <ctime>
 #include <iomanip>
-#include "src/AlgebraLib/AlgebraLib.hpp"
+#include "SparseLinearAlgebra/src/AlgebraLib/algebra_lib.hpp"
 
 
 int main() {

@@ -2,9 +2,9 @@
 // Created by Lars Gebraad on 14-8-17.
 //
 
-#include "SparseVector.hpp"
+#include "sparse_vector.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     SparseVector::SparseVector() {
         _numElements = 0;
         _isColumn = true;

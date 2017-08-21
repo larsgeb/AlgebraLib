@@ -11,7 +11,7 @@
 #include <unordered_map>
 #include <fstream>
 
-namespace AlgebraLib{
+namespace algebra_lib{
     typedef std::vector<double> contentVectorDouble;
 }
 

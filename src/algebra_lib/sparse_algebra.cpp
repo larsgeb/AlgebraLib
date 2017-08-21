@@ -3,10 +3,10 @@
 //
 
 #include <iostream>
-#include "SparseAlgebra.hpp"
+#include "sparse_algebra.hpp"
 
 // --- Algebra functions
-namespace AlgebraLib {
+namespace algebra_lib {
 
 
 
@@ -14,7 +14,7 @@ namespace AlgebraLib {
     SparseMatrix operator*(const SparseMatrix &A, const SparseMatrix &B) {
 
         if (A._columns != B._rows) {
-            throw std::length_error("Matrix multiplication: matrices are not compatible in dimension");
+            throw std::length_error("matrix multiplication: matrices are not compatible in dimension");
         }
 
         SparseMatrix P(A._rows, B._columns);
@@ -110,7 +110,7 @@ namespace AlgebraLib {
     }
 
     std::ostream &operator<<(std::ostream &stream, const SparseMatrix &SparseMatrix) {
-        stream << "Sparse Matrix of dimension " << SparseMatrix._rows << "x" << SparseMatrix._columns
+        stream << "Sparse matrix of dimension " << SparseMatrix._rows << "x" << SparseMatrix._columns
                << ", displaying non-zero elements (zero-based indices):"
                << std::endl;
         for (auto const &row : SparseMatrix._matrixMap) {

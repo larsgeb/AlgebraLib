@@ -2,37 +2,37 @@
 // Created by Lars Gebraad on 16-8-17.
 //
 
-#include "FullAlgebra.hpp"
+#include "full_algebra.hpp"
 #include <cmath>
-#include "Vector.hpp"
+#include "vector.hpp"
 
-namespace AlgebraLib {
-    Vector::Vector(unsigned long elements, bool isColumn) {
+namespace algebra_lib {
+    vector::vector(unsigned long elements, bool isColumn) {
         _isColumn = isColumn;
         _elements = elements;
         _vectorContents = std::vector<double>(_elements, 0.0);
     };
 
-    Vector::Vector(unsigned long elements) {
+    vector::vector(unsigned long elements) {
         _isColumn = true;
         _elements = elements;
         _vectorContents = std::vector<double>(_elements, 0.0);
 
     };
 
-    Vector::Vector() {
+    vector::vector() {
         _isColumn = true;
         _elements = 2;
         _vectorContents = std::vector<double>(_elements, 0.0);
     };
 
-    Vector::Vector(bool isColumn) {
+    vector::vector(bool isColumn) {
         _isColumn = isColumn;
         _elements = 2;
         _vectorContents = std::vector<double>(_elements, 0.0);
     };
 
-    double &Vector::operator[](int i) {
+    double &vector::operator[](int i) {
         if (i < 0) {
             throw std::out_of_range("Out of natural range for vectors.");
         } else if (i >= _elements) {
@@ -42,7 +42,7 @@ namespace AlgebraLib {
         return _vectorContents[i];
     }
 
-    const double &Vector::operator[](int i) const {
+    const double &vector::operator[](int i) const {
         if (i < 0) {
             throw std::out_of_range("Out of natural range for vectors.");
         } else if (i >= _elements) {
@@ -52,7 +52,7 @@ namespace AlgebraLib {
         return _vectorContents[i];
     }
 
-    double &Vector::operator()(int i) {
+    double &vector::operator()(int i) {
         if (i - 1 < 0) {
             throw std::out_of_range("Out of natural range for vectors.");
         } else if (i - 1 >= _elements) {
@@ -62,7 +62,7 @@ namespace AlgebraLib {
         return _vectorContents[i - 1];
     }
 
-    const double &Vector::operator()(int i) const {
+    const double &vector::operator()(int i) const {
         if (i - 1 < 0) {
             throw std::out_of_range("Out of natural range for vectors.");
         } else if (i - 1 >= _elements) {
@@ -72,70 +72,70 @@ namespace AlgebraLib {
         return _vectorContents[i - 1];
     }
 
-    contentVectorDouble::iterator Vector::begin() {
+    contentVectorDouble::iterator vector::begin() {
         return _vectorContents.begin();
     }
 
-    contentVectorDouble::iterator Vector::end() {
+    contentVectorDouble::iterator vector::end() {
         return _vectorContents.end();
     }
 
-    contentVectorDouble::const_iterator Vector::begin() const {
+    contentVectorDouble::const_iterator vector::begin() const {
         return _vectorContents.begin();
     }
 
-    contentVectorDouble::const_iterator Vector::end() const {
+    contentVectorDouble::const_iterator vector::end() const {
         return _vectorContents.end();
     }
 
-    contentVectorDouble::reverse_iterator Vector::rbegin() {
+    contentVectorDouble::reverse_iterator vector::rbegin() {
         return _vectorContents.rbegin();
     }
 
-    contentVectorDouble::reverse_iterator Vector::rend() {
+    contentVectorDouble::reverse_iterator vector::rend() {
         return _vectorContents.rend();
     }
 
-    contentVectorDouble::const_iterator Vector::cbegin() const noexcept {
+    contentVectorDouble::const_iterator vector::cbegin() const noexcept {
         return _vectorContents.cbegin();
     }
 
-    contentVectorDouble::const_iterator Vector::cend() const noexcept {
+    contentVectorDouble::const_iterator vector::cend() const noexcept {
         return _vectorContents.cend();
     }
 
-    contentVectorDouble::const_reverse_iterator Vector::crbegin() const noexcept {
+    contentVectorDouble::const_reverse_iterator vector::crbegin() const noexcept {
         return _vectorContents.crbegin();
     }
 
-    contentVectorDouble::const_reverse_iterator Vector::crend() const noexcept {
+    contentVectorDouble::const_reverse_iterator vector::crend() const noexcept {
         return _vectorContents.crend();
     }
 
-    Vector Vector::Transpose() {
-        return static_cast<Vector>(static_cast<const Vector *>(this)->Transpose());
+    vector vector::Transpose() {
+        return static_cast<vector>(static_cast<const vector *>(this)->Transpose());
     }
 
-    Vector Vector::Transpose() const {
-        Vector Ut = (*this);
+    vector vector::Transpose() const {
+        vector Ut = (*this);
         Ut._isColumn = !_isColumn;
         return Ut;
     }
 
-    Vector &Vector::TransposeSelf() {
+    vector &vector::TransposeSelf() {
         _isColumn = !_isColumn;
         return (*this);
     }
 
-    Vector Vector::Normalize() {
-        return static_cast<Vector>(static_cast<const Vector *>(this)->Normalize());
+    vector vector::Normalize() {
+        return static_cast<vector>(static_cast<const vector *>(this)->Normalize());
     }
 
-    Vector Vector::Normalize() const {
+    vector vector::Normalize() const {
         return (*this)/sqrt((*this) * (*this));
     }
 
-    Vector &Vector::NormalizeSelf() {
+    vector &vector::NormalizeSelf() {
         (*this) = (*this).Normalize();
         return (*this);
     }

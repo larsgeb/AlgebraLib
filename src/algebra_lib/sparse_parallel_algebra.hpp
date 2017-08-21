@@ -7,7 +7,7 @@
 
 #include <vector>
 #include <thread>
-#include "SparseAlgebra.hpp"
+#include "sparse_algebra.hpp"
 
 SparseVector ParallelMatrixVector(const SparseMatrix &A, const SparseVector &U);
 

@@ -1,10 +1,10 @@
 #ifndef LINEARALGEBRA_SPARSEMATRIX_H
 #define LINEARALGEBRA_SPARSEMATRIX_H
 
-#include "Globals.hpp"
-#include "SparseVector.hpp"
+#include "globals.hpp"
+#include "sparse_vector.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /*!
      * \brief Class for sparse matrices.
      */

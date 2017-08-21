@@ -15,11 +15,11 @@
 #ifndef LINEARALGEBRA_FULLALGEBRA_HPP
 #define LINEARALGEBRA_FULLALGEBRA_HPP
 
-#include "Globals.hpp"
-#include "Vector.hpp"
-#include "Matrix.hpp"
+#include "globals.hpp"
+#include "vector.hpp"
+#include "matrix.hpp"
 
-namespace AlgebraLib {
+namespace algebra_lib {
     /**
      *  \brief Matrix matrix product.
      * @param A \f$ m \times n \f$ matrix
@@ -27,15 +27,15 @@ namespace AlgebraLib {
      * @return \f$ m \times l \f$ matrix
      * @throw std::length_error A and B are not of compatible dimension.
      */
-    Matrix operator*(const Matrix &A, const Matrix &B);
+    matrix operator*(const matrix &A, const matrix &B);
 
-    Matrix operator*(const Matrix &A, const double &b);
+    matrix operator*(const matrix &A, const double &b);
 
-    Matrix operator*(const double &b, const Matrix &A);
+    matrix operator*(const double &b, const matrix &A);
 
-    Matrix operator+(const Matrix &A, const Matrix &B);
+    matrix operator+(const matrix &A, const matrix &B);
 
-    Matrix operator-(const Matrix &A, const Matrix &B);
+    matrix operator-(const matrix &A, const matrix &B);
 
     /**
      *  \brief Matrix vector product.
@@ -45,7 +45,7 @@ namespace AlgebraLib {
      * @throw std::length_error A and U are not of compatible dimension.
      * @throw std::invalid_argument U is not a column vector.
      */
-    Vector operator*(const Matrix &A, const Vector &U);
+    vector operator*(const matrix &A, const vector &U);
 
     /**
      *  \brief Vector matrix product.
@@ -55,7 +55,7 @@ namespace AlgebraLib {
      * @throw std::length_error U and A are not of compatible dimension.
      * @throw std::invalid_argument U is not a row vector.
      */
-    Vector operator*(const Vector &U, const Matrix &A);
+    vector operator*(const vector &U, const matrix &A);
 
     /**
      * \brief Vector dot product.
@@ -64,7 +64,7 @@ namespace AlgebraLib {
      * @return scalar
      * @throw std::length_error U and V are not of compatible dimension.
      */
-    double operator*(const Vector &U, const Vector &V);
+    double operator*(const vector &U, const vector &V);
 
     /**
      * \brief Vector sum.
@@ -73,7 +73,7 @@ namespace AlgebraLib {
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
      * @throw std::length_error U and V are not of compatible dimension.
      */
-    Vector operator+(const Vector &U, const Vector &V);
+    vector operator+(const vector &U, const vector &V);
 
     /**
      * \brief Vector difference.
@@ -82,7 +82,7 @@ namespace AlgebraLib {
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
      * @throw std::length_error U and V are not of compatible dimension.
      */
-    Vector operator-(const Vector &U, const Vector &V);
+    vector operator-(const vector &U, const vector &V);
 
     /**
      * \brief Vector scalar product.
@@ -90,7 +90,7 @@ namespace AlgebraLib {
      * @param m scalar
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
      */
-    Vector operator*(const Vector &U, double m);
+    vector operator*(const vector &U, double m);
 
     /**
      * \brief Vector scalar product.
@@ -101,7 +101,7 @@ namespace AlgebraLib {
      * reverse order of operator*(const SparseVector &U, double m). Functions are identical.
      *
      */
-    Vector operator*(double m, const Vector &U);
+    vector operator*(double m, const vector &U);
 
     /**
      * \brief Vector scalar division.
@@ -109,25 +109,25 @@ namespace AlgebraLib {
      * @param m scalar
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ vector, same as U
      */
-    Vector operator/(const Vector &U, double m);
+    vector operator/(const vector &U, double m);
 
-    Vector ElementWiseMultiplication(const Vector &U, const Vector &V);
+    vector ElementWiseMultiplication(const vector &U, const vector &V);
 
-    Vector ElementWiseDivision(double d, const Vector &V, bool preserveZero = true);
+    vector ElementWiseDivision(double d, const vector &V, bool preserveZero = true);
 
-    Matrix ElementWiseDivision(double d, const Matrix &V, bool preserveZero = true);
+    matrix ElementWiseDivision(double d, const matrix &V, bool preserveZero = true);
 
-    Matrix VectorToDiagonal(Vector &U, int offset = 0);
+    matrix VectorToDiagonal(vector &U, int offset = 0);
 
-    Matrix VectorToDiagonal(const Vector &Vector, int offset = 0);
+    matrix VectorToDiagonal(const vector &Vector, int offset = 0);
 
-    Matrix ReadMatrix(const char *filename);
+    matrix ReadMatrix(const char *filename);
 
-    void WriteMatrix(Matrix M, const char *filename);
+    void WriteMatrix(matrix M, const char *filename);
 
-    Vector ReadVector(const char *filename);
+    vector ReadVector(const char *filename);
 
-    void WriteVector(Vector U, const char *filename);
+    void WriteVector(vector U, const char *filename);
 };
 
 #endif //LINEARALGEBRA_FULLALGEBRA_HPP

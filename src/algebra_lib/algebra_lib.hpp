@@ -41,8 +41,8 @@
 #ifndef LINEARALGEBRA_ALGEBRALIB_HPP
 #define LINEARALGEBRA_ALGEBRALIB_HPP
 
-#include "Globals.hpp"
-#include "FullAlgebra.hpp"
-#include "SparseAlgebra.hpp"
+#include "globals.hpp"
+#include "full_algebra.hpp"
+#include "sparse_algebra.hpp"
 
 #endif //LINEARALGEBRA_ALGEBRALIB_HPP

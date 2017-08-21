@@ -2,11 +2,11 @@
 // Created by Lars Gebraad on 14-8-17.
 //
 
-#include "SparseParallelAlgebra.hpp"
+#include "sparse_parallel_algebra.hpp"
 
 SparseVector ParallelMatrixVector(const SparseMatrix &A, const SparseVector &U) {
     if (A._columns != U._numElements) {
-        throw std::length_error("Vector and matrix are not compatible in dimension");
+        throw std::length_error("vector and matrix are not compatible in dimension");
     }
     SparseVector P(A._rows);
 
