@@ -20,8 +20,26 @@ namespace algebra_lib {
         _isColumn = row;
     }
 
-// Indexing using operators on mutable and constant instantiations.
-    double &sparse_vector::operator[](int i) {
+    double sparse_vector::operator[](int i) {
+        return (static_cast<const sparse_vector *>(this)->operator[](i));
+    }
+
+    const double sparse_vector::operator[](int i) const {
+        if (i < 0) {
+            throw std::out_of_range("Exceeded natural range for indices");
+        } else if (i >= _numElements)
+            throw std::out_of_range("Exceeded number of elements");
+
+        double val = 0.0;
+        try {
+            return  _vectorMap.at(i);
+        } catch (std::out_of_range & e){
+            val = 0.0;
+        }
+        return val;
+    }
+
+    double &sparse_vector::operator()(int i) {
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i >= _numElements)
@@ -33,64 +51,10 @@ namespace algebra_lib {
             return lookup->second;
         }
         return _vectorMap[i];
-
     }
 
-    const double &sparse_vector::operator[](int i) const {
-        if (i < 0) {
-            throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i >= _numElements)
-            throw std::out_of_range("Exceeded number of elements");
-
-        /*
-        // Try to find current key in sparse vector, if it does not exist, we get iterator at end of map.
-        auto lookup = _vectorMap.find(i);
-        if (lookup != _vectorMap.end()) {
-            return lookup->second;
-        }
-
-        // Very bad below!
-        const double &a = 0.0;
-            return a;
-        */
-
-        return _vectorMap.at(i);
-    }
-
-    double &sparse_vector::operator()(int i) {
-        if (i < 1) {
-            throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i > _numElements)
-            throw std::out_of_range("Exceeded number of elements");
-
-        // Try to find current key in sparse vector, if it does not exist, we get iterator at end of map.
-        const std::map<int, double>::iterator &lookup = _vectorMap.find(i - 1);
-        if (lookup != _vectorMap.end()) {
-            return lookup->second;
-        }
-        return _vectorMap[i - 1];
-    }
-
-    const double &sparse_vector::operator()(int i) const {
-        if (i < 1) {
-            throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i > _numElements)
-            throw std::out_of_range("Exceeded number of elements");
-
-        /*
-        // Try to find current key in sparse vector, if it does not exist, we get iterator at end of map.
-        auto lookup = _vectorMap.find(i);
-        if (lookup != _vectorMap.end()) {
-            return lookup->second;
-        }
-
-        // Very bad below
-        const double &a = 0.0;
-            return a;
-        */
-
-        return _vectorMap.at(i - 1);
-
+    const double sparse_vector::operator()(int i) const {
+        return (this)->operator[](i);
     }
 
     sparse_vector sparse_vector::Transpose() {
@@ -106,10 +70,36 @@ namespace algebra_lib {
         return (*this);
     }
 
-    /*SparseVector::SparseVector(const SparseVector &rhs) {
-        _isColumn = rhs._isColumn;
-        _numElements = rhs._numElements;
-        _vectorMap = rhs._vectorMap;
-    }*/
+    sparseVectorContentDouble::const_iterator sparse_vector::begin() const {
+        return _vectorMap.begin();
+    }
+
+    sparseVectorContentDouble::const_iterator sparse_vector::end() const {
+        return _vectorMap.end();
+    }
+
+    sparseVectorContentDouble::reverse_iterator sparse_vector::rbegin() {
+        return _vectorMap.rbegin();
+    }
+
+    sparseVectorContentDouble::reverse_iterator sparse_vector::rend() {
+        return _vectorMap.rend();
+    }
+
+    sparseVectorContentDouble::const_iterator sparse_vector::cbegin() const noexcept {
+        return _vectorMap.cbegin();
+    }
+
+    sparseVectorContentDouble::const_iterator sparse_vector::cend() const noexcept {
+        return _vectorMap.cend();
+    }
+
+    sparseVectorContentDouble::const_reverse_iterator sparse_vector::crbegin() const noexcept {
+        return _vectorMap.crbegin();
+    }
+
+    sparseVectorContentDouble::const_reverse_iterator sparse_vector::crend() const noexcept {
+        return _vectorMap.crend();
+    }
 }
 // --- end of class ---

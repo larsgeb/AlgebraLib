@@ -4,11 +4,13 @@
 
 #include <ctime>
 #include <iomanip>
-#include "SparseLinearAlgebra/src/AlgebraLib/algebra_lib.hpp"
+#include "src/algebra_lib/algebra_lib.hpp"
 
+using namespace algebra_lib;
 
 int main() {
-    AlgebraLib::Matrix PSD(3, 3);
+
+    /*matrix PSD(3, 3);
 
     PSD[0][0] = 4;
     PSD[0][1] = 12;
@@ -21,12 +23,17 @@ int main() {
     PSD[2][2] = 98;
 
 
-    AlgebraLib::WriteMatrix(PSD.CholeskyDecompose().InvertLowerTriangular(),"Matrix.txt");
+    WriteMatrix(PSD.CholeskyDecompose().InvertLowerTriangular(),"Matrix.txt");
 
 
-    AlgebraLib::Matrix A = AlgebraLib::ReadMatrix("Matrix.txt");
+    matrix A = ReadMatrix("Matrix.txt");
 
-    std::cout << A.InvertLowerTriangular() * A;
+    std::cout << A.InvertLowerTriangular() * A;*/
+
+    sparse_matrix B(501, 501);
+
+    sparse_matrix A = ParallelMatrixProduct(B, B);
+    std::cout << A;
 
     return EXIT_SUCCESS;
 }

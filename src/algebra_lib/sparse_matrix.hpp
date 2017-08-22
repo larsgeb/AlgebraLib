@@ -8,16 +8,11 @@ namespace algebra_lib {
     /*!
      * \brief Class for sparse matrices.
      */
+    // Type definitions
+    typedef std::map<int, sparse_vector> sparseContentMatrixDouble;
     class sparse_matrix {
     public:
-        // Type definitions
-        typedef std::map<int, sparse_vector> MatrixMap;
-
-        // Fields
-        MatrixMap _matrixMap;
-        int _rows;
-        int _columns;
-        /// \todo Create non-zero column index in sparse_matrix to speed up the iterations here, possibly during reference access.
+        // todo Create non-zero column index in sparse_matrix to speed up the iterations here, possibly during reference access.
 
         // Constructors
         sparse_matrix(int rows, int columns);
@@ -25,18 +20,12 @@ namespace algebra_lib {
         // Getters and setters using operators
         sparse_vector operator[](int i);
 
-        const sparse_vector &operator[](int i) const;
+        const sparse_vector operator[](int i) const;
 
         sparse_vector &operator()(int i);
 
-        const sparse_vector &operator()(int i) const;
+        const sparse_vector operator()(int i) const;
 
-        /*
-         * Cannot get reference for columns, as that would require us to
-         * create the entire getColumn, effectively creating every row and
-         * defeating the whole purpose of sparse algebra. Workaround;
-         * separate setters and getters for columns.
-         */
         sparse_vector GetSparseColumn(int column);
 
         const sparse_vector GetSparseColumn(int column) const;
@@ -45,10 +34,26 @@ namespace algebra_lib {
 
         sparse_matrix SetSparseColumn(sparse_vector Vector, int column);
 
-        // Member functions
-        int GetRows();
+        sparseContentMatrixDouble::const_iterator begin() const;
 
-        int GetColumns();
+        sparseContentMatrixDouble::const_iterator end() const;
+
+        sparseContentMatrixDouble::reverse_iterator rbegin();
+
+        sparseContentMatrixDouble::reverse_iterator rend();
+
+        sparseContentMatrixDouble::const_iterator cbegin() const noexcept;
+
+        sparseContentMatrixDouble::const_iterator cend() const noexcept;
+
+        sparseContentMatrixDouble::const_reverse_iterator crbegin() const noexcept;
+
+        sparseContentMatrixDouble::const_reverse_iterator crend() const noexcept;
+
+        // Member functions
+        int rows() const;
+
+        int columns() const;
 
         sparse_matrix Transpose();
 
@@ -56,6 +61,11 @@ namespace algebra_lib {
 
         // Friend functions
         friend std::ostream &operator<<(std::ostream &stream, const sparse_matrix &sparse_matrix);
+
+    private:
+        sparseContentMatrixDouble _matrixMap;
+        int _rows;
+        int _columns;
     };
 
 }

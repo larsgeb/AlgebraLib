@@ -44,5 +44,6 @@
 #include "globals.hpp"
 #include "full_algebra.hpp"
 #include "sparse_algebra.hpp"
+#include "sparse_parallel_algebra.hpp"
 
 #endif //LINEARALGEBRA_ALGEBRALIB_HPP

@@ -2,27 +2,57 @@
 // Created by Lars Gebraad on 14-8-17.
 //
 
+#include <thread>
+#include <cmath>
+#include "sparse_algebra.hpp"
 #include "sparse_parallel_algebra.hpp"
 
-sparse_vector ParallelMatrixVector(const sparse_matrix &A, const sparse_vector &U) {
-    if (A._columns != U._numElements) {
-        throw std::length_error("vector and matrix are not compatible in dimension");
-    }
-    sparse_vector P(A._rows);
+namespace algebra_lib {
+    sparse_matrix ParallelMatrixProduct(const sparse_matrix &A, const sparse_matrix &B) {
+        if (A.columns() != B.rows()) {
+            throw std::length_error("Matrices are not compatible in dimension");
+        }
+        sparse_matrix P(A.rows(), B.columns());
+        sparse_matrix *Ppoint = &P;
 
-    std::vector<std::thread> workers;
-    int j = 0;
 
-    /// \todo Linux (and possibly other platforms) can't handle unlimited number of threads. Divide and conquer.
-    for (auto const &rowM : A._matrixMap) {
-        workers.emplace_back(std::thread([](int i, const sparse_vector &row, const sparse_vector &rhs, double &pElement) {
-            pElement = row * rhs;
-        }, j++, std::ref(rowM.second), std::ref(U), std::ref(P[rowM.first])));
-    }
-    std::cout << "Main thread!" << std::endl;
-    for (std::thread &e : workers) {
-        e.join();
-    }
+        unsigned concThreads = std::thread::hardware_concurrency();
+        if (concThreads <= 1) concThreads = 2;
 
-    return P;
+        std::vector<unsigned> rowsPerCore(concThreads, (unsigned) floor(A.rows() / concThreads));
+        std::vector<unsigned> startingRow(concThreads, 0);
+        std::vector<unsigned> endingRow(concThreads, 0);
+
+        if (A.rows() % concThreads > 0)
+            rowsPerCore[0]++;
+
+        endingRow[0] = rowsPerCore[0] - 1;
+
+        for (auto it = rowsPerCore.begin() + 1; it != rowsPerCore.end(); it++) {
+            if (A.rows() % concThreads > (it - rowsPerCore.begin()))
+                rowsPerCore[it - rowsPerCore.begin()]++;
+
+            startingRow[it - rowsPerCore.begin()] = endingRow[it - rowsPerCore.begin() - 1] + 1;
+            endingRow[it - rowsPerCore.begin()] = startingRow[it - rowsPerCore.begin()] + *(it) - 1;
+        }
+
+        std::vector<std::thread> workers;
+
+        for (int i = 0; i < startingRow.size(); i++) {
+            workers.emplace_back(
+                    std::thread([&]() mutable {
+                        for (int jRow = startingRow[i]; jRow < endingRow[i]; ++jRow) {
+//                            Ppoint->operator[](jRow).operator[](1) = 1;
+                        }
+                    }));
+        }
+
+        // Wrap up
+        std::cout << "Main thread!" << std::endl;
+        for (std::thread &e : workers) {
+            e.join();
+        }
+
+        return P;
+    }
 }

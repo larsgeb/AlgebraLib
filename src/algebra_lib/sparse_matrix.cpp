@@ -15,7 +15,7 @@ namespace algebra_lib {
         return (static_cast<const sparse_matrix *>(this)->operator[](i));
     }
 
-    const sparse_vector &sparse_matrix::operator[](int i) const {
+    const sparse_vector sparse_matrix::operator[](int i) const {
         // Check if within matrix size
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
@@ -23,61 +23,37 @@ namespace algebra_lib {
             throw std::out_of_range("Exceeded number of rows");
         }
 
-        return _matrixMap.at(i);
-
+        try {
+            return _matrixMap.at(i);
+        } catch (std::out_of_range &e){
+            return sparse_vector(_columns, false);
+        }
     }
 
     sparse_vector &sparse_matrix::operator()(int i) {
-        if (i < 1) {
+        if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i > _rows) {
+        } else if (i >= _rows) {
             throw std::out_of_range("Exceeded number of rows");
         }
 
-        if (_matrixMap.find(i - 1) == _matrixMap.end())
-            _matrixMap[i - 1] = sparse_vector(_columns, false);
+        // Row doesn't exist, accessing for assignment, so create the row.
+        if (_matrixMap.find(i) == _matrixMap.end())
+            _matrixMap[i] = sparse_vector(columns(), false);
 
-        _matrixMap[i - 1]._numElements = _columns;
-        return _matrixMap[i - 1];
+        return _matrixMap[i];
     }
 
-    const sparse_vector &sparse_matrix::operator()(int i) const {
-        // Check if within matrix size
-        if (i < 1) {
-            throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i > _rows) {
-            throw std::out_of_range("Exceeded number of rows");
-        }
-
-        /*
-        const std::map<int, SparseVector>::const_iterator &row = _matrixMap.find(i);
-
-        if (row != _matrixMap.end()) {
-            // Do we have entries in the constant matrix?
-            return row->second;
-        }
-
-        // If not, we're not allowed to make them, so we return empty const SparseVector.
-        const SparseVector A(_columns, false);
-        return A;
-         */
-
-        return _matrixMap.at(i - 1);
-
+    const sparse_vector sparse_matrix::operator()(int i) const {
+        return (this)->operator[](i);
     }
 
-    int sparse_matrix::GetRows() { return _rows; }
+    int sparse_matrix::rows() const { return _rows; }
 
-    int sparse_matrix::GetColumns() { return _columns; }
+    int sparse_matrix::columns() const { return _columns; }
 
     sparse_vector sparse_matrix::GetSparseColumn(int column) {
-        sparse_vector P(_rows, true);
-        for (auto &row : _matrixMap) {
-            double entry = row.second[column];
-            if (entry != 0)
-                P[row.first] = entry;
-        }
-        return P;
+        return static_cast<const sparse_matrix>(*this).GetSparseColumn(column);
     }
 
     const sparse_vector sparse_matrix::GetSparseColumn(int column) const {
@@ -86,7 +62,7 @@ namespace algebra_lib {
             try {
                 double entry = row.second[column];
                 if (entry != 0)
-                    P[row.first] = entry;
+                    P(row.first) = entry;
             } catch (const std::exception &e) {
                 /*
                  * Nothing fancy, we're trying to acces a const matrix. Right.. So what happens if we don't know which
@@ -111,7 +87,7 @@ namespace algebra_lib {
         for (auto row: _matrixMap) {
             for (auto column: row.second._vectorMap) {
                 if (column.second != 0)
-                    T[column.first][row.first] = column.second;
+                    T(column.first)(row.first) = column.second;
             }
         }
 
@@ -125,7 +101,7 @@ namespace algebra_lib {
         for (auto row: _matrixMap) {
             for (auto column: row.second._vectorMap) {
                 if (column.second != 0)
-                    T[column.first][row.first] = column.second;
+                    T(column.first)(row.first) = column.second;
             }
         }
         (*this) = T;
@@ -137,9 +113,9 @@ namespace algebra_lib {
         // sparse_matrix = sparse_matrix::SetSparseColumn().
         for (auto &&item : Vector._vectorMap) {
             if (item.second != 0) {
-                (*this)[item.first][column] = item.second;
+                (*this)(item.first)(column) = item.second;
             } else {
-                (*this)[item.first]._vectorMap.erase(column);
+                (*this)(item.first)._vectorMap.erase(column);
             }
         }
         return (*this);
@@ -149,12 +125,44 @@ namespace algebra_lib {
         sparse_matrix VectorModified = (*this);
         for (auto &&item : Vector._vectorMap) {
             if (item.second != 0) {
-                VectorModified[item.first][column] = item.second;
+                VectorModified(item.first)(column) = item.second;
             } else {
-                VectorModified[item.first]._vectorMap.erase(column);
+                VectorModified(item.first)._vectorMap.erase(column);
             }
         }
         return VectorModified;
+    }
+
+    sparseContentMatrixDouble::const_iterator sparse_matrix::begin() const {
+        return _matrixMap.begin();
+    }
+
+    sparseContentMatrixDouble::const_iterator sparse_matrix::end() const {
+        return _matrixMap.end();
+    }
+
+    sparseContentMatrixDouble::reverse_iterator sparse_matrix::rbegin() {
+        return _matrixMap.rbegin();
+    }
+
+    sparseContentMatrixDouble::reverse_iterator sparse_matrix::rend() {
+        return _matrixMap.rend();
+    }
+
+    sparseContentMatrixDouble::const_iterator sparse_matrix::cbegin() const noexcept {
+        return _matrixMap.cbegin();
+    }
+
+    sparseContentMatrixDouble::const_iterator sparse_matrix::cend() const noexcept {
+        return _matrixMap.cend();
+    }
+
+    sparseContentMatrixDouble::const_reverse_iterator sparse_matrix::crbegin() const noexcept {
+        return _matrixMap.crbegin();
+    }
+
+    sparseContentMatrixDouble::const_reverse_iterator sparse_matrix::crend() const noexcept {
+        return _matrixMap.crend();
     }
 
 }
