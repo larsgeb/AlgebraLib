@@ -94,6 +94,19 @@ namespace algebra_lib {
         return T;
     }
 
+    const sparse_matrix sparse_matrix::Transpose() const {
+        sparse_matrix T(_columns, _rows);
+
+        for (auto row: _matrixMap) {
+            for (auto column: row.second._vectorMap) {
+                if (column.second != 0)
+                    T(column.first)(row.first) = column.second;
+            }
+        }
+
+        return T;
+    }
+
     sparse_matrix sparse_matrix::TransposeSelf() {
         // Does not provide performance increase//less required memory over
         // sparse_matrix = sparse_matrix::Transpose().

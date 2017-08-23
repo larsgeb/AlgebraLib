@@ -54,13 +54,13 @@ namespace algebra_lib {
 
         sparse_vector TransposeSelf();
 
-        double elements() const { return _numElements;}
+        unsigned int size() const { return _numElements;}
 
         // Friend functions
         friend std::ostream &operator<<(std::ostream &stream, const sparse_vector &SparseVector);
 
     private:
-        int _numElements;
+        unsigned _numElements;
 
     };
 }

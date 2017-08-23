@@ -102,5 +102,31 @@ namespace algebra_lib {
      * @return \f$ 1 \times n \f$ or \f$ n \times 1 \f$ sparse vector, same as U
      */
     sparse_vector operator/(const sparse_vector &U, double m);
+
+    sparse_matrix operator*(const sparse_matrix &A, const double &b);
+
+    sparse_matrix operator*(const double &b, const sparse_matrix &A);
+
+    sparse_matrix operator+(const sparse_matrix &A, const sparse_matrix &B);
+
+    sparse_matrix operator-(const sparse_matrix &A, const sparse_matrix &B);
+
+    sparse_vector ElementWiseMultiplication(const sparse_vector &U, const sparse_vector &V);
+
+    sparse_vector ElementWiseDivision(double d, const sparse_vector &V, bool preserveZero = true);
+
+    sparse_matrix ElementWiseDivision(double d, const sparse_matrix &V, bool preserveZero = true);
+
+    sparse_matrix VectorToDiagonal(sparse_vector &U, int offset = 0);
+
+    sparse_matrix VectorToDiagonal(const sparse_vector &Vector, int offset = 0);
+
+    sparse_matrix ReadSparseMatrix(const char *filename);
+
+    void WriteMatrix(sparse_matrix M, const char *filename);
+
+    sparse_vector ReadSparseVector(const char *filename);
+
+    void WriteVector(sparse_vector U, const char *filename);
 }
 #endif //LINEARALGEBRA_MATRIX_H_H

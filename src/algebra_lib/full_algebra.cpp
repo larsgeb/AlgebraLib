@@ -310,8 +310,8 @@ namespace algebra_lib {
         outfile << "# " << std::endl;
 
         outfile << U.size() << std::endl;
-        for (int i = 0; i < U.size(); i++) {
-            outfile << U[i] << " ";
+        for (double &i : U) {
+            outfile << i << " ";
         }
         outfile.close();
     }

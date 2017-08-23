@@ -57,7 +57,23 @@ namespace algebra_lib {
 
         sparse_matrix Transpose();
 
+        const sparse_matrix Transpose() const;
+
         sparse_matrix TransposeSelf();
+
+        // Member functions
+        sparse_matrix InvertLowerTriangular();
+        sparse_matrix InvertLowerTriangular() const;
+        sparse_matrix InvertMatrixElements(bool preserveZero = false);
+        sparse_matrix InvertMatrixElements(bool preserveZero = false) const;
+        sparse_matrix & InvertMatrixElementsSelf(bool preserveZero = false);
+        sparse_vector Trace(int offset = 0);
+        sparse_vector Trace(int offset = 0) const;
+        sparse_matrix CholeskyDecompose();
+        sparse_matrix CholeskyDecompose() const;
+        sparse_vector SolveLowerTriangular(sparse_vector &Y);
+        sparse_vector SolveLowerTriangular(sparse_vector &Y) const;
+        sparse_matrix & Unit();
 
         // Friend functions
         friend std::ostream &operator<<(std::ostream &stream, const sparse_matrix &sparse_matrix);
@@ -66,6 +82,8 @@ namespace algebra_lib {
         sparseContentMatrixDouble _matrixMap;
         int _rows;
         int _columns;
+
+
     };
 
 }
