@@ -9,30 +9,31 @@ namespace algebra_lib {
      * \brief Class for sparse matrices.
      */
     // Type definitions
-    typedef std::map<int, sparse_vector> sparseContentMatrixDouble;
+    typedef std::map<unsigned int, sparse_vector> sparseContentMatrixDouble;
     class sparse_matrix {
     public:
         // todo Create non-zero column index in sparse_matrix to speed up the iterations here, possibly during reference access.
 
         // Constructors
-        sparse_matrix(int rows, int columns);
+        sparse_matrix();
+        sparse_matrix(unsigned int rows, unsigned int columns);
 
         // Getters and setters using operators
-        sparse_vector operator[](int i);
+        sparse_vector operator[](unsigned int i);
 
-        const sparse_vector operator[](int i) const;
+        const sparse_vector operator[](unsigned int i) const;
 
-        sparse_vector &operator()(int i);
+        sparse_vector &operator()(unsigned int i);
 
-        const sparse_vector operator()(int i) const;
+        const sparse_vector operator()(unsigned int i) const;
 
-        sparse_vector GetSparseColumn(int column);
+        sparse_vector GetSparseColumn(unsigned int column);
 
-        const sparse_vector GetSparseColumn(int column) const;
+        const sparse_vector GetSparseColumn(unsigned int column) const;
 
-        sparse_matrix SetSparseColumnSelf(sparse_vector Vector, int column);
+        sparse_matrix SetSparseColumnSelf(sparse_vector Vector, unsigned int column);
 
-        sparse_matrix SetSparseColumn(sparse_vector Vector, int column);
+        sparse_matrix SetSparseColumn(sparse_vector Vector, unsigned int column);
 
         sparseContentMatrixDouble::const_iterator begin() const;
 
@@ -51,9 +52,9 @@ namespace algebra_lib {
         sparseContentMatrixDouble::const_reverse_iterator crend() const noexcept;
 
         // Member functions
-        int rows() const;
+        unsigned int rows() const;
 
-        int columns() const;
+        unsigned int columns() const;
 
         sparse_matrix Transpose();
 
@@ -80,8 +81,8 @@ namespace algebra_lib {
 
     private:
         sparseContentMatrixDouble _matrixMap;
-        int _rows;
-        int _columns;
+        unsigned int _rows;
+        unsigned int _columns;
 
 
     };

@@ -132,7 +132,7 @@ namespace algebra_lib {
     }
 
     vector vector::Normalize() const {
-        return (*this)/sqrt((*this) * (*this));
+        return (*this) / sqrt((*this) * (*this));
     }
 
     vector &vector::NormalizeSelf() {

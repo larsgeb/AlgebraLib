@@ -6,34 +6,40 @@
 #include "sparse_matrix.hpp"
 
 namespace algebra_lib {
-    sparse_matrix::sparse_matrix(int rows, int columns) {
+
+    sparse_matrix::sparse_matrix() {
+        _rows = 2;
+        _columns = 2;
+    }
+
+    sparse_matrix::sparse_matrix(unsigned int rows, unsigned int columns) {
         _rows = rows;
         _columns = columns;
     }
 
-    sparse_vector sparse_matrix::operator[](int i) {
+    sparse_vector sparse_matrix::operator[](unsigned int i) {
         return (static_cast<const sparse_matrix *>(this)->operator[](i));
     }
 
-    const sparse_vector sparse_matrix::operator[](int i) const {
+    const sparse_vector sparse_matrix::operator[](unsigned int i) const {
         // Check if within matrix size
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i >= _rows) {
+        } else if (i >= rows()) {
             throw std::out_of_range("Exceeded number of rows");
         }
 
         try {
             return _matrixMap.at(i);
-        } catch (std::out_of_range &e){
-            return sparse_vector(_columns, false);
+        } catch (std::out_of_range &e) {
+            return sparse_vector(columns(), false);
         }
     }
 
-    sparse_vector &sparse_matrix::operator()(int i) {
+    sparse_vector &sparse_matrix::operator()(unsigned int i) {
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
-        } else if (i >= _rows) {
+        } else if (i >= rows()) {
             throw std::out_of_range("Exceeded number of rows");
         }
 
@@ -44,20 +50,20 @@ namespace algebra_lib {
         return _matrixMap[i];
     }
 
-    const sparse_vector sparse_matrix::operator()(int i) const {
+    const sparse_vector sparse_matrix::operator()(unsigned int i) const {
         return (this)->operator[](i);
     }
 
-    int sparse_matrix::rows() const { return _rows; }
+    unsigned int sparse_matrix::rows() const { return _rows; }
 
-    int sparse_matrix::columns() const { return _columns; }
+    unsigned int sparse_matrix::columns() const { return _columns; }
 
-    sparse_vector sparse_matrix::GetSparseColumn(int column) {
+    sparse_vector sparse_matrix::GetSparseColumn(unsigned int column) {
         return static_cast<const sparse_matrix>(*this).GetSparseColumn(column);
     }
 
-    const sparse_vector sparse_matrix::GetSparseColumn(int column) const {
-        sparse_vector P(_rows, true);
+    const sparse_vector sparse_matrix::GetSparseColumn(unsigned int column) const {
+        sparse_vector P(rows(), true);
         for (auto &row : _matrixMap) {
             try {
                 double entry = row.second[column];
@@ -82,10 +88,10 @@ namespace algebra_lib {
     }
 
     sparse_matrix sparse_matrix::Transpose() {
-        sparse_matrix T(_columns, _rows);
+        sparse_matrix T(columns(), rows());
 
         for (auto row: _matrixMap) {
-            for (auto column: row.second._vectorMap) {
+            for (auto column: row.second) {
                 if (column.second != 0)
                     T(column.first)(row.first) = column.second;
             }
@@ -95,10 +101,10 @@ namespace algebra_lib {
     }
 
     const sparse_matrix sparse_matrix::Transpose() const {
-        sparse_matrix T(_columns, _rows);
+        sparse_matrix T(columns(), rows());
 
         for (auto row: _matrixMap) {
-            for (auto column: row.second._vectorMap) {
+            for (auto column: row.second) {
                 if (column.second != 0)
                     T(column.first)(row.first) = column.second;
             }
@@ -110,9 +116,9 @@ namespace algebra_lib {
     sparse_matrix sparse_matrix::TransposeSelf() {
         // Does not provide performance increase//less required memory over
         // sparse_matrix = sparse_matrix::Transpose().
-        sparse_matrix T(_columns, _rows);
+        sparse_matrix T(columns(), rows());
         for (auto row: _matrixMap) {
-            for (auto column: row.second._vectorMap) {
+            for (auto column: row.second) {
                 if (column.second != 0)
                     T(column.first)(row.first) = column.second;
             }
@@ -121,26 +127,27 @@ namespace algebra_lib {
         return (*this);
     }
 
-    sparse_matrix sparse_matrix::SetSparseColumnSelf(sparse_vector Vector, int column) {
+    sparse_matrix sparse_matrix::SetSparseColumnSelf(sparse_vector Vector, unsigned int column) {
         // Does provide performance increase//less required memory over
         // sparse_matrix = sparse_matrix::SetSparseColumn().
-        for (auto &&item : Vector._vectorMap) {
+        for (auto &&item : Vector) {
             if (item.second != 0) {
                 (*this)(item.first)(column) = item.second;
             } else {
-                (*this)(item.first)._vectorMap.erase(column);
+//                (*this)(item.first)._vectorMap.erase(column);
+                (*this)(item.first).eraseEntry(column);
             }
         }
         return (*this);
     }
 
-    sparse_matrix sparse_matrix::SetSparseColumn(sparse_vector Vector, int column) {
+    sparse_matrix sparse_matrix::SetSparseColumn(sparse_vector Vector, unsigned int column) {
         sparse_matrix VectorModified = (*this);
-        for (auto &&item : Vector._vectorMap) {
+        for (auto &&item : Vector) {
             if (item.second != 0) {
                 VectorModified(item.first)(column) = item.second;
             } else {
-                VectorModified(item.first)._vectorMap.erase(column);
+                VectorModified(item.first).eraseEntry(column);
             }
         }
         return VectorModified;
@@ -177,6 +184,55 @@ namespace algebra_lib {
     sparseContentMatrixDouble::const_reverse_iterator sparse_matrix::crend() const noexcept {
         return _matrixMap.crend();
     }
+
+    sparse_matrix sparse_matrix::InvertLowerTriangular() {
+        return sparse_matrix();
+    }
+
+    sparse_matrix sparse_matrix::InvertLowerTriangular() const {
+        return sparse_matrix();
+    }
+
+    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) {
+        return sparse_matrix();
+    }
+
+    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) const {
+        return sparse_matrix();
+    }
+
+    sparse_matrix &sparse_matrix::InvertMatrixElementsSelf(bool preserveZero) {
+        return <#initializer#>;
+    }
+
+    sparse_vector sparse_matrix::Trace(int offset) {
+        return sparse_vector();
+    }
+
+    sparse_vector sparse_matrix::Trace(int offset) const {
+        return sparse_vector();
+    }
+
+    sparse_matrix sparse_matrix::CholeskyDecompose() {
+        return sparse_matrix();
+    }
+
+    sparse_matrix sparse_matrix::CholeskyDecompose() const {
+        return sparse_matrix();
+    }
+
+    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) {
+        return sparse_vector();
+    }
+
+    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) const {
+        return sparse_vector();
+    }
+
+    sparse_matrix &sparse_matrix::Unit() {
+        return <#initializer#>;
+    }
+
 
 }
 

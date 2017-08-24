@@ -2,6 +2,8 @@
 // Created by Lars Gebraad on 14-8-17.
 //
 
+#include "sparse_algebra.hpp"
+#include <cmath>
 #include "sparse_vector.hpp"
 
 namespace algebra_lib {
@@ -10,21 +12,21 @@ namespace algebra_lib {
         _isColumn = true;
     };
 
-    sparse_vector::sparse_vector(int numElements) {
+    sparse_vector::sparse_vector(unsigned int numElements) {
         _numElements = numElements;
         _isColumn = true;
     };
 
-    sparse_vector::sparse_vector(int numElements, bool row) {
+    sparse_vector::sparse_vector(unsigned int numElements, bool row) {
         _numElements = numElements;
         _isColumn = row;
     }
 
-    double sparse_vector::operator[](int i) {
+    double sparse_vector::operator[](unsigned int i) {
         return (static_cast<const sparse_vector *>(this)->operator[](i));
     }
 
-    const double sparse_vector::operator[](int i) const {
+    const double sparse_vector::operator[](unsigned int i) const {
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i >= _numElements)
@@ -32,32 +34,32 @@ namespace algebra_lib {
 
         double val = 0.0;
         try {
-            return  _vectorMap.at(i);
-        } catch (std::out_of_range & e){
+            return _vectorMap.at(i);
+        } catch (std::out_of_range &e) {
             val = 0.0;
         }
         return val;
     }
 
-    double &sparse_vector::operator()(int i) {
+    double &sparse_vector::operator()(unsigned int i) {
         if (i < 0) {
             throw std::out_of_range("Exceeded natural range for indices");
         } else if (i >= _numElements)
             throw std::out_of_range("Exceeded number of elements");
 
         // Try to find current key in sparse vector, if it does not exist, we get iterator at end of map.
-        const std::map<int, double>::iterator &lookup = _vectorMap.find(i);
+        const std::map<unsigned int, double>::iterator &lookup = _vectorMap.find(i);
         if (lookup != _vectorMap.end()) {
             return lookup->second;
         }
         return _vectorMap[i];
     }
 
-    const double sparse_vector::operator()(int i) const {
+    const double sparse_vector::operator()(unsigned int i) const {
         return (this)->operator[](i);
     }
 
-    sparse_vector sparse_vector::Transpose() {
+    sparse_vector sparse_vector::Transpose() const{
         sparse_vector T(_numElements, !_isColumn);
         T._vectorMap = _vectorMap;
         return T;
@@ -100,6 +102,14 @@ namespace algebra_lib {
 
     sparseVectorContentDouble::const_reverse_iterator sparse_vector::crend() const noexcept {
         return _vectorMap.crend();
+    }
+
+    sparse_vector sparse_vector::Normalize() const{
+        return (*this) / sqrt((*this) * (*this));
+    }
+
+    std::map<unsigned int, double>::const_iterator sparse_vector::find(const unsigned int &key ) const {
+        return _vectorMap.find(key);
     }
 }
 // --- end of class ---

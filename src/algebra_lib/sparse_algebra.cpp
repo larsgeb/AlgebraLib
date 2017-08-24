@@ -18,7 +18,7 @@ namespace algebra_lib {
         sparse_matrix P(A.rows(), B.columns());
         for (int columnB = 0; columnB < B.columns(); ++columnB) {
             sparse_vector p = A * B.GetSparseColumn(columnB);
-            for (auto pi : p._vectorMap) {
+            for (auto pi : p) {
                 if (pi.second != 0) {
                     P(pi.first)(columnB) = pi.second;
                 }
@@ -31,7 +31,7 @@ namespace algebra_lib {
         if (A.columns() != U.size()) {
             throw std::length_error(
                     "Left multiplication with matrix: vector and matrix are not compatible in dimension");
-        } else if (!U._isColumn) {
+        } else if (!U.isColumn()) {
             throw std::invalid_argument(
                     "Left multiplication with matrix: vector is not a column vector! First transpose it for goodness' sake.");
         }
@@ -49,9 +49,9 @@ namespace algebra_lib {
     double operator*(const sparse_vector &U, const sparse_vector &V) {
         if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
         double sum = 0.0;
-        for (auto const &entryU : U._vectorMap) {
-            auto lookup = V._vectorMap.find(entryU.first);
-            if (lookup != V._vectorMap.end()) {
+        for (auto const &entryU : U) {
+            auto lookup = V.find(entryU.first);
+            if (lookup != V.end()) {
                 sum += entryU.second * lookup->second;
             }
         }
@@ -61,7 +61,7 @@ namespace algebra_lib {
     sparse_vector operator+(const sparse_vector &U, const sparse_vector &V) {
         if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
         sparse_vector S = U;
-        for (auto const &entryV : V._vectorMap) {
+        for (auto const &entryV : V) {
             S(entryV.first) += entryV.second;
         }
         return S;
@@ -70,7 +70,7 @@ namespace algebra_lib {
     sparse_vector operator-(const sparse_vector &U, const sparse_vector &V) {
         if (U.size() != V.size()) throw std::length_error("Vectors are not the same dimension");
         sparse_vector S = U;
-        for (auto const &entryV : V._vectorMap) {
+        for (auto const &entryV : V) {
             S(entryV.first) -= entryV.second;
         }
         return S;
@@ -78,8 +78,8 @@ namespace algebra_lib {
 
     sparse_vector operator*(const sparse_vector &U, const double m) {
         sparse_vector V = U;
-        for (std::pair<const int, double> &entry : V._vectorMap) {
-            entry.second = entry.second / m;
+        for (auto &entry : V) {
+            V(entry.first) = entry.second / m;
         }
         return V;
     }
@@ -90,8 +90,8 @@ namespace algebra_lib {
 
     sparse_vector operator/(const sparse_vector &U, const double m) {
         sparse_vector V = U;
-        for (std::pair<const int, double> &entry : V._vectorMap) {
-            entry.second = entry.second / m;
+        for (auto &entry : V) {
+            V(entry.first) = entry.second / m;
         }
         return V;
     }
@@ -101,14 +101,14 @@ namespace algebra_lib {
         if (A.rows() != U.size()) {
             throw std::length_error(
                     "Right multiplication with matrix: vector and matrix are not compatible in dimension");
-        } else if (U._isColumn) {
+        } else if (U.isColumn()) {
             throw std::invalid_argument(
                     "Right multiplication with matrix: vector is not a row vector! First transpose it for goodness' "
                             "sake.");
         }
         sparse_vector P(A.columns(), false);
 
-        for (int columnA = 0; columnA < A.columns(); columnA++) {
+        for (unsigned int columnA = 0; columnA < A.columns(); columnA++) {
             P(columnA) = U * A.GetSparseColumn(columnA);
         }
 
@@ -141,7 +141,7 @@ namespace algebra_lib {
             for (auto &&element : row.second) {
                 S(row.first)(element.first) += element.second;
                 if (S[row.first][element.first] == 0)
-                    S(row.first)._vectorMap.erase(element.first);
+                    S(row.first).eraseEntry(element.first);
             }
         }
 
@@ -158,7 +158,7 @@ namespace algebra_lib {
             for (auto &&element : row.second) {
                 D(row.first)(element.first) -= element.second;
                 if (D[row.first][element.first] == 0)
-                    D(row.first)._vectorMap.erase(element.first);
+                    D(row.first).eraseEntry(element.first);
             }
         }
 
@@ -173,7 +173,7 @@ namespace algebra_lib {
         for (auto &&element : P) {
             P(element.first) *= V[element.first];
             if (P[element.first] == 0)
-                P._vectorMap.erase(element.first);
+                P.eraseEntry(element.first);
         }
 
         return P;
@@ -233,8 +233,8 @@ namespace algebra_lib {
 
     sparse_matrix ReadSparseMatrix(const char *filename) {
         double element;
-        int rows;
-        int columns;
+        unsigned int rows;
+        unsigned int columns;
 
         std::ifstream infile(filename);
 
@@ -251,11 +251,11 @@ namespace algebra_lib {
         infile >> rows;
         infile >> columns;
 
-        sparse_matrix ReadMatrix(rows, static_cast<int>(columns));
+        sparse_matrix ReadMatrix(rows, columns);
 
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
+        for (unsigned int i = 0; i < rows; i++) {
+            for (unsigned int j = 0; j < columns; j++) {
                 infile >> element;
                 if (element != 0.0)
                     ReadMatrix(i)(j) = element;
@@ -288,7 +288,7 @@ namespace algebra_lib {
 
     sparse_vector ReadSparseVector(const char *filename) {
         double element;
-        int columns;
+        unsigned int columns;
 
         std::ifstream infile(filename);
 
@@ -306,7 +306,7 @@ namespace algebra_lib {
 
         sparse_vector ReadVector(columns, true);
 
-        for (int i = 0; i < columns; i++) {
+        for (unsigned int i = 0; i < columns; i++) {
             infile >> element;
             if (element != 0)
                 ReadVector(i) = element;
@@ -327,32 +327,32 @@ namespace algebra_lib {
         outfile << "# " << std::endl;
 
         outfile << U.size() << std::endl;
-        for (int i = 0; i < U.size(); i++) {
-            outfile << U[i] << " ";
+        for (auto &&i : U) {
+            outfile << i.second << " ";
         }
         outfile.close();
     }
 
-    std::ostream &operator<<(std::ostream &stream, const sparse_vector &SparseVector) {
-        stream << "Sparse " << (SparseVector._isColumn ? "column" : "row") << " vector of dimension "
-               << SparseVector._numElements
+    std::ostream &operator<<(std::ostream &stream, const sparse_vector &out_vector) {
+        stream << "Sparse " << (out_vector.isColumn() ? "column" : "row") << " vector of dimension "
+               << out_vector._numElements
                << ", displaying non-zero elements (zero-based indices):"
                << std::endl;
         stream << "- start -" << std::endl;
-        for (auto const &entry : SparseVector._vectorMap) {
+        for (auto const &entry : out_vector) {
             stream << "\tElement " << entry.first << ": " << entry.second << std::endl;
         }
         stream << "-- end --" << std::endl;
         return stream;
     }
 
-    std::ostream &operator<<(std::ostream &stream, const sparse_matrix &sparse_matrix) {
-        stream << "Sparse matrix of dimension " << sparse_matrix._rows << "x" << sparse_matrix._columns
+    std::ostream &operator<<(std::ostream &stream, const sparse_matrix &out_matrix) {
+        stream << "Sparse matrix of dimension " << out_matrix.rows() << "x" << out_matrix.columns()
                << ", displaying non-zero elements (zero-based indices):"
                << std::endl;
         stream << "- start -" << std::endl;
-        for (auto const &row : sparse_matrix._matrixMap) {
-            for (auto const &entry: row.second._vectorMap) {
+        for (auto const &row : out_matrix) {
+            for (auto const &entry: row.second) {
                 stream << "\tElement [" << row.first << "," << entry.first << "]: " << entry.second << std::endl;
             }
         }

@@ -8,30 +8,28 @@ namespace algebra_lib {
      * \brief Class for sparse vectors.
      */
     // Type definitions
-    typedef std::map<int, double> sparseVectorContentDouble;
+    typedef std::map<unsigned int, double> sparseVectorContentDouble;
 
     class sparse_vector {
     public:
         // Fields
-        sparseVectorContentDouble _vectorMap;
 
-        bool _isColumn;
 
         // Constructors
-        explicit sparse_vector();
+        sparse_vector();
 
-        explicit sparse_vector(int numElements);
+        explicit sparse_vector(unsigned int numElements);
 
-        sparse_vector(int numElements, bool isColumn);
+        sparse_vector(unsigned int numElements, bool isColumn);
 
         // Getters and setters using operators
-        double operator[](int i);
+        double operator[](unsigned int i);
 
-        const double operator[](int i) const;
+        const double operator[](unsigned int i) const;
 
-        double &operator()(int i);
+        double &operator()(unsigned int i);
 
-        const double operator()(int i) const;
+        const double operator()(unsigned int i) const;
 
         sparseVectorContentDouble::const_iterator begin() const;
 
@@ -50,17 +48,27 @@ namespace algebra_lib {
         sparseVectorContentDouble::const_reverse_iterator crend() const noexcept;
 
         // Member functions
-        sparse_vector Transpose();
+        sparse_vector Normalize() const;
+
+        sparse_vector Transpose() const;
 
         sparse_vector TransposeSelf();
 
-        unsigned int size() const { return _numElements;}
+        std::map<unsigned int, double>::const_iterator find(const unsigned int &key) const;
+
+        unsigned int size() const { return _numElements; }
+
+        bool isColumn() const { return _isColumn; }
+
+        void eraseEntry(unsigned int element) { _vectorMap.erase(element); }
 
         // Friend functions
         friend std::ostream &operator<<(std::ostream &stream, const sparse_vector &SparseVector);
 
     private:
         unsigned _numElements;
+        bool _isColumn;
+        sparseVectorContentDouble _vectorMap;
 
     };
 }
