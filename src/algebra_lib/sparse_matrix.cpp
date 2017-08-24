@@ -185,53 +185,53 @@ namespace algebra_lib {
         return _matrixMap.crend();
     }
 
-    sparse_matrix sparse_matrix::InvertLowerTriangular() {
-        return sparse_matrix();
-    }
-
-    sparse_matrix sparse_matrix::InvertLowerTriangular() const {
-        return sparse_matrix();
-    }
-
-    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) {
-        return sparse_matrix();
-    }
-
-    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) const {
-        return sparse_matrix();
-    }
-
-    sparse_matrix &sparse_matrix::InvertMatrixElementsSelf(bool preserveZero) {
-        return <#initializer#>;
-    }
-
-    sparse_vector sparse_matrix::Trace(int offset) {
-        return sparse_vector();
-    }
-
-    sparse_vector sparse_matrix::Trace(int offset) const {
-        return sparse_vector();
-    }
-
-    sparse_matrix sparse_matrix::CholeskyDecompose() {
-        return sparse_matrix();
-    }
-
-    sparse_matrix sparse_matrix::CholeskyDecompose() const {
-        return sparse_matrix();
-    }
-
-    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) {
-        return sparse_vector();
-    }
-
-    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) const {
-        return sparse_vector();
-    }
-
-    sparse_matrix &sparse_matrix::Unit() {
-        return <#initializer#>;
-    }
+//    sparse_matrix sparse_matrix::InvertLowerTriangular() {
+//        return sparse_matrix();
+//    }
+//
+//    sparse_matrix sparse_matrix::InvertLowerTriangular() const {
+//        return sparse_matrix();
+//    }
+//
+//    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) {
+//        return sparse_matrix();
+//    }
+//
+//    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) const {
+//        return sparse_matrix();
+//    }
+//
+//    sparse_matrix &sparse_matrix::InvertMatrixElementsSelf(bool preserveZero) {
+//        return <#initializer#>;
+//    }
+//
+//    sparse_vector sparse_matrix::Trace(int offset) {
+//        return sparse_vector();
+//    }
+//
+//    sparse_vector sparse_matrix::Trace(int offset) const {
+//        return sparse_vector();
+//    }
+//
+//    sparse_matrix sparse_matrix::CholeskyDecompose() {
+//        return sparse_matrix();
+//    }
+//
+//    sparse_matrix sparse_matrix::CholeskyDecompose() const {
+//        return sparse_matrix();
+//    }
+//
+//    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) {
+//        return sparse_vector();
+//    }
+//
+//    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) const {
+//        return sparse_vector();
+//    }
+//
+//    sparse_matrix &sparse_matrix::Unit() {
+//        return <#initializer#>;
+//    }
 
 
 }
