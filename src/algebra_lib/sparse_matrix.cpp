@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 #include "sparse_matrix.hpp"
 
 namespace algebra_lib {
@@ -185,55 +186,134 @@ namespace algebra_lib {
         return _matrixMap.crend();
     }
 
-//    sparse_matrix sparse_matrix::InvertLowerTriangular() {
-//        return sparse_matrix();
-//    }
-//
-//    sparse_matrix sparse_matrix::InvertLowerTriangular() const {
-//        return sparse_matrix();
-//    }
-//
-//    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) {
-//        return sparse_matrix();
-//    }
-//
-//    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) const {
-//        return sparse_matrix();
-//    }
-//
-//    sparse_matrix &sparse_matrix::InvertMatrixElementsSelf(bool preserveZero) {
-//        return <#initializer#>;
-//    }
-//
-//    sparse_vector sparse_matrix::Trace(int offset) {
-//        return sparse_vector();
-//    }
-//
-//    sparse_vector sparse_matrix::Trace(int offset) const {
-//        return sparse_vector();
-//    }
-//
-//    sparse_matrix sparse_matrix::CholeskyDecompose() {
-//        return sparse_matrix();
-//    }
-//
-//    sparse_matrix sparse_matrix::CholeskyDecompose() const {
-//        return sparse_matrix();
-//    }
-//
-//    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) {
-//        return sparse_vector();
-//    }
-//
-//    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) const {
-//        return sparse_vector();
-//    }
-//
-//    sparse_matrix &sparse_matrix::Unit() {
-//        return <#initializer#>;
-//    }
+    sparse_matrix sparse_matrix::InvertLowerTriangular() {
+        return (static_cast<const sparse_matrix *>(this)->InvertLowerTriangular());
+    }
 
+    sparse_matrix sparse_matrix::InvertLowerTriangular() const {
+        if (rows() != columns()) {
+            throw std::length_error("matrix trace: matrix is not square.");
+        }
 
+        sparse_matrix Inverse(rows(), columns());
+
+        for (unsigned int column = 0; column < Inverse.columns(); ++column) {
+            sparse_vector RHS(Inverse.rows(), true);
+            RHS(column) = 1.0;
+
+            Inverse.SetSparseColumnSelf(SolveLowerTriangular(RHS), column);
+        }
+        return Inverse;
+    }
+
+    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) {
+        return static_cast<const sparse_matrix *>(this)->InvertMatrixElements(preserveZero);
+    }
+
+    sparse_matrix sparse_matrix::InvertMatrixElements(bool preserveZero) const {
+        sparse_matrix iM = (*this);
+        for (auto &&row : (*this)) {
+            for (auto &&element : row.second) {
+                if (!(preserveZero and element.second == 0))
+                    iM(row.first)(element.first) = 1.0 / element.second;
+            }
+        }
+        return iM;
+    }
+
+    sparse_matrix &sparse_matrix::InvertMatrixElementsSelf(bool preserveZero) {
+        (*this) = (*this).InvertMatrixElements(preserveZero);
+        return (*this);
+    }
+
+    sparse_vector sparse_matrix::Trace(int offset) {
+        return (static_cast<const sparse_matrix *>(this)->Trace(offset));
+    }
+
+    sparse_vector sparse_matrix::Trace(int offset) const {
+        if (rows() != columns()) {
+            throw std::length_error("Matrix trace: matrix is not square.");
+        } else if (abs(offset) >= rows()) {
+            throw std::out_of_range("Exceeded matrix bounds");
+        }
+        sparse_vector VectorTrace(rows() - abs(offset));
+
+        if (offset > 0) {
+            for (unsigned int element = 0; element < VectorTrace.size(); ++element) {
+                VectorTrace(element) = (*this)[element + offset][element];
+            }
+        } else {
+            for (unsigned int element = 0; element < VectorTrace.size(); ++element) {
+                VectorTrace(element) = (*this)[element][element - offset];
+            }
+        }
+        return VectorTrace;
+    }
+
+    sparse_matrix sparse_matrix::CholeskyDecompose() {
+        return static_cast<const sparse_matrix *>(this)->CholeskyDecompose();
+    }
+
+    sparse_matrix sparse_matrix::CholeskyDecompose() const {
+        if (rows() != columns()) {
+            throw std::length_error("Cholesky decomposition: matrix is not square.");
+        }
+
+        sparse_matrix LowerCholesky(rows(), columns());
+
+        LowerCholesky(0)(0) = sqrt((*this)[0][0]);
+
+        for (unsigned int row = 1; row < rows(); ++row) {
+            for (unsigned int column = 0; column <= row; ++column) {
+
+                double sum = 0;
+                for (int k = 0; k < column; k++) {
+                    sum += LowerCholesky[row][k] * LowerCholesky[column][k];
+                }
+
+                if (column == row) {
+                    LowerCholesky(row)(column) = sqrt((*this)[row][column] - sum);
+                } else {
+                    LowerCholesky(row)(column) = (1 / LowerCholesky[column][column]) * ((*this)[row][column] - sum);
+                }
+            }
+        }
+
+        return LowerCholesky;
+    }
+
+    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) {
+        return (static_cast<const sparse_matrix *>(this)->SolveLowerTriangular(Y));
+    }
+
+    sparse_vector sparse_matrix::SolveLowerTriangular(sparse_vector &Y) const {
+        if (rows() != columns()) {
+            throw std::length_error("Solving lower triangular matrix: matrix is not square.");
+        }
+
+        sparse_vector X(columns(), true);
+
+        X(0) = (Y[0] / (*this)[0][0]);
+
+        for (unsigned int i = 1; i < X.size(); ++i) {
+            double sum = 0.0;
+
+            for (unsigned int j = 0; j < i; ++j) {
+                sum += (*this)[i][j] * X[j];
+            }
+
+            X(i) = (Y[i] - sum) / (*this)[i][i];
+        }
+        return X;
+    }
+
+    sparse_matrix &sparse_matrix::Unit() {
+        for (auto it : (*this)){
+            it.second = sparse_vector(columns(), false);
+            it.second(it.first) = 1.0;
+        }
+        return (*this);
+    }
 }
 
 // --- end of class ---

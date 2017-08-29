@@ -131,7 +131,7 @@ namespace algebra_lib {
     }
 
     matrix matrix::InvertMatrixElements(bool preserveZero) {
-        return static_cast<matrix>(static_cast<const matrix *>(this)->InvertMatrixElements(preserveZero));
+        return static_cast<const matrix *>(this)->InvertMatrixElements(preserveZero);
     }
 
     matrix &matrix::InvertMatrixElementsSelf(bool preserveZero) {
@@ -177,12 +177,12 @@ namespace algebra_lib {
     }
 
     matrix matrix::CholeskyDecompose() {
-        return static_cast<matrix>(static_cast<const matrix *>(this)->CholeskyDecompose());
+        return static_cast<const matrix *>(this)->CholeskyDecompose();
     }
 
     matrix matrix::CholeskyDecompose() const {
         if (rows() != columns()) {
-            throw std::length_error("matrix trace: matrix is not square.");
+            throw std::length_error("Cholesky decomposition: matrix is not square.");
         }
 
         matrix LowerCholesky(rows(), columns());
@@ -206,17 +206,15 @@ namespace algebra_lib {
         }
 
         return LowerCholesky;
-
-
     }
 
     vector matrix::Trace(int offset) {
-        return static_cast<vector>(static_cast<const matrix *>(this)->Trace(offset));
+        return static_cast<const matrix *>(this)->Trace(offset);
     }
 
     vector matrix::Trace(int offset) const {
         if (rows() != columns()) {
-            throw std::length_error("matrix trace: matrix is not square.");
+            throw std::length_error("Matrix trace: matrix is not square.");
         } else if (abs(offset) >= rows()) {
             throw std::out_of_range("Exceeded matrix bounds");
         }
@@ -235,12 +233,12 @@ namespace algebra_lib {
     }
 
     vector matrix::SolveLowerTriangular(algebra_lib::vector &Y) {
-        return static_cast<vector>(static_cast<const matrix *>(this)->SolveLowerTriangular(Y));
+        return static_cast<const matrix *>(this)->SolveLowerTriangular(Y);
     }
 
     vector matrix::SolveLowerTriangular(algebra_lib::vector &Y) const {
         if (rows() != columns()) {
-            throw std::length_error("matrix trace: matrix is not square.");
+            throw std::length_error("Solving lower triangular matrix: matrix is not square.");
         }
 
         vector X(columns(), true);
